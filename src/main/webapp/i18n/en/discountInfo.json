@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "discountInfo" : {
+            "home": {
+                "title": "Discount Infos",
+                "createLabel": "Create a new Discount Info",
+                "createOrEditLabel": "Create or edit a Discount Info",
+                "search": "Search for Discount Info"
+            },
+            "created": "A new Discount Info is created with identifier {{ param }}",
+            "updated": "A Discount Info is updated with identifier {{ param }}",
+            "deleted": "A Discount Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Discount Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Discount Info"
+            },
+            "fixedDiscount": "Fixed Discount",
+            "discountType": "Discount Type"
+        }
+    }
+}

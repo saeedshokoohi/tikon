@@ -1,0 +1,35 @@
+
+<div class="row" >
+    <div style="float: right">
+        <eo-date-picker id="field_endDate"
+                        date-value="$ctrl.newDate">
+
+        </eo-date-picker>
+
+    </div>
+      <div style="float: right" class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="$ctrl.onAdddate()"><i class="glyphicon glyphicon-plus"></i></button>
+              </div>
+</div>
+
+
+</div>
+<div class="row">
+
+
+
+    <fieldset class="standard" >
+
+        <div class="row">
+            <span    ng-repeat="date in $ctrl.offDates">
+<span class="btn btn-default btn-sm offDate" ng-click="$ctrl.onRemoveDate(date)" >
+  <span class="glyphicon glyphicon-remove"  ></span>
+    <span>
+             {{date.name}}
+        </span>
+</span>
+            </span>
+        </div>
+    </fieldset>
+</div>
+

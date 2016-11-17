@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myNotificationSettingLabel" translate="tikonApp.notificationSetting.home.createOrEditLabel">Create or edit a Notification Setting</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.notificationSetting.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.notificationSetting.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.notificationSetting.sendBookingConfirmation" for="field_sendBookingConfirmation">Send Booking Confirmation</label>
+            <select class="form-control" name="sendBookingConfirmation" ng-model="vm.notificationSetting.sendBookingConfirmation" id="field_sendBookingConfirmation">
+                <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.notificationSetting.sendOnCancelBooking" for="field_sendOnCancelBooking">Send On Cancel Booking</label>
+            <select class="form-control" name="sendOnCancelBooking" ng-model="vm.notificationSetting.sendOnCancelBooking" id="field_sendOnCancelBooking">
+                <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.notificationSetting.sendOnMoveBooking" for="field_sendOnMoveBooking">Send On Move Booking</label>
+            <select class="form-control" name="sendOnMoveBooking" ng-model="vm.notificationSetting.sendOnMoveBooking" id="field_sendOnMoveBooking">
+                <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.notificationSetting.sendCustomerReminder" for="field_sendCustomerReminder">Send Customer Reminder</label>
+            <select class="form-control" name="sendCustomerReminder" ng-model="vm.notificationSetting.sendCustomerReminder" id="field_sendCustomerReminder">
+                <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.notificationSetting.reminderTimeInAdvanced" for="field_reminderTimeInAdvanced">Reminder Time In Advanced</label>
+            <input type="number" class="form-control" name="reminderTimeInAdvanced" id="field_reminderTimeInAdvanced"
+                    ng-model="vm.notificationSetting.reminderTimeInAdvanced"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

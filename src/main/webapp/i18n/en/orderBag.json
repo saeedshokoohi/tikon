@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "orderBag" : {
+            "home": {
+                "title": "Order Bags",
+                "createLabel": "Create a new Order Bag",
+                "createOrEditLabel": "Create or edit a Order Bag",
+                "search": "Search for Order Bag"
+            },
+            "created": "A new Order Bag is created with identifier {{ param }}",
+            "updated": "A Order Bag is updated with identifier {{ param }}",
+            "deleted": "A Order Bag is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Order Bag {{ id }}?"
+            },
+            "detail": {
+                "title": "Order Bag"
+            },
+            "createDate": "Create Date",
+            "status": "Status"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "tikonApp": {
+        "servant" : {
+            "home": {
+                "title": "Servants",
+                "createLabel": "Create a new Servant",
+                "createOrEditLabel": "Create or edit a Servant",
+                "search": "Search for Servant"
+            },
+            "created": "A new Servant is created with identifier {{ param }}",
+            "updated": "A Servant is updated with identifier {{ param }}",
+            "deleted": "A Servant is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Servant {{ id }}?"
+            },
+            "detail": {
+                "title": "Servant"
+            },
+            "title": "Title",
+            "level": "Level",
+            "personInfo": "Person Info",
+            "serviceCategories": "Service Categories",
+            "serviceItems": "Service Items",
+            "priceInfo": "Price Info"
+        }
+    }
+}

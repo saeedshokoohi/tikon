@@ -1,0 +1,142 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "options",
+      "otherEntityName": "serviceOptionInfo",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "discountInfo",
+      "otherEntityName": "discountInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "location",
+      "otherEntityName": "locationInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "imageAlbum",
+      "otherEntityName": "albumInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 5,
+      "relationshipName": "capacityInfo",
+      "otherEntityName": "serviceCapacityInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 6,
+      "relationshipName": "category",
+      "otherEntityName": "serviceCategory",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 7,
+      "relationshipName": "priceinfo",
+      "otherEntityName": "priceInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 8,
+      "relationshipName": "serviceTimes",
+      "otherEntityName": "scheduleInfo",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 9,
+      "relationshipName": "servants",
+      "otherEntityName": "servant",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 10,
+      "relationshipName": "agreement",
+      "otherEntityName": "agreementInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 11,
+      "relationshipName": "tags",
+      "otherEntityName": "metaTag",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "itemTitle",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "minPreReserveTime",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "maxPreReserveTime",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "hasWaitingList",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "mustGetParticipantInfo",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "canBeCanceled",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "minPreCancelTime",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "paymentType",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "serviceType",
+      "fieldType": "ServiceItemType",
+      "fieldValues": "INDEPENDENT_SERVICE,SERVICE_PACKAGE,DEPENDENT_SERVICE"
+    }
+  ],
+  "changelogDate": "20160630101327",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

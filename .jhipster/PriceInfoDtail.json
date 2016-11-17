@@ -1,0 +1,29 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "capacityRatio",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "coworkerPrice",
+      "fieldType": "Double"
+    }
+  ],
+  "changelogDate": "20160630101319",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

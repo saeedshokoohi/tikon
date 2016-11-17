@@ -1,0 +1,46 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "offtimes",
+      "otherEntityName": "offTime",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "weeklyScheduleInfo",
+      "otherEntityName": "weeklyScheduleInfo",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "dailyDuration"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "startTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "endTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "duration",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "gaptime",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160630101335",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

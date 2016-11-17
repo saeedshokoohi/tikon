@@ -1,0 +1,36 @@
+
+<div>
+    <h2><span translate="tikonApp.timePeriod.detail.title">Time Period</span> {{vm.timePeriod.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.timePeriod.startTime">Start Time</span></dt>
+        <dd>
+            <span>{{vm.timePeriod.startTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.timePeriod.endTime">End Time</span></dt>
+        <dd>
+            <span>{{vm.timePeriod.endTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.timePeriod.duration">Duration</span></dt>
+        <dd>
+            <span>{{vm.timePeriod.duration}}</span>
+        </dd>
+        <dt><span translate="tikonApp.timePeriod.gaptime">Gaptime</span></dt>
+        <dd>
+            <span>{{vm.timePeriod.gaptime}}</span>
+        </dd>
+        <dt><span translate="tikonApp.timePeriod.offtimes">Offtimes</span></dt>
+        <dd>
+            <span ng-repeat="offtimes in vm.timePeriod.offtimes">
+                <a ui-sref="off-time-detail({id: {{offtimes.id}}})">{{offtimes.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

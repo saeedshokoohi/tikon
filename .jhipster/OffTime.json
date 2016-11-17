@@ -1,0 +1,39 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "durationSlice",
+      "otherEntityName": "timePeriod",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "offtimes"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "i",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "fromTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "toTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "offTimeType",
+      "fieldType": "OffTimeType",
+      "fieldValues": "REST_TIME,DINNER_TIME"
+    }
+  ],
+  "changelogDate": "20160630101333",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

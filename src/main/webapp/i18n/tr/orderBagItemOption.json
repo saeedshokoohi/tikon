@@ -1,0 +1,29 @@
+{
+    "tikonApp": {
+        "orderBagItemOption" : {
+            "home": {
+                "title": "Order Bag Item Options",
+                "createLabel": "Create a new Order Bag Item Option",
+                "createOrEditLabel": "Create or edit a Order Bag Item Option",
+                "search": "Search for Order Bag Item Option"
+            },
+            "created": "A new Order Bag Item Option is created with identifier {{ param }}",
+            "updated": "A Order Bag Item Option is updated with identifier {{ param }}",
+            "deleted": "A Order Bag Item Option is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Order Bag Item Option {{ id }}?"
+            },
+            "detail": {
+                "title": "Order Bag Item Option"
+            },
+            "reserveTime": "Reserve Time",
+            "qty": "Qty",
+            "price": "Price",
+            "discount": "Discount",
+            "vat": "Vat",
+            "totalPrice": "Total Price",
+            "orderbagItemDtail": "Orderbag Item Dtail",
+            "orderbagItem": "Orderbag Item"
+        }
+    }
+}

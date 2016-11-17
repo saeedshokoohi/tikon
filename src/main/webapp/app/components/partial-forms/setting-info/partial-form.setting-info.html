@@ -1,0 +1,122 @@
+<div>
+
+    <!--<jhi-alert></jhi-alert>-->
+    <!--<div class="container-fluid">-->
+    <!--<div class="row">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!---->
+    <ul class="nav nav-tabs  nav-justified lightnav">
+        <li class="active"><a data-toggle="tab" data-target="#themeSettingTab">
+            <span translate="tikonApp.settingInfo.sections.themeSettingTab">themeSettingTab </span>
+        </a></li>
+        <li ><a data-toggle="tab" data-target="#notificationSettingTab">
+            <span translate="tikonApp.settingInfo.sections.notificationSettingTab">notificationSettingTab </span>
+        </a></li>
+        <li ><a data-toggle="tab" data-target="#financialSettingTab">
+            <span translate="tikonApp.settingInfo.sections.financialSettingTab">financialSettingTab </span>
+        </a></li>
+    </ul>
+
+
+    <div id="settingInfo" >
+
+        <div class="tab-content panel panel-default">
+            <div id="themeSettingTab" class="tab-pane fade in active">
+
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.themeSettingInfo.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                           ng-model="$ctrl.settingInfo.themeSettingInfo.name"
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label translate="tikonApp.themeSettingInfo.logoImage" for="field_logoImage">Logo Image</label>
+                    <select class="form-control" id="field_logoImage" name="logoImage" ng-model="$ctrl.themeSettingInfo.logoImageId" ng-options="imageData.id as imageData.id for imageData in $ctrl.imagedata"            >
+                        <option value=""></option>
+                    </select>
+                </div>
+
+            </div>
+            <div id="notificationSettingTab" class="tab-pane fade">
+
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.notificationSetting.sendBookingConfirmation" for="field_sendBookingConfirmation">Send Booking Confirmation</label>
+                    <select class="form-control" name="sendBookingConfirmation" ng-model="$ctrl.settingInfo.notificationSetting.sendBookingConfirmation" id="field_sendBookingConfirmation">
+                        <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                        <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                        <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                        <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.notificationSetting.sendOnCancelBooking" for="field_sendOnCancelBooking">Send On Cancel Booking</label>
+                    <select class="form-control" name="sendOnCancelBooking" ng-model="$ctrl.settingInfo.notificationSetting.sendOnCancelBooking" id="field_sendOnCancelBooking">
+                        <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                        <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                        <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                        <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.notificationSetting.sendOnMoveBooking" for="field_sendOnMoveBooking">Send On Move Booking</label>
+                    <select class="form-control" name="sendOnMoveBooking" ng-model="$ctrl.settingInfo.notificationSetting.sendOnMoveBooking" id="field_sendOnMoveBooking">
+                        <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                        <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                        <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                        <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.notificationSetting.sendCustomerReminder" for="field_sendCustomerReminder">Send Customer Reminder</label>
+                    <select class="form-control" name="sendCustomerReminder" ng-model="$ctrl.settingInfo.notificationSetting.sendCustomerReminder" id="field_sendCustomerReminder">
+                        <option value="NONE" translate="tikonApp.NotificationType.NONE">NONE</option>
+                        <option value="SMS" translate="tikonApp.NotificationType.SMS">SMS</option>
+                        <option value="EMAIL" translate="tikonApp.NotificationType.EMAIL">EMAIL</option>
+                        <option value="SMS_AND_EMAIL" translate="tikonApp.NotificationType.SMS_AND_EMAIL">SMS_AND_EMAIL</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.notificationSetting.reminderTimeInAdvanced" for="field_reminderTimeInAdvanced">Reminder Time In Advanced</label>
+                    <input type="number" class="form-control" name="reminderTimeInAdvanced" id="field_reminderTimeInAdvanced"
+                           ng-model="$ctrl.notificationSetting.reminderTimeInAdvanced"
+                    />
+                </div>
+
+            </div>
+            <div id="financialSettingTab" class="tab-pane fade in ">
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.financialSetting.taxPercentage" for="field_taxPercentage">Tax Percentage</label>
+                    <input type="number" class="form-control" name="taxPercentage" id="field_taxPercentage"
+                           ng-model="$ctrl.settingInfo.financialSetting.taxPercentage"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.financialSetting.hasDiscount" for="field_hasDiscount">Has Discount</label>
+                    <input type="checkbox" class="form-control" name="hasDiscount" id="field_hasDiscount"
+                           ng-model="$ctrl.settingInfo.financialSetting.hasDiscount"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.financialSetting.currency" for="field_currency">Currency</label>
+                    <select class="form-control" name="currency" ng-model="$ctrl.settingInfo.financialSetting.currency" id="field_currency">
+                        <option value="RIAL" translate="tikonApp.Currency.RIAL">RIAL</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="text-center">
+        <!-- <jhi-item-count page="$ctrl.page" total="$ctrl.queryCount"></jhi-item-count>
+         <uib-pagination class="pagination-sm" total-items="$ctrl.totalItems" ng-model="$ctrl.page" ng-change="$ctrl.transition()"></uib-pagination>-->
+    </div>
+
+
+</div>

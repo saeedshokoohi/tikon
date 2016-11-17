@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ServiceOptionItem.
+    -->
+    <changeSet id="20160630101323-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="option_info_id"
+                                 baseTableName="service_option_item"
+                                 constraintName="fk_serviceoptionitem_optioninfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_option_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="price_info_id"
+                                 baseTableName="service_option_item"
+                                 constraintName="fk_serviceoptionitem_priceinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="price_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="images_id"
+                                 baseTableName="service_option_item"
+                                 constraintName="fk_serviceoptionitem_images_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="album_info"/>
+
+    </changeSet>
+</databaseChangeLog>

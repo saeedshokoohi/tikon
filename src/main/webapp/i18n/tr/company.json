@@ -1,0 +1,31 @@
+{
+    "tikonApp": {
+        "company" : {
+            "home": {
+                "title": "Companies",
+                "createLabel": "Create a new Company",
+                "createOrEditLabel": "Create or edit a Company",
+                "search": "Search for Company"
+            },
+            "created": "A new Company is created with identifier {{ param }}",
+            "updated": "A Company is updated with identifier {{ param }}",
+            "deleted": "A Company is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Company {{ id }}?"
+            },
+            "detail": {
+                "title": "Company"
+            },
+            "title": "Title",
+            "description": "Description",
+            "phoneNumber": "Phone Number",
+            "activityType": "Activity Type",
+            "webSiteUrl": "Web Site Url",
+            "keyUrl": "Key Url",
+            "setting": "Setting",
+            "agreement": "Agreement",
+            "location": "Location",
+            "tags": "Tags"
+        }
+    }
+}

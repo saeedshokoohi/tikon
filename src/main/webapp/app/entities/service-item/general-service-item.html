@@ -1,0 +1,235 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <action-bar></action-bar>
+    <ul class="nav nav-tabs  nav-justified lightnav">
+        <li class="active"><a data-toggle="tab" data-target="#generalTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.generalTab">generalTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#scheduleTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.scheduleTab">scheduleTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#priceTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.priceTab">priceTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#capacityTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.capacityTab">capacityTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#discountTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.discountTab">discountTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#settingTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.settingTab">settingTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#imageAlbumTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.imageAlbumTab">imageAlbumTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#optionTab">
+            <span translate="supplierPanel.sideMenu.serviceItem.optionTab">optionTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#agreementTab">
+            <span class="no-wrap" translate="supplierPanel.sideMenu.serviceItem.agreementTab">agreementTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#servantTab">
+            <span class="no-wrap" translate="supplierPanel.sideMenu.serviceItem.servantTab">servantTab </span>
+        </a></li>
+
+    </ul>
+
+
+    <!--<persian-datepicker-popup-wrap ng-model="vm.serviceItem.itemTitle"></persian-datepicker-popup-wrap>-->
+
+    <div class="tab-content panel panel-default">
+        <div id="generalTab" class="tab-pane fade in active">
+            <div class="modal-body">
+
+                <!--<div class="form-group" ng-show="vm.serviceItem.id">-->
+                <!--<label for="id" translate="global.field.id">ID</label>-->
+                <!--<input type="text" class="form-control" id="id" name="id"-->
+                <!--ng-model="vm.serviceItem.id" readonly />-->
+                <!--</div>-->
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.serviceItem.itemTitle" for="field_itemTitle">Item
+                        Title</label>
+                    <input type="text" class="form-control" name="itemTitle" id="field_itemTitle"
+                           ng-model="vm.serviceItem.itemTitle"
+                    />
+                </div>
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.serviceItem.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                           ng-model="vm.serviceItem.description"
+                    />
+                </div>
+
+
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.serviceItem.serviceType" for="field_serviceType">Service
+                        Type</label>
+                    <select class="form-control" name="serviceType" ng-model="vm.serviceItem.serviceType"
+                            id="field_serviceType">
+                        <option value="INDEPENDENT_SERVICE" translate="tikonApp.ServiceItemType.INDEPENDENT_SERVICE">
+                            INDEPENDENT_SERVICE
+                        </option>
+                        <option value="SERVICE_PACKAGE" translate="tikonApp.ServiceItemType.SERVICE_PACKAGE">
+                            SERVICE_PACKAGE
+                        </option>
+                        <option value="DEPENDENT_SERVICE" translate="tikonApp.ServiceItemType.DEPENDENT_SERVICE">
+                            DEPENDENT_SERVICE
+                        </option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label translate="tikonApp.serviceItem.location" for="field_location">Location</label>
+                    <select class="form-control" id="field_location" name="location"
+                            ng-model="vm.serviceItem.locationId"
+                            ng-options="locationInfo.id as locationInfo.id for locationInfo in vm.locationinfos">
+                        <option value=""></option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label translate="tikonApp.serviceItem.category" for="field_category">Category</label>
+                    <select class="form-control" id="field_category" name="category"
+                            ng-model="vm.serviceItem.categoryId"
+                            ng-options="serviceCategory.id as serviceCategory.categoryName for serviceCategory in vm.servicecategories">
+                        <option value=""></option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label translate="tikonApp.serviceItem.servants" for="field_servants">Servants</label>
+                    <select class="form-control" id="field_servants" multiple name="servants"
+                            ng-model="vm.serviceItem.servants"
+                            ng-options="servant as servant.id for servant in vm.servants track by servant.id"></select>
+                </div>
+
+                <div class="form-group">
+                    <label translate="tikonApp.serviceItem.tags" for="field_tags">Tags</label>
+                    <select class="form-control" id="field_tags" multiple name="tags" ng-model="vm.serviceItem.tags"
+                            ng-options="metaTag as metaTag.id for metaTag in vm.metatags track by metaTag.id"></select>
+                </div>
+            </div>
+        </div>
+        <div id="scheduleTab" class="tab-pane fade">
+
+            <div id="scheduleInfoList" >
+                <pf-service-item-schedules service-item-id="vm.serviceItem.id" selected-schedule-info="vm.serviceItem.scheduleInfo">
+
+                </pf-service-item-schedules>
+            </div>
+
+        </div>
+        <div id="capacityTab" class="tab-pane fade">
+
+            <div class="form-group">
+                <label translate="tikonApp.serviceItem.capacityInfo" for="field_qty">Capacity Info</label>
+                <input type="text" class="form-control" name="capacityInfoQty" id="field_qty"
+                       ng-model="vm.serviceItem.capacityInfo.qty"
+                />
+            </div>
+
+        </div>
+        <div id="settingTab" class="tab-pane fade">
+            <div class="form-group">
+                <label class="control-label" translate="tikonApp.serviceItem.hasWaitingList" for="field_hasWaitingList">Has
+                    Waiting List</label>
+                <input type="checkbox" class="form-control" name="hasWaitingList" id="field_hasWaitingList"
+                       ng-model="vm.serviceItem.hasWaitingList"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label" translate="tikonApp.serviceItem.mustGetParticipantInfo"
+                       for="field_mustGetParticipantInfo">Must Get Participant Info</label>
+                <input type="checkbox" class="form-control" name="mustGetParticipantInfo"
+                       id="field_mustGetParticipantInfo"
+                       ng-model="vm.serviceItem.mustGetParticipantInfo"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label" translate="tikonApp.serviceItem.canBeCanceled" for="field_canBeCanceled">Can
+                    Be Canceled</label>
+                <input type="checkbox" class="form-control" name="canBeCanceled" id="field_canBeCanceled"
+                       ng-model="vm.serviceItem.canBeCanceled"
+                />
+            </div>
+            <div class="form-group">
+                <label class="control-label" translate="tikonApp.serviceItem.minPreCancelTime"
+                       for="field_minPreCancelTime">Min Pre Cancel Time</label>
+                <input type="number" class="form-control" name="minPreCancelTime" id="field_minPreCancelTime"
+                       ng-model="vm.serviceItem.minPreCancelTime"
+                />
+            </div>
+
+        </div>
+        <div id="discountTab" class="tab-pane fade">
+            <div class="form-group">
+                <label translate="tikonApp.serviceItem.discountInfo" for="field_discountInfo">Discount Info</label>
+                <select class="form-control" id="field_discountInfo" name="discountInfo"
+                        ng-model="vm.serviceItem.discountInfoId"
+                        ng-options="discountInfo.id as discountInfo.id for discountInfo in vm.discountinfos">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div id="imageAlbumTab" class="tab-pane fade">
+            <div class="form-group">
+                <label translate="tikonApp.serviceItem.imageAlbum" for="field_imageAlbum">Image Album</label>
+                <select class="form-control" id="field_imageAlbum" name="imageAlbum"
+                        ng-model="vm.serviceItem.imageAlbumId"
+                        ng-options="albumInfo.id as albumInfo.id for albumInfo in vm.albuminfos">
+                    <option value=""></option>
+                </select>
+            </div>
+        </div>
+        <div id="optionTab" class="tab-pane fade">
+
+            <div id="serviceOptionInfo" >
+
+                <pf-service-item-option-info service-option-item="vm.serviceItem.serviceOptionItem" service-item-id="vm.serviceItem.id"  form-state="vm.serviceOptionInfoFormState"  >
+
+                </pf-service-item-option-info>
+            </div>
+
+        </div>
+        <div id="priceTab" class="tab-pane fade">
+            <div id="priceInfo" >
+
+                <pf-service-item-price-info price-info-dtail="vm.serviceItem.servicePriceInfoDtail" service-item-id="vm.serviceItem.id" on-create-new-price-info="vm.onCreateNewPriceInfo" on-selected-price-info-changed="vm.onSelectedPriceInfoChanged" form-state="vm.priceInfoFormState"  >
+
+                </pf-service-item-price-info>
+            </div>
+        </div>
+        <div id="agreementTab" class="tab-pane fade">
+            <div id="agreementInfo" >
+
+                <pf-service-item-agreement-info agreement="vm.serviceItem.agreement"   >
+
+                </pf-service-item-agreement-info>
+            </div>
+        </div>
+        <div id="servantTab" class="tab-pane fade">
+
+            <div id="servants" >
+
+                <pf-service-item-servants servants="vm.serviceItem.servants" service-item-id="vm.serviceItem.id"  form-state="vm.servantFormState"  >
+
+                </pf-service-item-servants>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--  <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+              <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+          </button>
+          <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+              <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+          </button>
+      </div>-->
+</form>

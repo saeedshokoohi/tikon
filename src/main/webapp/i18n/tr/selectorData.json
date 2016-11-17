@@ -1,0 +1,26 @@
+{
+    "tikonApp": {
+        "selectorData" : {
+            "home": {
+                "title": "Selector Data",
+                "createLabel": "Create a new Selector Data",
+                "createOrEditLabel": "Create or edit a Selector Data",
+                "search": "Search for Selector Data"
+            },
+            "created": "A new Selector Data is created with identifier {{ param }}",
+            "updated": "A Selector Data is updated with identifier {{ param }}",
+            "deleted": "A Selector Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Selector Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Selector Data"
+            },
+            "key": "Key",
+            "text": "Text",
+            "orderNo": "Order No",
+            "type": "Type",
+            "parent": "Parent"
+        }
+    }
+}

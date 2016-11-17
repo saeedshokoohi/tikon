@@ -1,0 +1,89 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCompanyLabel" translate="tikonApp.company.home.createOrEditLabel">Create or edit a Company</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.company.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.company.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                    ng-model="vm.company.title"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.company.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.phoneNumber" for="field_phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                    ng-model="vm.company.phoneNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.activityType" for="field_activityType">Activity Type</label>
+            <select class="form-control" name="activityType" ng-model="vm.company.activityType" id="field_activityType">
+                <option value="BEAUTY" translate="tikonApp.ActivityType.BEAUTY">BEAUTY</option>
+                <option value="TRAVEL" translate="tikonApp.ActivityType.TRAVEL">TRAVEL</option>
+                <option value="HEALTH" translate="tikonApp.ActivityType.HEALTH">HEALTH</option>
+                <option value="SPORT" translate="tikonApp.ActivityType.SPORT">SPORT</option>
+                <option value="EDUCATION" translate="tikonApp.ActivityType.EDUCATION">EDUCATION</option>
+                <option value="OTHER" translate="tikonApp.ActivityType.OTHER">OTHER</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.webSiteUrl" for="field_webSiteUrl">Web Site Url</label>
+            <input type="text" class="form-control" name="webSiteUrl" id="field_webSiteUrl"
+                    ng-model="vm.company.webSiteUrl"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.keyUrl" for="field_keyUrl">Key Url</label>
+            <input type="text" class="form-control" name="keyUrl" id="field_keyUrl"
+                    ng-model="vm.company.keyUrl"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.company.setting" for="field_setting">Setting</label>
+            <select class="form-control" id="field_setting" name="setting" ng-model="vm.company.settingId" ng-options="settingInfo.id as settingInfo.id for settingInfo in vm.settinginfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.company.agreement" for="field_agreement">Agreement</label>
+            <select class="form-control" id="field_agreement" name="agreement" ng-model="vm.company.agreementId" ng-options="agreementInfo.id as agreementInfo.id for agreementInfo in vm.agreementinfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.company.location" for="field_location">Location</label>
+            <select class="form-control" id="field_location" name="location" ng-model="vm.company.locationId" ng-options="locationInfo.id as locationInfo.id for locationInfo in vm.locationinfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.company.tags" for="field_tags">Tags</label>
+            <select class="form-control" id="field_tags" multiple name="tags" ng-model="vm.company.tags" ng-options="metaTag as metaTag.id for metaTag in vm.metatags track by metaTag.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

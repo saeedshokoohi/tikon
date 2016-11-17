@@ -1,0 +1,20 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fixedDiscount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "discountType",
+      "fieldType": "DiscountType",
+      "fieldValues": "FIXED,SCHEDULE_BASED,ITEM_QUANTITY_BASED,CUSTOMER_BASED"
+    }
+  ],
+  "changelogDate": "20160630101320",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

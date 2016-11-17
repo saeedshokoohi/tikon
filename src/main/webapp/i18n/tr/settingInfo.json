@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "settingInfo" : {
+            "home": {
+                "title": "Setting Infos",
+                "createLabel": "Create a new Setting Info",
+                "createOrEditLabel": "Create or edit a Setting Info",
+                "search": "Search for Setting Info"
+            },
+            "created": "A new Setting Info is created with identifier {{ param }}",
+            "updated": "A Setting Info is updated with identifier {{ param }}",
+            "deleted": "A Setting Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Setting Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Setting Info"
+            },
+            "settingName": "Setting Name",
+            "themeSettingInfo": "Theme Setting Info",
+            "notificationSetting": "Notification Setting",
+            "financialSetting": "Financial Setting"
+        }
+    }
+}

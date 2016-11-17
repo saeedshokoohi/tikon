@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Company.
+    -->
+    <changeSet id="20160630101301-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="setting_id"
+                                 baseTableName="company"
+                                 constraintName="fk_company_setting_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="setting_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="agreement_id"
+                                 baseTableName="company"
+                                 constraintName="fk_company_agreement_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agreement_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="location_id"
+                                 baseTableName="company"
+                                 constraintName="fk_company_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="companies_id"
+                                 baseTableName="company_tags"
+                                 constraintName="fk_company_tags_metatag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="company_tags"
+                                 constraintName="fk_company_tags_company_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meta_tag"/>
+        
+    </changeSet>
+</databaseChangeLog>

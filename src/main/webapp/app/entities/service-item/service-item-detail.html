@@ -1,0 +1,106 @@
+
+<div>
+    <h2><span translate="tikonApp.serviceItem.detail.title">Service Item</span> {{vm.serviceItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.serviceItem.itemTitle">Item Title</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.itemTitle}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.description">Description</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.description}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.minPreReserveTime">Min Pre Reserve Time</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.minPreReserveTime}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.maxPreReserveTime">Max Pre Reserve Time</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.maxPreReserveTime}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.hasWaitingList">Has Waiting List</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.hasWaitingList}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.mustGetParticipantInfo">Must Get Participant Info</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.mustGetParticipantInfo}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.canBeCanceled">Can Be Canceled</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.canBeCanceled}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.minPreCancelTime">Min Pre Cancel Time</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.minPreCancelTime}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.paymentType">Payment Type</span></dt>
+        <dd>
+            <span>{{vm.serviceItem.paymentType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.serviceType">Service Type</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.ServiceItemType.' + vm.serviceItem.serviceType}}">{{vm.serviceItem.serviceType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.options">Options</span></dt>
+        <dd>
+            <span ng-repeat="options in vm.serviceItem.options">
+                <a ui-sref="service-option-info-detail({id: {{options.id}}})">{{options.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.discountInfo">Discount Info</span></dt>
+        <dd>
+            <a ui-sref="discount-info-detail({id:vm.serviceItem.discountInfoId})">{{vm.serviceItem.discountInfoId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.location">Location</span></dt>
+        <dd>
+            <a ui-sref="location-info-detail({id:vm.serviceItem.locationId})">{{vm.serviceItem.locationId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.imageAlbum">Image Album</span></dt>
+        <dd>
+            <a ui-sref="album-info-detail({id:vm.serviceItem.imageAlbumId})">{{vm.serviceItem.imageAlbumId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.capacityInfo">Capacity Info</span></dt>
+        <dd>
+            <a ui-sref="service-capacity-info-detail({id:vm.serviceItem.capacityInfoId})">{{vm.serviceItem.capacityInfoId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.category">Category</span></dt>
+        <dd>
+            <a ui-sref="service-category-detail({id:vm.serviceItem.categoryId})">{{vm.serviceItem.categoryId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.priceinfo">Priceinfo</span></dt>
+        <dd>
+            <a ui-sref="price-info-detail({id:vm.serviceItem.priceinfoId})">{{vm.serviceItem.priceinfoId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.serviceTimes">Service Times</span></dt>
+        <dd>
+            <span ng-repeat="serviceTimes in vm.serviceItem.serviceTimes">
+                <a ui-sref="schedule-info-detail({id: {{serviceTimes.id}}})">{{serviceTimes.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.servants">Servants</span></dt>
+        <dd>
+            <span ng-repeat="servants in vm.serviceItem.servants">
+                <a ui-sref="servant-detail({id: {{servants.id}}})">{{servants.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.agreement">Agreement</span></dt>
+        <dd>
+            <a ui-sref="agreement-info-detail({id:vm.serviceItem.agreementId})">{{vm.serviceItem.agreementId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceItem.tags">Tags</span></dt>
+        <dd>
+            <span ng-repeat="tags in vm.serviceItem.tags">
+                <a ui-sref="meta-tag-detail({id: {{tags.id}}})">{{tags.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,54 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "orderBagItem",
+      "otherEntityName": "orderBagServiceItem",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "priceInfoDtail",
+      "otherEntityName": "priceInfoDtail",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "reserveTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "gty",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "discount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "vat",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "totalPrice",
+      "fieldType": "Double"
+    }
+  ],
+  "changelogDate": "20160630101312",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

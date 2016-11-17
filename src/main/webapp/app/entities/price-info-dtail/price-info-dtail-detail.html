@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="tikonApp.priceInfoDtail.detail.title">Price Info Dtail</span> {{vm.priceInfoDtail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.priceInfoDtail.title">Title</span></dt>
+        <dd>
+            <span>{{vm.priceInfoDtail.title}}</span>
+        </dd>
+        <dt><span translate="tikonApp.priceInfoDtail.capacityRatio">Capacity Ratio</span></dt>
+        <dd>
+            <span>{{vm.priceInfoDtail.capacityRatio}}</span>
+        </dd>
+        <dt><span translate="tikonApp.priceInfoDtail.price">Price</span></dt>
+        <dd>
+            <span>{{vm.priceInfoDtail.price}}</span>
+        </dd>
+        <dt><span translate="tikonApp.priceInfoDtail.coworkerPrice">Coworker Price</span></dt>
+        <dd>
+            <span>{{vm.priceInfoDtail.coworkerPrice}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

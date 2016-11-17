@@ -1,0 +1,9 @@
+{
+    "tikonApp": {
+        "ScheduleType" : {
+            "null": "",
+            "PRIMARY": "PRIMARY",
+            "EXCEPTIONAL": "EXCEPTIONAL"
+        }
+    }
+}

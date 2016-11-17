@@ -1,0 +1,29 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "scheduleInfo",
+      "otherEntityName": "scheduleInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "discountInfo",
+      "otherEntityName": "discountInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "amount",
+      "fieldType": "Double"
+    }
+  ],
+  "changelogDate": "20160630101321",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

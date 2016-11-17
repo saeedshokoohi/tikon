@@ -1,0 +1,187 @@
+{
+    "global": {
+        "title": "تیکآن",
+        "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
+         "setup":{
+             "setupWizard":"پنل مدیریتی"
+         },
+        "menu": {
+            "home": "خانه",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "موجودیت ها",
+                "company": "شرکت",
+                "companyManager": "Company Manager",
+                "selectorData": "Selector Data",
+                "selectorDataType": "Selector Data Type",
+                "serviceCategory": "Service Category",
+                "customer": "Customer",
+                "orderBag": "Order Bag",
+                "orderBagItem": "Order Bag Item",
+                "invoiceInfo": "Invoice Info",
+                "orderBagItemOption": "Order Bag Item Option",
+                "paymentLog": "Payment Log",
+                "locationInfo": "Location Info",
+                "personInfo": "Person Info",
+                "priceInfo": "Price Info",
+                "fixedPrice": "Fixed Price",
+                "discountInfo": "Discount Info",
+                "fixedDiscount": "Fixed Discount",
+                "scheduleBasePrice": "Schedule Base Price",
+                "serviceOptionInfo": "Service Option Info",
+                "serviceOptionItem": "Service Option Item",
+                "servant": "Servant",
+                "albumInfo": "Album Info",
+                "imageData": "Image Data",
+                "serviceItem": "Service Item",
+                "serviceCapacityInfo": "Service Capacity Info",
+                "capacityException": "Capacity Exception",
+                "datePeriod": "Date Period",
+                "offDay": "Off Day",
+                "offTime": "Off Time",
+                "weeklyWorkDay": "Weekly Work Day",
+                "timePeriod": "Time Period",
+                "dailyScheduleInfo": "Daily Schedule Info",
+                "weeklyScheduleInfo": "Weekly Schedule Info",
+                "scheduleInfo": "Schedule Info",
+                "settingInfo": "Setting Info",
+                "themeSettingInfo": "Theme Setting Info",
+                "financialSetting": "Financial Setting",
+                "notificationSetting": "Notification Setting",
+                "extraSetting": "Extra Setting",
+                "participantPerson": "Participant Person",
+                "cancelingInfo": "Canceling Info",
+                "targetServiceItemTime": "Target Service Item Time",
+                "waitingList": "Waiting List",
+                "agreementInfo": "Agreement Info",
+                "customerComment": "Customer Comment",
+                "customerRank": "Customer Rank",
+                "company": "Company",
+                "metaTag": "Meta Tag",
+                "companySocialNetworkInfo": "Company Social Network Info",
+                "socialNetworkInfo": "Social Network Info",
+                "orderBagServiceItem": "Order Bag Service Item",
+                "orderBagServiceItemDtail": "Order Bag Service Item Dtail",
+                "priceInfoDtail": "Price Info Dtail",
+                "scheduleBaseDiscount": "Schedule Base Discount",
+                "relatedServiceItem": "Related Service Item",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+
+
+            },
+            "account": {
+                "main": "حساب",
+                "settings": "تنظیمات",
+                "password": "کلمه عبور",
+                "sessions": "نشست ها",
+                "login": "ورود",
+                "logout": "خروج",
+                "register": "ثبت نام",
+                "userProfile":"پروفایل کاربری"
+            },
+            "admin": {
+                "main": "مدیریت",
+                "userManagement": "مدیریت کاربران",
+                "tracker": "پیگیری کاربران",
+                "metrics": "معیارها",
+                "health": "صحت عملکرد",
+                "configuration": "پیکربندی",
+                "logs": "لاگ ها",
+                "audits": "نویسنده",
+                "apidocs": "واسط ها",
+                "database": "پایگاه داده",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "زبان"
+        },
+        "form": {
+            "username": "نام کاربری",
+            "username.placeholder": "نام کاربری",
+            "newpassword": "کلمه عبور",
+            "newpassword.placeholder": "کلمه عبور",
+            "confirmpassword": "تکرار کلمه عبور",
+            "confirmpassword.placeholder":  "تکرار کلمه عبور",
+            "email": "پست الکترونیکی",
+            "email.placeholder":  "پست الکترونیکی",
+            "phonenumber":"شماره موبایل",
+            "phonenumber.placeholder":"09121111111"
+        },
+        "messages": {
+            "info": {
+                "authenticated": "If you want to <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">sign in</a>, you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\").",
+                "register": "حساب کاربری ندارید؟ <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">ثبت نام کنید</a>"
+            },
+            "error": {
+                "dontmatch": "کلمه عبور و تکرار آن مطابقت ندارند"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "کلمه عبور الزامی است",
+                    "minlength": "کلمه عبور حد اقل باید 4 حرف داشته باشد",
+                    "maxlength": "کلمه عبور نمیتواند بیشتر از 50 کاراکتر باشد",
+                    "strength": "پیچیدگی کلمه عبور:"
+                },
+                "confirmpassword": {
+                    "required": "تکرار کلمه عبور الزامی است",
+                    "minlength":  "کلمه عبور حد اقل باید 4 حرف داشته باشد",
+                    "maxlength": "کلمه عبور نمیتواند بیشتر از 50 کاراکتر باشد"
+                },
+                "email": {
+                    "required": "آدرس پست الکترونیکی الزامی است",
+                    "invalid": "آدرس پست الکترونیکی معتبر نیست",
+                    "minlength": "پست الکترونیکی حداقل باید 5 کاراکتر باشد",
+                    "maxlength": "آدرس پست الکترونیکی نمیتواند بیشتر از 50 کاراکتر باشد."
+                }
+            }
+        },
+        "field": {
+            "id": "شناسه"
+        },
+        "ribbon": {
+            "dev":"درحال توسعه"
+        }
+    },
+    "entity": {
+        "action": {
+            "addblob": "اضافه کردن فایل",
+            "addimage": "اضافه کردن تصویر",
+            "back": "بازگشت",
+            "cancel": "لغو",
+            "delete": "حذف",
+            "edit": "ویرایش",
+            "open": "باز کردن",
+            "save": "ثبت",
+            "view": "نمایش",
+            "backToList":"backToList"
+        },
+        "detail": {
+            "field": "فیلد",
+            "value": "مقدار"
+        },
+        "delete": {
+            "title": "اطمینان از حذف"
+        },
+        "validation": {
+            "required": "وارد کردن این فیلد الزامی است",
+            "minlength": "This field is required to be at least {{ min }} characters.",
+            "maxlength": "This field cannot be longer than {{ max }} characters.",
+            "min": "This field should be more than {{ min }}.",
+            "max": "This field cannot be more than {{ max }}.",
+            "minbytes": "This field should be more than {{ min }} bytes.",
+            "maxbytes": "This field cannot be more than {{ max }} bytes.",
+            "pattern": "This field should follow pattern {{ pattern }}.",
+            "number": "This field should be a number.",
+            "datetimelocal": "This field should be a date and time."
+        }
+    },
+    "error": {
+        "server.not.reachable": "Server not reachable",
+        "url.not.found": "پیدا نشد",
+        "NotNull": "فیلد {{ fieldName }} نمیتواند خالی باشد",
+        "Size": "اندازه فیلد {{ fieldName }} مناسب نیست",
+        "userexists": "نام کاربری وجود دارد",
+        "emailexists": "پست الکترونیکی قبلا استفاده شده است",
+        "idexists": "A new {{ entityName }} cannot already have an ID"
+    },
+    "footer": ""
+}

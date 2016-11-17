@@ -1,0 +1,22 @@
+
+<div>
+    <h2><span translate="tikonApp.participantPerson.detail.title">Participant Person</span> {{vm.participantPerson.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.participantPerson.personInfo">Person Info</span></dt>
+        <dd>
+            <a ui-sref="person-info-detail({id:vm.participantPerson.personInfoId})">{{vm.participantPerson.personInfoId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.participantPerson.orderBagItemDtail">Order Bag Item Dtail</span></dt>
+        <dd>
+            <a ui-sref="order-bag-service-item-dtail-detail({id:vm.participantPerson.orderBagItemDtailId})">{{vm.participantPerson.orderBagItemDtailId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

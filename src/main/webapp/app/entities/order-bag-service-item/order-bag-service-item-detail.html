@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="tikonApp.orderBagServiceItem.detail.title">Order Bag Service Item</span> {{vm.orderBagServiceItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.orderBagServiceItem.status">Status</span></dt>
+        <dd>
+            <span>{{vm.orderBagServiceItem.status}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagServiceItem.subtotalServicePrice">Subtotal Service Price</span></dt>
+        <dd>
+            <span>{{vm.orderBagServiceItem.subtotalServicePrice}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagServiceItem.subtotalOptionPrice">Subtotal Option Price</span></dt>
+        <dd>
+            <span>{{vm.orderBagServiceItem.subtotalOptionPrice}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagServiceItem.subtotalVAT">Subtotal VAT</span></dt>
+        <dd>
+            <span>{{vm.orderBagServiceItem.subtotalVAT}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagServiceItem.subtotalDiscount">Subtotal Discount</span></dt>
+        <dd>
+            <span>{{vm.orderBagServiceItem.subtotalDiscount}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagServiceItem.totalRowPrice">Total Row Price</span></dt>
+        <dd>
+            <span>{{vm.orderBagServiceItem.totalRowPrice}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagServiceItem.orderBag">Order Bag</span></dt>
+        <dd>
+            <a ui-sref="order-bag-detail({id:vm.orderBagServiceItem.orderBagId})">{{vm.orderBagServiceItem.orderBagId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.orderBagServiceItem.serviceItem">Service Item</span></dt>
+        <dd>
+            <a ui-sref="service-item-detail({id:vm.orderBagServiceItem.serviceItemId})">{{vm.orderBagServiceItem.serviceItemId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

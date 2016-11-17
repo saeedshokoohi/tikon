@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity WeeklyScheduleInfo.
+    -->
+    <changeSet id="20160630101336-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="weekly_schedule_infos_id"
+                                 baseTableName="weekly_schedule_info_date_period"
+                                 constraintName="fk_weekly_schedule_info_date_period_dateperiod_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="weekly_schedule_info"/>
+        <addForeignKeyConstraint baseColumnNames="date_periods_id"
+                                 baseTableName="weekly_schedule_info_date_period"
+                                 constraintName="fk_weekly_schedule_info_date_period_weeklyscheduleinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="date_period"/>
+        
+        <addForeignKeyConstraint baseColumnNames="weekly_schedule_infos_id"
+                                 baseTableName="weekly_schedule_info_daily_duration"
+                                 constraintName="fk_weekly_schedule_info_daily_duration_timeperiod_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="weekly_schedule_info"/>
+        <addForeignKeyConstraint baseColumnNames="daily_durations_id"
+                                 baseTableName="weekly_schedule_info_daily_duration"
+                                 constraintName="fk_weekly_schedule_info_daily_duration_weeklyscheduleinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="time_period"/>
+        
+        <addForeignKeyConstraint baseColumnNames="weekly_schedule_infos_id"
+                                 baseTableName="weekly_schedule_info_weekdays"
+                                 constraintName="fk_weekly_schedule_info_weekdays_weeklyworkday_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="weekly_schedule_info"/>
+        <addForeignKeyConstraint baseColumnNames="weekdays_id"
+                                 baseTableName="weekly_schedule_info_weekdays"
+                                 constraintName="fk_weekly_schedule_info_weekdays_weeklyscheduleinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="weekly_work_day"/>
+        
+    </changeSet>
+</databaseChangeLog>

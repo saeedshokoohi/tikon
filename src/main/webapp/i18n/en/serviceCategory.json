@@ -1,0 +1,31 @@
+{
+    "tikonApp": {
+        "serviceCategory" : {
+            "home": {
+                "title": "دسته بندی سرویس ها",
+                "createLabel": "دسته بندی جدید",
+                "createOrEditLabel": "ویرایش یا ایجاد دسته بندی جدید",
+                "search": "جستجو"
+            },
+            "created": "یک دسته بندی جدید اضافه شد.",
+            "updated": "دسته بندی ویرایش شد.",
+            "deleted": "دسته بندی حذف شد",
+            "delete": {
+                "question": "آیا از حذف این دسته بندی اطمینان دارید ؟"
+            },
+            "detail": {
+                "title": "دسته بندی سرویس ها"
+            },
+            "categoryName": "عنوان دسته بندی",
+            "setting": "تنظیمات مروبطه",
+            "company": "کسب و کار ",
+            "parent": "دسته بندی سطح بالا",
+            "servants": "سرویس دهندگان",
+            "images": "تصاویر",
+            "sections": {
+                "serviceCategoryTab": "اطلاعات اصلی",
+                "settingInfoTab": "تنظیمات"
+            }
+        }
+    }
+}

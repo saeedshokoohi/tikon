@@ -1,0 +1,29 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+
+    <div class="modal-body">
+  <action-bar></action-bar>
+      <!--  <div class="form-group" ng-show="vm.agreementInfo.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.agreementInfo.id" readonly />
+        </div>-->
+        <div class="form-group" >
+            <label style="padding: 10px"  active="active" class="control-label" translate="tikonApp.agreementInfo.rules" for="field_rules">Rules</label>
+            <div height="300" style="padding: 10px"   type="text" summernote class="form-control" name="rules" id="field_rules"
+                    ng-model="vm.companyInfo.agreementInfo.rules"
+                     >
+                </div>
+        </div>
+        <div class="form-group" style="height: 310px" >
+            <label style="padding: 10px"  class="control-label" translate="tikonApp.agreementInfo.agreement" for="field_agreement">Agreement</label>
+            <div height="300"  type="text" summernote  class="form-control" name="agreement" id="field_agreement"
+                    ng-model="vm.companyInfo.agreementInfo.agreement"
+                     >
+                </div>
+        </div>
+
+    </div>
+
+</form>

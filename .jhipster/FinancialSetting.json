@@ -1,0 +1,25 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "taxPercentage",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "hasDiscount",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "currency",
+      "fieldType": "Currency",
+      "fieldValues": "RIAL"
+    }
+  ],
+  "changelogDate": "20160630101340",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

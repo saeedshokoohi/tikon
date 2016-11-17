@@ -1,0 +1,13 @@
+{
+    "tikonApp": {
+        "ActivityType" : {
+            "null": "انتخاب کنید",
+            "BEAUTY": "زیبایی",
+            "TRAVEL": "گردشگری",
+            "HEALTH": "سلامتی",
+            "SPORT": "ورزش",
+            "EDUCATION": "آموزشی",
+            "OTHER": "دیگر موارد"
+        }
+    }
+}

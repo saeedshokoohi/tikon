@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "cancelingInfo" : {
+            "home": {
+                "title": "Canceling Infos",
+                "createLabel": "Create a new Canceling Info",
+                "createOrEditLabel": "Create or edit a Canceling Info",
+                "search": "Search for Canceling Info"
+            },
+            "created": "A new Canceling Info is created with identifier {{ param }}",
+            "updated": "A Canceling Info is updated with identifier {{ param }}",
+            "deleted": "A Canceling Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Canceling Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Canceling Info"
+            },
+            "description": "Description",
+            "status": "Status"
+        }
+    }
+}

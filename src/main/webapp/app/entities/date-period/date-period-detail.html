@@ -1,0 +1,28 @@
+
+<div>
+    <h2><span translate="tikonApp.datePeriod.detail.title">Date Period</span> {{vm.datePeriod.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.datePeriod.fromDate">From Date</span></dt>
+        <dd>
+            <span>{{vm.datePeriod.fromDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.datePeriod.toDate">To Date</span></dt>
+        <dd>
+            <span>{{vm.datePeriod.toDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.datePeriod.offdays">Offdays</span></dt>
+        <dd>
+            <span ng-repeat="offdays in vm.datePeriod.offdays">
+                <a ui-sref="off-day-detail({id: {{offdays.id}}})">{{offdays.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

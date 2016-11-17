@@ -1,0 +1,45 @@
+{
+    "register": {
+        "title": "ثبت نام",
+        "form": {
+            "button": "ثبت نام"
+        },
+        "messages": {
+            "validate": {
+                "login": {
+                    "required": "نام کاربری درج نشده است.",
+                    "minlength": "نام کاربری باید حداقل شامل یک حرف باشد.",
+                    "maxlength": "نام کاربری نمیتواند از 50 حرف بیشتر باشد.",
+                    "pattern": "Your username can only contain lower-case letters and digits."
+                },
+                "phoneNumber":{
+                    "required": "شماره موبایل درج نشده است."
+
+                }
+            },
+            "success": "<strong>ثبت نام با موفقیت انجام شد!</strong> کد فعال سازی برای شما ارسال شد.",
+            "error": {
+                "fail": "<strong>ثبت نام با خطا مواجه شد!</strong> لطفا در زمان دیگری تلاش کنید.",
+                "userexists": "<strong>نام کاربری وارد شده قبلا ثبت نام شده است!</strong>لطفا نام کاربری دیگری انتخاب کنید.",
+                "emailexists": "<strong>ایمیل وارد شده موجود می باشد!</strong> لطفا ایمیل دیگری وارد کنید.",
+                "phonenumberexists": "<strong>موبایل وارد شده موجود می باشد!</strong> لطفا موایل دیگری وارد کنید."
+            }
+        }
+        ,
+        "activated": {
+            "title": "فعال سازی",
+            "key":"کد فعال سازی",
+            "keyPlaceHolder":"کد فعال سازی",
+            "resendkey":"ارسال مجدد",
+                "messages": {
+                "success": "<strong>نام کاربری شما فعال شد.</strong>",
+                "error": "<strong>کد وارد شده صحیح نمی باشد.</strong> ",
+                "enter":"ورود به سایت",
+                "reSendActivationKey":"کد فعال سازی برای شما ارسال شد.",
+                "reSendActivationKeyError":"خطا در ارسال کد فعال سازی .لطفا مجدد تلاش کنید"
+
+            }
+        }
+
+    }
+}

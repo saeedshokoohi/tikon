@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="tikonApp.serviceTimeSession.detail.title">Service Time Session</span> {{vm.serviceTimeSession.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.serviceTimeSession.startTime">Start Time</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.startTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.endTime">End Time</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.endTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.startDate">Start Date</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.startDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.endDate">End Date</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.endDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.capacity">Capacity</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.capacity}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.comment">Comment</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.comment}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.price">Price</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.price}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.discount">Discount</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSession.discount}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.serviceTimeSessionInfo">Service Time Session Info</span></dt>
+        <dd>
+            <a ui-sref="service-time-session-info-detail({id:vm.serviceTimeSession.serviceTimeSessionInfoId})">{{vm.serviceTimeSession.serviceTimeSessionInfoId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSession.sessionTimes">Session Times</span></dt>
+        <dd>
+            <a ui-sref="service-time-session-info-detail({id:vm.serviceTimeSession.sessionTimesId})">{{vm.serviceTimeSession.sessionTimesId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

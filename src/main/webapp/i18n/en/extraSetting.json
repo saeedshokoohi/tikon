@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "extraSetting" : {
+            "home": {
+                "title": "Extra Settings",
+                "createLabel": "Create a new Extra Setting",
+                "createOrEditLabel": "Create or edit a Extra Setting",
+                "search": "Search for Extra Setting"
+            },
+            "created": "A new Extra Setting is created with identifier {{ param }}",
+            "updated": "A Extra Setting is updated with identifier {{ param }}",
+            "deleted": "A Extra Setting is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Extra Setting {{ id }}?"
+            },
+            "detail": {
+                "title": "Extra Setting"
+            },
+            "key": "Key",
+            "value": "Value",
+            "settingInfo": "Setting Info"
+        }
+    }
+}

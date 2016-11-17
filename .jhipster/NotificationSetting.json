@@ -1,0 +1,38 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "sendBookingConfirmation",
+      "fieldType": "NotificationType",
+      "fieldValues": "NONE,SMS,EMAIL,SMS_AND_EMAIL"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "sendOnCancelBooking",
+      "fieldType": "NotificationType",
+      "fieldValues": "NONE,SMS,EMAIL,SMS_AND_EMAIL"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "sendOnMoveBooking",
+      "fieldType": "NotificationType",
+      "fieldValues": "NONE,SMS,EMAIL,SMS_AND_EMAIL"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "sendCustomerReminder",
+      "fieldType": "NotificationType",
+      "fieldValues": "NONE,SMS,EMAIL,SMS_AND_EMAIL"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "reminderTimeInAdvanced",
+      "fieldType": "Double"
+    }
+  ],
+  "changelogDate": "20160630101341",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

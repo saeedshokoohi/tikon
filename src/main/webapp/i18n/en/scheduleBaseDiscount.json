@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "scheduleBaseDiscount" : {
+            "home": {
+                "title": "Schedule Base Discounts",
+                "createLabel": "Create a new Schedule Base Discount",
+                "createOrEditLabel": "Create or edit a Schedule Base Discount",
+                "search": "Search for Schedule Base Discount"
+            },
+            "created": "A new Schedule Base Discount is created with identifier {{ param }}",
+            "updated": "A Schedule Base Discount is updated with identifier {{ param }}",
+            "deleted": "A Schedule Base Discount is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Schedule Base Discount {{ id }}?"
+            },
+            "detail": {
+                "title": "Schedule Base Discount"
+            },
+            "amount": "Amount",
+            "scheduleInfo": "Schedule Info",
+            "discountInfo": "Discount Info"
+        }
+    }
+}

@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span translate="tikonApp.serviceOptionItem.detail.title">Service Option Item</span> {{vm.serviceOptionItem.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.serviceOptionItem.optionName">Option Name</span></dt>
+        <dd>
+            <span>{{vm.serviceOptionItem.optionName}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceOptionItem.description">Description</span></dt>
+        <dd>
+            <span>{{vm.serviceOptionItem.description}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceOptionItem.optionInfo">Option Info</span></dt>
+        <dd>
+            <a ui-sref="service-option-info-detail({id:vm.serviceOptionItem.optionInfoId})">{{vm.serviceOptionItem.optionInfoId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceOptionItem.priceInfo">Price Info</span></dt>
+        <dd>
+            <a ui-sref="price-info-detail({id:vm.serviceOptionItem.priceInfoId})">{{vm.serviceOptionItem.priceInfoId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceOptionItem.images">Images</span></dt>
+        <dd>
+            <a ui-sref="album-info-detail({id:vm.serviceOptionItem.imagesId})">{{vm.serviceOptionItem.imagesId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ImageData.
+    -->
+    <changeSet id="20160630101326-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="album_info_id"
+                                 baseTableName="image_data"
+                                 constraintName="fk_imagedata_albuminfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="album_info"/>
+
+    </changeSet>
+</databaseChangeLog>

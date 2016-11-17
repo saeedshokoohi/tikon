@@ -1,0 +1,14 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "qty",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160630101329",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

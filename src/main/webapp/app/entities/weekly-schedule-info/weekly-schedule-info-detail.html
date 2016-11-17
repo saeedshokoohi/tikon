@@ -1,0 +1,32 @@
+
+<div>
+    <h2><span translate="tikonApp.weeklyScheduleInfo.detail.title">Weekly Schedule Info</span> {{vm.weeklyScheduleInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.weeklyScheduleInfo.datePeriod">Date Period</span></dt>
+        <dd>
+            <span ng-repeat="datePeriod in vm.weeklyScheduleInfo.datePeriods">
+                <a ui-sref="date-period-detail({id: {{datePeriod.id}}})">{{datePeriod.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="tikonApp.weeklyScheduleInfo.dailyDuration">Daily Duration</span></dt>
+        <dd>
+            <span ng-repeat="dailyDuration in vm.weeklyScheduleInfo.dailyDurations">
+                <a ui-sref="time-period-detail({id: {{dailyDuration.id}}})">{{dailyDuration.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="tikonApp.weeklyScheduleInfo.weekdays">Weekdays</span></dt>
+        <dd>
+            <span ng-repeat="weekdays in vm.weeklyScheduleInfo.weekdays">
+                <a ui-sref="weekly-work-day-detail({id: {{weekdays.id}}})">{{weekdays.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

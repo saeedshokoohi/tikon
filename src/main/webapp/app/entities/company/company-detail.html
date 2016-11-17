@@ -1,0 +1,56 @@
+
+<div>
+    <h2><span translate="tikonApp.company.detail.title">Company</span> {{vm.company.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.company.title">Title</span></dt>
+        <dd>
+            <span>{{vm.company.title}}</span>
+        </dd>
+        <dt><span translate="tikonApp.company.description">Description</span></dt>
+        <dd>
+            <span>{{vm.company.description}}</span>
+        </dd>
+        <dt><span translate="tikonApp.company.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.company.phoneNumber}}</span>
+        </dd>
+        <dt><span translate="tikonApp.company.activityType">Activity Type</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.ActivityType.' + vm.company.activityType}}">{{vm.company.activityType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.company.webSiteUrl">Web Site Url</span></dt>
+        <dd>
+            <span>{{vm.company.webSiteUrl}}</span>
+        </dd>
+        <dt><span translate="tikonApp.company.keyUrl">Key Url</span></dt>
+        <dd>
+            <span>{{vm.company.keyUrl}}</span>
+        </dd>
+        <dt><span translate="tikonApp.company.setting">Setting</span></dt>
+        <dd>
+            <a ui-sref="setting-info-detail({id:vm.company.settingId})">{{vm.company.settingId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.company.agreement">Agreement</span></dt>
+        <dd>
+            <a ui-sref="agreement-info-detail({id:vm.company.agreementId})">{{vm.company.agreementId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.company.location">Location</span></dt>
+        <dd>
+            <a ui-sref="location-info-detail({id:vm.company.locationId})">{{vm.company.locationId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.company.tags">Tags</span></dt>
+        <dd>
+            <span ng-repeat="tags in vm.company.tags">
+                <a ui-sref="meta-tag-detail({id: {{tags.id}}})">{{tags.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

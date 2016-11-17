@@ -1,0 +1,48 @@
+
+<div>
+    <h2><span translate="tikonApp.imageData.detail.title">Image Data</span> {{vm.imageData.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.imageData.fileName">File Name</span></dt>
+        <dd>
+            <span>{{vm.imageData.fileName}}</span>
+        </dd>
+        <dt><span translate="tikonApp.imageData.caption">Caption</span></dt>
+        <dd>
+            <span>{{vm.imageData.caption}}</span>
+        </dd>
+        <dt><span translate="tikonApp.imageData.fileType">File Type</span></dt>
+        <dd>
+            <span>{{vm.imageData.fileType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.imageData.fileData">File Data</span></dt>
+        <dd>
+            <div ng-if="vm.imageData.fileData">
+                <a ng-click="vm.openFile(vm.imageData.fileDataContentType, vm.imageData.fileData)" translate="entity.action.open">open</a>
+                {{vm.imageData.fileDataContentType}}, {{vm.byteSize(vm.imageData.fileData)}}
+            </div>
+        </dd>
+        <dt><span translate="tikonApp.imageData.thumbnailData">Thumbnail Data</span></dt>
+        <dd>
+            <div ng-if="vm.imageData.thumbnailData">
+                <a ng-click="vm.openFile(vm.imageData.thumbnailDataContentType, vm.imageData.thumbnailData)" translate="entity.action.open">open</a>
+                {{vm.imageData.thumbnailDataContentType}}, {{vm.byteSize(vm.imageData.thumbnailData)}}
+            </div>
+        </dd>
+        <dt><span translate="tikonApp.imageData.isCoverImage">Is Cover Image</span></dt>
+        <dd>
+            <span>{{vm.imageData.isCoverImage}}</span>
+        </dd>
+        <dt><span translate="tikonApp.imageData.albumInfo">Album Info</span></dt>
+        <dd>
+            <a ui-sref="album-info-detail({id:vm.imageData.albumInfoId})">{{vm.imageData.albumInfoId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

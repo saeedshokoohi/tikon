@@ -1,0 +1,29 @@
+{
+    "tikonApp": {
+        "locationInfo" : {
+            "home": {
+                "title": "محل کسب و کار",
+                "createLabel": "Create a new Location Info",
+                "createOrEditLabel": "Create or edit a Location Info",
+                "search": "Search for Location Info"
+            },
+            "created": "A new Location Info is created with identifier {{ param }}",
+            "updated": "A Location Info is updated with identifier {{ param }}",
+            "deleted": "A Location Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Location Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Location Info"
+            },
+            "title": "عنوان",
+            "address": "آدرس",
+            "mapX": "Map X",
+            "mapY": "Map Y",
+            "isActive": "Is Active",
+            "country": "کشور",
+            "state": "استان",
+            "city": "شهر"
+        }
+    }
+}

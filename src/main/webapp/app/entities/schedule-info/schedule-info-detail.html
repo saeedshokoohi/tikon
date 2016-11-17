@@ -1,0 +1,22 @@
+
+<div>
+    <h2><span translate="tikonApp.scheduleInfo.detail.title">Schedule Info</span> {{vm.scheduleInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.scheduleInfo.scheduleType">Schedule Type</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.ScheduleType.' + vm.scheduleInfo.scheduleType}}">{{vm.scheduleInfo.scheduleType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.scheduleInfo.weeklyScheduleInfo">Weekly Schedule Info</span></dt>
+        <dd>
+            <a ui-sref="weekly-schedule-info-detail({id:vm.scheduleInfo.weeklyScheduleInfoId})">{{vm.scheduleInfo.weeklyScheduleInfoId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

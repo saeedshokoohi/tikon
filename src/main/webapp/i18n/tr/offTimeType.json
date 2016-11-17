@@ -1,0 +1,9 @@
+{
+    "tikonApp": {
+        "OffTimeType" : {
+            "null": "",
+            "REST_TIME": "REST_TIME",
+            "DINNER_TIME": "DINNER_TIME"
+        }
+    }
+}

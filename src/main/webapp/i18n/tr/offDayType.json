@@ -1,0 +1,11 @@
+{
+    "tikonApp": {
+        "OffDayType" : {
+            "null": "",
+            "WEEKEND": "WEEKEND",
+            "NEW_YEAR_HOLYDAY": "NEW_YEAR_HOLYDAY",
+            "CALENDAR_HOLYDAY": "CALENDAR_HOLYDAY",
+            "COMPANY_HOLYDAY": "COMPANY_HOLYDAY"
+        }
+    }
+}

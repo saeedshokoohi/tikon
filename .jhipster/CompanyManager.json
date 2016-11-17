@@ -1,0 +1,29 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "company",
+      "otherEntityName": "company",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "personInfo",
+      "otherEntityName": "personInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "managerType",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160630101305",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "metaTag" : {
+            "home": {
+                "title": "Meta Tags",
+                "createLabel": "Create a new Meta Tag",
+                "createOrEditLabel": "Create or edit a Meta Tag",
+                "search": "Search for Meta Tag"
+            },
+            "created": "A new Meta Tag is created with identifier {{ param }}",
+            "updated": "A Meta Tag is updated with identifier {{ param }}",
+            "deleted": "A Meta Tag is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Meta Tag {{ id }}?"
+            },
+            "detail": {
+                "title": "Meta Tag"
+            },
+            "tag": "Tag",
+            "company": "Company",
+            "serviceItem": "Service Item"
+        }
+    }
+}

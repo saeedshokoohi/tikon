@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "scheduleInfo" : {
+            "home": {
+                "title": "Schedule Infos",
+                "createLabel": "Create a new Schedule Info",
+                "createOrEditLabel": "Create or edit a Schedule Info",
+                "search": "Search for Schedule Info"
+            },
+            "created": "A new Schedule Info is created with identifier {{ param }}",
+            "updated": "A Schedule Info is updated with identifier {{ param }}",
+            "deleted": "A Schedule Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Schedule Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Schedule Info"
+            },
+            "scheduleType": "Schedule Type",
+            "weeklyScheduleInfo": "Weekly Schedule Info",
+            "serviceItems": "Service Items"
+        }
+    }
+}

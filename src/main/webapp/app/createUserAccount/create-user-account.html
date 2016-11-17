@@ -1,0 +1,310 @@
+<div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1 ng-if="vm.formMode == 'REGISTER'" translate="register.title">Registration</h1>
+
+            <h1 ng-if="vm.formMode == 'ACTIVEUSER'" translate="register.activated.title">Activation</h1>
+
+            <div ng-if="!vm.activatedSuccess">
+                <div class="alert alert-success" ng-show="vm.success && !vm.activateError && !vm.regenerateSuccess "
+                     translate="register.messages.success">
+                    <strong>Registration saved!</strong> Please check your email for confirmation.
+                </div>
+
+                <div class="alert alert-danger" ng-show="vm.error" translate="register.messages.error.fail">
+                    <strong>Registration failed!</strong> Please try again later.
+                </div>
+
+                <div class="alert alert-danger" ng-show="vm.errorUserExists"
+                     translate="register.messages.error.userexists">
+                    <strong>Login name already registered!</strong> Please choose another one.
+                </div>
+
+                <div class="alert alert-danger" ng-show="vm.errorEmailExists"
+                     translate="register.messages.error.emailexists">
+                    <strong>E-mail is already in use!</strong> Please choose another one.
+                </div>
+
+                <div class="alert alert-danger" ng-show="vm.doNotMatch" translate="global.messages.error.dontmatch">
+                    The password and its confirmation do not match!
+                </div>
+
+                <div class="alert alert-danger" ng-show="vm.errorPhoneNumberExists"
+                     translate="register.messages.error.phonenumberexists">
+                    <strong>Phone Number is already in use!</strong> Please choose another one.
+                </div>
+
+            </div>
+
+            <div class="alert alert-success" ng-show="vm.activatedSuccess "
+                 translate="register.activated.messages.success">
+                <strong>Your user has been activated.</strong> Please <a class="alert-link" href=""
+                 ng-click="vm.login()">sign in</a>.
+            </div>
+
+            <div class="alert alert-danger" ng-show="vm.activateError"
+                 translate="register.activated.messages.error">
+                <strong>Activation code is invalid!.</strong>
+            </div>
+
+            <div ng-if="!vm.activatedSuccess">
+                <div class="alert alert-success" ng-show="vm.regenerateSuccess"
+                     translate="register.activated.messages.reSendActivationKey">
+                    <strong>Activation code Resend.</strong>
+                </div>
+
+                <div class="alert alert-danger" ng-show="vm.regenerateError"
+                     translate="register.activated.messages.reSendActivationKeyError">
+                    <strong>Error in Resend Activation Code.Try Later .</strong>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+
+            <form name="form" role="form" novalidate ng-submit="vm.submited()" show-validation>
+                <div ng-if="vm.formMode == 'REGISTER'">
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.personInfo.fisrtName" for="fisrtName">Fisrt
+                            Name</label>
+                        <input type="text" class="form-control" name="fisrtName" id="field_fisrtName"
+                               ng-model="vm.registerAccount.firstName"
+                        />
+
+                        <div ng-show="form.fisrtName.$dirty && form.fisrtName.$invalid">
+                            <p class="help-block"
+                               ng-show="form.fisrtName.$error.required"
+                               translate="register.messages.validate.login.required">
+                                Your username is required.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.fisrtName.$error.minlength"
+                               translate="register.messages.validate.login.minlength">
+                                Your username is required to be at least 1 character.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.fisrtName.$error.maxlength"
+                               translate="register.messages.validate.login.maxlength">
+                                Your username cannot be longer than 50 characters.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.fisrtName.$error.pattern"
+                               translate="register.messages.validate.login.pattern">
+                                Your username can only contain lower-case letters and digits.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.personInfo.lastName" for="lastName">last
+                            Name</label>
+                        <input type="text" class="form-control" name="lastName" id="field_lastName"
+                               ng-model="vm.registerAccount.lastName"
+                        />
+
+                        <div ng-show="form.lastName.$dirty && form.lastName.$invalid">
+                            <p class="help-block"
+                               ng-show="form.lastName.$error.required"
+                               translate="register.messages.validate.login.required">
+                                Your username is required.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.lastName.$error.minlength"
+                               translate="register.messages.validate.login.minlength">
+                                Your username is required to be at least 1 character.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.lastName.$error.maxlength"
+                               translate="register.messages.validate.login.maxlength">
+                                Your username cannot be longer than 50 characters.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.lastName.$error.pattern"
+                               translate="register.messages.validate.login.pattern">
+                                Your username can only contain lower-case letters and digits.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="login" translate="global.form.username">Username</label>
+                        <input type="text" class="form-control" id="login" name="login"
+                               placeholder="{{'global.form.username.placeholder' | translate}}"
+                               ng-model="vm.registerAccount.login" ng-minlength=1 ng-maxlength=50
+                               ng-pattern="/^[_'.@A-Za-z0-9-]*$/" required>
+
+                        <div ng-show="form.login.$dirty && form.login.$invalid">
+                            <p class="help-block"
+                               ng-show="form.login.$error.required"
+                               translate="register.messages.validate.login.required">
+                                Your username is required.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.login.$error.minlength"
+                               translate="register.messages.validate.login.minlength">
+                                Your username is required to be at least 1 character.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.login.$error.maxlength"
+                               translate="register.messages.validate.login.maxlength">
+                                Your username cannot be longer than 50 characters.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.login.$error.pattern" translate="register.messages.validate.login.pattern">
+                                Your username can only contain lower-case letters and digits.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="phoneNumber" translate="tikonApp.personInfo.phoneNumber">Phone
+                            Number</label>
+                        <input type="phoneNumber" class="form-control" id="phoneNumber" name="phoneNumber"
+                               placeholder="{{'tikonApp.personInfo.phoneNumber' | translate}}"
+                               ng-model="vm.registerAccount.phoneNumber" ng-minlength=11 ng-maxlength=11 required>
+
+                        <div ng-show="form.phoneNumber.$dirty && form.phoneNumber.$invalid">
+                            <p class="help-block"
+                               ng-show="form.phoneNumber.$error.required"
+                               translate="global.messages.validate.phoneNumber.required">
+                                Your phone number is required.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="email" translate="global.form.email">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                               placeholder="{{'global.form.email.placeholder' | translate}}"
+                               ng-model="vm.registerAccount.email" ng-minlength=5 ng-maxlength=100 required>
+
+                        <div ng-show="form.email.$dirty && form.email.$invalid">
+                            <p class="help-block"
+                               ng-show="form.email.$error.required" translate="global.messages.validate.email.required">
+                                Your e-mail is required.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.email.$error.email" translate="global.messages.validate.email.invalid">
+                                Your e-mail is invalid.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.email.$error.minlength"
+                               translate="global.messages.validate.email.minlength">
+                                Your e-mail is required to be at least 5 characters.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.email.$error.maxlength"
+                               translate="global.messages.validate.email.maxlength">
+                                Your e-mail cannot be longer than 100 characters.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="password" translate="global.form.newpassword">New
+                            password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                               placeholder="{{'global.form.newpassword.placeholder' | translate}}"
+                               ng-model="vm.registerAccount.password" ng-minlength=4 ng-maxlength=50 required>
+
+                        <div ng-show="form.password.$dirty && form.password.$invalid">
+                            <p class="help-block"
+                               ng-show="form.password.$error.required"
+                               translate="global.messages.validate.newpassword.required">
+                                Your password is required.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.password.$error.minlength"
+                               translate="global.messages.validate.newpassword.minlength">
+                                Your password is required to be at least 4 characters.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.password.$error.maxlength"
+                               translate="global.messages.validate.newpassword.maxlength">
+                                Your password cannot be longer than 50 characters.
+                            </p>
+                        </div>
+                        <password-strength-bar password-to-check="vm.registerAccount.password"></password-strength-bar>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="confirmPassword" translate="global.form.confirmpassword">New
+                            password confirmation</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                               placeholder="{{'global.form.confirmpassword.placeholder' | translate}}"
+                               ng-model="vm.confirmPassword" ng-minlength=4 ng-maxlength=50 required>
+
+                        <div ng-show="form.confirmPassword.$dirty && form.confirmPassword.$invalid">
+                            <p class="help-block"
+                               ng-show="form.confirmPassword.$error.required"
+                               translate="global.messages.validate.confirmpassword.required">
+                                Your confirmation password is required.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.confirmPassword.$error.minlength"
+                               translate="global.messages.validate.confirmpassword.minlength">
+                                Your confirmation password is required to be at least 4 characters.
+                            </p>
+
+                            <p class="help-block"
+                               ng-show="form.confirmPassword.$error.maxlength"
+                               translate="global.messages.validate.confirmpassword.maxlength">
+                                Your confirmation password cannot be longer than 50 characters.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary"
+                            translate="register.form.button">Register
+                    </button>
+
+                </div>
+                <div ng-if="vm.formMode == 'ACTIVEUSER'">
+
+                    <div class="form-group" ng-show="!vm.activatedSuccess">
+                        <label class="control-label" for="key" translate="register.activated.key">Key</label>
+                        <input type="key" class="form-control" id="key" name="key"
+                               placeholder="{{'register.activated.keyPlaceHolder' | translate}}"
+                               ng-model="vm.key" ng-minlength=5 ng-maxlength=5 required>
+
+                        <div>
+                            <button type="button" ng-disabled="form.$invalid" class="btn btn-default"
+                                    ng-click="vm.activateUser()"
+                                    translate="register.activated.title">Activate
+                            </button>
+                            <button type="button"  class="btn btn-default"
+                                    ng-click="vm.regenerateActivationKey()"
+                                    translate="register.activated.resendkey">Activate
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group" ng-show="vm.activatedSuccess">
+                        <button type="button"  class="btn btn-default"
+                                ng-click="vm.login()"
+                                translate="register.activated.messages.enter">Enter
+                        </button>
+                    </div>
+
+                </div>
+
+
+            </form>
+
+
+
+        </div>
+    </div>
+</div>

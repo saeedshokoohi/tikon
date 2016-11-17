@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "companySocialNetworkInfo" : {
+            "home": {
+                "title": "Company Social Network Infos",
+                "createLabel": "Create a new Company Social Network Info",
+                "createOrEditLabel": "Create or edit a Company Social Network Info",
+                "search": "Search for Company Social Network Info"
+            },
+            "created": "A new Company Social Network Info is created with identifier {{ param }}",
+            "updated": "A Company Social Network Info is updated with identifier {{ param }}",
+            "deleted": "A Company Social Network Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Company Social Network Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Company Social Network Info"
+            },
+            "orderNumber": "Order Number",
+            "company": "Company",
+            "socialNetworkInfo": "Social Network Info"
+        }
+    }
+}

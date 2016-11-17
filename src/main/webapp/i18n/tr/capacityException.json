@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "capacityException" : {
+            "home": {
+                "title": "Capacity Exceptions",
+                "createLabel": "Create a new Capacity Exception",
+                "createOrEditLabel": "Create or edit a Capacity Exception",
+                "search": "Search for Capacity Exception"
+            },
+            "created": "A new Capacity Exception is created with identifier {{ param }}",
+            "updated": "A Capacity Exception is updated with identifier {{ param }}",
+            "deleted": "A Capacity Exception is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Capacity Exception {{ id }}?"
+            },
+            "detail": {
+                "title": "Capacity Exception"
+            },
+            "exceptionType": "Exception Type",
+            "reserveTime": "Reserve Time",
+            "newQty": "New Qty",
+            "serviceCapacityInfo": "Service Capacity Info"
+        }
+    }
+}

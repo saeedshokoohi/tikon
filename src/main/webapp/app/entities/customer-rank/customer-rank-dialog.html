@@ -1,0 +1,54 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCustomerRankLabel" translate="tikonApp.customerRank.home.createOrEditLabel">Create or edit a Customer Rank</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.customerRank.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.customerRank.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.customerRank.createDate" for="field_createDate">Create Date</label>
+                <div class="input-group">
+                    <input id="field_createDate" type="text" class="form-control" name="createDate" datetime-picker="{{dateformat}}" ng-model="vm.customerRank.createDate" is-open="vm.datePickerOpenStatus.createDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.customerRank.rankValue" for="field_rankValue">Rank Value</label>
+            <input type="number" class="form-control" name="rankValue" id="field_rankValue"
+                    ng-model="vm.customerRank.rankValue"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.customerRank.customer" for="field_customer">Customer</label>
+            <select class="form-control" id="field_customer" name="customer" ng-model="vm.customerRank.customerId" ng-options="customer.id as customer.id for customer in vm.customers"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.customerRank.serviceItem" for="field_serviceItem">Service Item</label>
+            <select class="form-control" id="field_serviceItem" name="serviceItem" ng-model="vm.customerRank.serviceItemId" ng-options="serviceItem.id as serviceItem.id for serviceItem in vm.serviceitems"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

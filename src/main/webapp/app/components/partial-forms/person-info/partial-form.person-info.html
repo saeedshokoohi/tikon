@@ -1,0 +1,112 @@
+<div>
+
+    <!--<jhi-alert></jhi-alert>-->
+    <!--<div class="container-fluid">-->
+    <!--<div class="row">-->
+    <!--</div>-->
+    <!--</div>-->
+    <!---->
+    <ul class="nav nav-tabs  nav-justified lightnav">
+        <li class="active"><a data-toggle="tab" data-target="#basicInfoTab">
+            <span translate="tikonApp.personInfo.sections.generalTab">generalTab </span>
+        </a></li>
+        <li><a data-toggle="tab" data-target="#locationInfoTab">
+            <span translate="tikonApp.personInfo.sections.locationTab">Location Tab </span>
+        </a></li>
+    </ul>
+
+
+    <div id="personInfo" >
+
+        <div class="tab-content panel panel-default">
+            <div id="basicInfoTab" class="tab-pane fade in active">
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.personInfo.fisrtName" for="field_fisrtName">Fisrt Name</label>
+                        <input type="text" class="form-control" name="fisrtName" id="field_fisrtName"
+                               ng-model="$ctrl.personInfo.fisrtName"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.personInfo.lastName" for="field_lastName">Last Name</label>
+                        <input type="text" class="form-control" name="lastName" id="field_lastName"
+                               ng-model="$ctrl.personInfo.lastName"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.personInfo.gender.title" >Gender</label>
+
+                        <input type="radio" name="gender_male"  id="field_genderMale" ng-model="$ctrl.personInfo.gender" ng-value="true" >
+                        <span translate="tikonApp.personInfo.gender.male" >Male</span>
+                        </input>
+
+                        <input type="radio" name="gender_female"  id="field_genderFemale" ng-model="$ctrl.personInfo.gender" ng-value="false" >
+                        <span translate="tikonApp.personInfo.gender.female" >Female</span>
+                        </input>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.personInfo.phoneNumber" for="field_phoneNumber">Phone Number</label>
+                        <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                               ng-model="$ctrl.personInfo.phoneNumber"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.personInfo.nationalCode" for="field_nationalCode">National Code</label>
+                        <input type="text" class="form-control" name="nationalCode" id="field_nationalCode"
+                               ng-model="$ctrl.personInfo.nationalCode"
+                        />
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="control-label" translate="tikonApp.personInfo.birthDate" for="field_birthDate">Birth Date</label>
+                        <eo-date-picker id="field_birthDate"  date-value="$ctrl.personInfo.birthDate" > </eo-date-picker>
+                    </div>
+
+
+            </div>
+            <div id="locationInfoTab" class="tab-pane fade">
+
+                <div>
+                    <div class="form-group">
+                        <label translate="tikonApp.locationInfo.country" for="field_country">Country</label>
+                        <select class="form-control" id="field_country" ng-change="$ctrl.country_changed()" name="country" ng-model="$ctrl.personInfo.location.countryId" ng-options="selectorData.id as selectorData.text for selectorData in $ctrl.countryList"            >
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label translate="tikonApp.locationInfo.state" for="field_state">State</label>
+                        <select class="form-control" id="field_state" name="state" ng-change="$ctrl.province_changed()" ng-model="$ctrl.personInfo.location.stateId" ng-options="selectorData.id as selectorData.text for selectorData in $ctrl.provinceList"            >
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label translate="tikonApp.locationInfo.city" for="field_city">City</label>
+                        <select class="form-control" id="field_city" name="city" ng-model="$ctrl.personInfo.location.cityId" ng-options="selectorData.id as selectorData.text for selectorData in $ctrl.cityList"            >
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" translate="tikonApp.locationInfo.address" for="field_address">Address</label>
+                        <input type="text" class="form-control" name="address" id="field_address"
+                               ng-model="$ctrl.personInfo.location.address"
+                        />
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="text-center">
+        <!-- <jhi-item-count page="$ctrl.page" total="$ctrl.queryCount"></jhi-item-count>
+         <uib-pagination class="pagination-sm" total-items="$ctrl.totalItems" ng-model="$ctrl.page" ng-change="$ctrl.transition()"></uib-pagination>-->
+    </div>
+
+
+</div>

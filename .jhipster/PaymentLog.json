@@ -1,0 +1,34 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "invoiceInfo",
+      "otherEntityName": "invoiceInfo",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "paymentLog"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "traceCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "paymentType",
+      "fieldType": "PaymentType",
+      "fieldValues": "CASH,CREDIT_CARD"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "createDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160630101315",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

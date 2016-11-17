@@ -1,0 +1,26 @@
+{
+    "tikonApp": {
+        "serviceOptionItem" : {
+            "home": {
+                "title": "Service Option Items",
+                "createLabel": "Create a new Service Option Item",
+                "createOrEditLabel": "Create or edit a Service Option Item",
+                "search": "Search for Service Option Item"
+            },
+            "created": "A new Service Option Item is created with identifier {{ param }}",
+            "updated": "A Service Option Item is updated with identifier {{ param }}",
+            "deleted": "A Service Option Item is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Service Option Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Service Option Item"
+            },
+            "optionName": "Option Name",
+            "description": "Description",
+            "optionInfo": "Option Info",
+            "priceInfo": "Price Info",
+            "images": "Images"
+        }
+    }
+}

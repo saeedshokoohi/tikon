@@ -1,0 +1,56 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "country",
+      "otherEntityName": "selectorData",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "state",
+      "otherEntityName": "selectorData",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "city",
+      "otherEntityName": "selectorData",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "mapX",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "mapY",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160630101316",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="tikonApp.companyManager.detail.title">Company Manager</span> {{vm.companyManager.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.companyManager.managerType">Manager Type</span></dt>
+        <dd>
+            <span>{{vm.companyManager.managerType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.companyManager.company">Company</span></dt>
+        <dd>
+            <a ui-sref="company-detail({id:vm.companyManager.companyId})">{{vm.companyManager.companyId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.companyManager.personInfo">Person Info</span></dt>
+        <dd>
+            <a ui-sref="person-info-detail({id:vm.companyManager.personInfoId})">{{vm.companyManager.personInfoId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

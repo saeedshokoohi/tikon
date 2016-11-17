@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="tikonApp.offTime.detail.title">Off Time</span> {{vm.offTime.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.offTime.i">I</span></dt>
+        <dd>
+            <span>{{vm.offTime.i}}</span>
+        </dd>
+        <dt><span translate="tikonApp.offTime.fromTime">From Time</span></dt>
+        <dd>
+            <span>{{vm.offTime.fromTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.offTime.toTime">To Time</span></dt>
+        <dd>
+            <span>{{vm.offTime.toTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.offTime.offTimeType">Off Time Type</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.OffTimeType.' + vm.offTime.offTimeType}}">{{vm.offTime.offTimeType}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

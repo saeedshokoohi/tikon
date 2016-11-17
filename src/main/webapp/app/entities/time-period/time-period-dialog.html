@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTimePeriodLabel" translate="tikonApp.timePeriod.home.createOrEditLabel">Create or edit a Time Period</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.timePeriod.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.timePeriod.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.timePeriod.startTime" for="field_startTime">Start Time</label>
+                <div class="input-group">
+                    <input id="field_startTime" type="text" class="form-control" name="startTime" datetime-picker="{{dateformat}}" ng-model="vm.timePeriod.startTime" is-open="vm.datePickerOpenStatus.startTime"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.timePeriod.endTime" for="field_endTime">End Time</label>
+                <div class="input-group">
+                    <input id="field_endTime" type="text" class="form-control" name="endTime" datetime-picker="{{dateformat}}" ng-model="vm.timePeriod.endTime" is-open="vm.datePickerOpenStatus.endTime"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.timePeriod.duration" for="field_duration">Duration</label>
+            <input type="number" class="form-control" name="duration" id="field_duration"
+                    ng-model="vm.timePeriod.duration"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.timePeriod.gaptime" for="field_gaptime">Gaptime</label>
+            <input type="number" class="form-control" name="gaptime" id="field_gaptime"
+                    ng-model="vm.timePeriod.gaptime"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.timePeriod.offtimes" for="field_offtimes">Offtimes</label>
+            <select class="form-control" id="field_offtimes" multiple name="offtimes" ng-model="vm.timePeriod.offtimes" ng-options="offTime as offTime.id for offTime in vm.offtimes track by offTime.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

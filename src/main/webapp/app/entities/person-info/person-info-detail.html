@@ -1,0 +1,48 @@
+
+<div>
+    <h2><span translate="tikonApp.personInfo.detail.title">Person Info</span> {{vm.personInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.personInfo.nationalCode">National Code</span></dt>
+        <dd>
+            <span>{{vm.personInfo.nationalCode}}</span>
+        </dd>
+        <dt><span translate="tikonApp.personInfo.fisrtName">Fisrt Name</span></dt>
+        <dd>
+            <span>{{vm.personInfo.fisrtName}}</span>
+        </dd>
+        <dt><span translate="tikonApp.personInfo.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.personInfo.lastName}}</span>
+        </dd>
+        <dt><span translate="tikonApp.personInfo.gender">Gender</span></dt>
+        <dd>
+            <span>{{vm.personInfo.gender}}</span>
+        </dd>
+        <dt><span translate="tikonApp.personInfo.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.personInfo.phoneNumber}}</span>
+        </dd>
+        <dt><span translate="tikonApp.personInfo.birthDate">Birth Date</span></dt>
+        <dd>
+            <span>{{vm.personInfo.birthDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.personInfo.location">Location</span></dt>
+        <dd>
+            <a ui-sref="location-info-detail({id:vm.personInfo.locationId})">{{vm.personInfo.locationId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.personInfo.socialNetworkInfo">Social Network Info</span></dt>
+        <dd>
+            <span ng-repeat="socialNetworkInfo in vm.personInfo.socialNetworkInfos">
+                <a ui-sref="social-network-info-detail({id: {{socialNetworkInfo.id}}})">{{socialNetworkInfo.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

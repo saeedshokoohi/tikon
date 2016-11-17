@@ -1,0 +1,35 @@
+{
+   "supplierPanel":{
+       "title":"پنل مدیریتی کارگزار",
+       "sideMenu": {
+           "companyInfo": {
+            "title":   "مشخصات کسب و کار",
+               "general":"اطلاعات عمومی",
+               "location":"محل کسب و کار",
+               "agreement":"قوانین و توافقنامه",
+               "setting":"تنطیمات"
+
+           },
+           "servantInfo":"سرویس دهندگان",
+           "serviceItem":{
+               "title":"سرویس ها",
+               "serviceCategory":"دسته بندی سرویس ها",
+               "serviceItemList":"لیست سرویس ها",
+               "addServiceItem":"ایجاد سرویس جدید",
+               "generalTab":"مشخصات عمومی",
+               "scheduleTab":"برنامه زمانی",
+               "priceTab":"قیمت گذاری",
+               "discountTab":"تخفیفات",
+               "optionTab":"خدمات انتخابی",
+               "imageAlbumTab":"تصاویر",
+               "capacityTab":"ظرفیت سرویس",
+               "settingTab":"تنظیمات رزرو",
+               "agreementTab":"قوانین",
+               "servantTab":"سرویس دهندگان"
+           },
+           "servicelist":"لیست سرویسها",
+           "generalSetting":"تنظیمات "
+
+       }
+   }
+}

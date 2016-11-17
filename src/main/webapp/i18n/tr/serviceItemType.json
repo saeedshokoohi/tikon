@@ -1,0 +1,10 @@
+{
+    "tikonApp": {
+        "ServiceItemType" : {
+            "null": "",
+            "INDEPENDENT_SERVICE": "INDEPENDENT_SERVICE",
+            "SERVICE_PACKAGE": "SERVICE_PACKAGE",
+            "DEPENDENT_SERVICE": "DEPENDENT_SERVICE"
+        }
+    }
+}

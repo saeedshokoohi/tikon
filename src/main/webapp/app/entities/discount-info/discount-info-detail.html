@@ -1,0 +1,22 @@
+
+<div>
+    <h2><span translate="tikonApp.discountInfo.detail.title">Discount Info</span> {{vm.discountInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.discountInfo.fixedDiscount">Fixed Discount</span></dt>
+        <dd>
+            <span>{{vm.discountInfo.fixedDiscount}}</span>
+        </dd>
+        <dt><span translate="tikonApp.discountInfo.discountType">Discount Type</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.DiscountType.' + vm.discountInfo.discountType}}">{{vm.discountInfo.discountType}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

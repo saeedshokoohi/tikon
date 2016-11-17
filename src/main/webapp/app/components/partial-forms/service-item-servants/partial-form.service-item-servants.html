@@ -1,0 +1,82 @@
+<div>
+
+    <!--<jhi-alert></jhi-alert>-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xs-4 no-padding-left" >
+                <div class="form-group">
+                    <label translate="tikonApp.servant.home.title" for="field_servant">Category</label>
+                    <select class="form-control" id="field_servant" name="servant"
+                            ng-model="$ctrl.servantToAdd"
+                            ng-options="servant as (servant.personInfo.fisrtName + ' -- '+ servant.personInfo.lastName)  for servant in $ctrl.servantsByCompany">
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-xs-4 no-padding-left">
+                <button type="button" class="btn btn-primary" ng-click="$ctrl.newItem()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" translate="tikonApp.servant.home.addToServiceItem">
+                        Create new Price Info
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <br/>
+
+    <div id="servantList" ng-if="$ctrl.formState=='list'">
+        <div class="table-responsive">
+            <table class="jh-table table table-striped">
+                <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <!--<th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="title"><span translate="tikonApp.servant.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="personInfoId"><span translate="tikonApp.servant.personInfo">Person Info</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="fisrtName"><span translate="tikonApp.personInfo.fisrtName">Fisrt Name</span> <span
+                        class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastName"><span translate="tikonApp.personInfo.lastName">Last Name</span> <span
+                        class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phoneNumber"><span translate="tikonApp.personInfo.phoneNumber">Phone Number</span>
+                        <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="level"><span translate="tikonApp.servant.level">Level</span> <span
+                        class="glyphicon glyphicon-sort"></span></th>
+
+                    <th></th>
+                </tr>
+
+                </thead>
+                <tbody>
+
+                <tr ng-repeat="servant in $ctrl.servants track by servant.id">
+                    <!--<td><a ui-sref="supplierPanel.servantListByCompany.edit({id:servant.id})">{{servant.id}}</a></td>-->
+                    <td>{{servant.personInfo.fisrtName}}</td>
+                    <td>{{servant.personInfo.lastName}}</td>
+                    <td>{{servant.personInfo.phoneNumber}}</td>
+                    <td>{{servant.level}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="button"
+                                    ng-click="$ctrl.removeServant(servant.id)"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <!-- <jhi-item-count page="$ctrl.page" total="$ctrl.queryCount"></jhi-item-count>
+         <uib-pagination class="pagination-sm" total-items="$ctrl.totalItems" ng-model="$ctrl.page" ng-change="$ctrl.transition()"></uib-pagination>-->
+    </div>
+
+
+</div>

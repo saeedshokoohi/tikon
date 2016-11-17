@@ -1,0 +1,99 @@
+<div>
+    <h2 translate="tikonApp.company.home.title">Companies</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="company.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="tikonApp.company.home.createLabel">
+                        Create new Company
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'tikonApp.company.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="title"><span translate="tikonApp.company.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="tikonApp.company.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="phoneNumber"><span translate="tikonApp.company.phoneNumber">Phone Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="activityType"><span translate="tikonApp.company.activityType">Activity Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="webSiteUrl"><span translate="tikonApp.company.webSiteUrl">Web Site Url</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="keyUrl"><span translate="tikonApp.company.keyUrl">Key Url</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="settingId"><span translate="tikonApp.company.setting">Setting</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="agreementId"><span translate="tikonApp.company.agreement">Agreement</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="locationId"><span translate="tikonApp.company.location">Location</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="company in vm.companies track by company.id">
+                    <td><a ui-sref="company-detail({id:company.id})">{{company.id}}</a></td>
+                    <td>{{company.title}}</td>
+                    <td>{{company.description}}</td>
+                    <td>{{company.phoneNumber}}</td>
+                    <td translate="{{'tikonApp.ActivityType.' + company.activityType}}">{{company.activityType}}</td>
+                    <td>{{company.webSiteUrl}}</td>
+                    <td>{{company.keyUrl}}</td>
+                    <td>
+                        <a ui-sref="setting-info-detail({id:company.settingId})">{{company.settingId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="agreement-info-detail({id:company.agreementId})">{{company.agreementId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="location-info-detail({id:company.locationId})">{{company.locationId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="company-detail({id:company.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="company.edit({id:company.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="company.delete({id:company.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

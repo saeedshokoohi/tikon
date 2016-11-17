@@ -1,0 +1,41 @@
+
+<div class="row" >
+    <div style="float: right">
+  <eo-time-picker id="timePeriodOffTimeFromTime" time-value="$ctrl.fromTime"></eo-time-picker>
+
+    </div>
+    <div style="float: right">
+        <p style="padding: 10px;">
+            تا
+
+        </p>
+    </div>
+    <div style="float: right">
+        <eo-time-picker id="timePeriodOffTimtoTime"  time-value="$ctrl.toTime"></eo-time-picker>
+    </div>
+      <div style="float: right" class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="$ctrl.onAddtime()"><i class="glyphicon glyphicon-plus"></i></button>
+              </div>
+</div>
+
+
+</div>
+<div class="row" style="height: 100px">
+
+
+
+    <fieldset class="standard" >
+
+        <div class="row">
+            <span    ng-repeat="time in $ctrl.offTimes">
+<span class="btn btn-default btn-sm offDate" ng-click="$ctrl.onRemovetime(time)" >
+  <span class="glyphicon glyphicon-remove"  ></span>
+    <span>
+             {{time.name}}
+        </span>
+</span>
+            </span>
+        </div>
+    </fieldset>
+</div>
+

@@ -1,0 +1,875 @@
+
+entity ServiceTimeSessionInfo
+{
+  id Long,
+  type Integer
+
+
+}
+entity ServiceTimeSession
+{
+  id Long,
+  startTime ZonedDateTime,
+  endTime ZonedDateTime,
+  startDate LocalDate,
+  endDate LocalDate,
+  capacity Integer,
+  comment String,
+  price Double,
+  discount Double
+
+}
+
+entity Company
+{
+  id Long,
+  title String,
+  description String,
+  phoneNumber String,
+  activityType ActivityType,
+  webSiteUrl String,
+  keyUrl String
+
+}
+
+entity MetaTag
+{
+  id Long,
+  tag String
+}
+entity CompanySocialNetworkInfo
+{
+  id Long,
+  orderNumber Integer
+}
+entity SocialNetworkInfo
+{
+   id Long,
+   socialNetworkType SocialNetworkType,
+   title String,
+   url String
+}
+
+
+
+entity CompanyManager
+{
+ id Long,
+ managerType Integer
+ }
+entity SelectorData
+{
+   id Long,
+   key String,
+   text String,
+   orderNo Integer
+}
+entity SelectorDataType
+{
+ id Long,
+ key String,
+ typeName String
+}
+entity ServiceCategory
+{
+  id Long,
+  categoryName String
+}
+
+
+entity Customer
+{
+  id Long,
+  userAccountId Long
+}
+
+entity OrderBag
+{
+id Long,
+createDate ZonedDateTime,
+status Integer
+}
+
+entity OrderBagServiceItem
+{
+ id Long,
+ status Integer,
+ subtotalServicePrice Double,
+ subtotalOptionPrice Double,
+ subtotalVAT Double,
+ subtotalDiscount Double,
+ totalRowPrice Double
+
+}
+
+
+entity OrderBagServiceItemDtail
+{
+   id Long,
+   reserveTime ZonedDateTime,
+   gty Double,
+   price Double,
+   discount Double,
+   vat Double,
+   totalPrice Double
+
+}
+
+entity InvoiceInfo
+{
+  id Long,
+  createDate ZonedDateTime
+
+}
+
+entity OrderBagItemOption
+{
+   id Long,
+   reserveTime ZonedDateTime,
+   qty Double,
+   price Double,
+   discount Double,
+   vat Double,
+   totalPrice Double
+}
+
+entity PaymentLog
+{
+  id Long,
+  traceCode String,
+  paymentType PaymentType,
+  createDate ZonedDateTime
+
+}
+
+entity LocationInfo
+{
+  id Long,
+  title String,
+  address String,
+   mapX String,
+  mapY String,
+  isActive Boolean
+
+}
+
+entity PersonInfo
+{
+  id Long,
+  nationalCode String,
+  fisrtName String,
+  lastName String,
+  gender Boolean,
+  phoneNumber String,
+  birthDate ZonedDateTime
+}
+
+
+
+entity PriceInfo
+{
+id Long,
+fromValidDate ZonedDateTime,
+
+priceType PriceType
+
+}
+entity PriceInfoDtail
+{
+id Long,
+title String,
+capacityRatio Integer,
+price Double,
+coworkerPrice Double
+
+}
+relationship ManyToOne
+{
+  PriceInfoDtail to PriceInfo
+}
+entity DiscountInfo
+{
+id Long,
+fixedDiscount Double,
+discountType DiscountType
+}
+entity ScheduleBaseDiscount
+{
+  id Long,
+  amount Double
+}
+
+
+entity ServiceOptionInfo
+{
+  id Long,
+  title String
+
+}
+
+entity ServiceOptionItem
+{
+id Long,
+optionName String,
+description String
+}
+
+entity Servant
+ {
+   id Long,
+   title String,
+   level Integer
+ }
+
+entity AlbumInfo
+ {
+   id Long,
+   isSingleImage Boolean,
+   caption String
+
+ }
+
+
+entity ImageData
+ {
+   id Long,
+   fileName String,
+   caption String,
+   fileType String,
+   fileData Blob,
+   thumbnailData Blob,
+   isCoverImage Boolean
+ }
+
+
+
+entity ServiceItem
+  {
+  id Long,
+  itemTitle String,
+  description String,
+  minPreReserveTime Double,
+  maxPreReserveTime Double,
+  hasWaitingList Boolean,
+  mustGetParticipantInfo Boolean,
+  canBeCanceled Boolean,
+  minPreCancelTime Double,
+  paymentType Integer,
+  serviceType ServiceItemType
+
+  }
+  entity RelatedServiceItem
+  {
+   id Long,
+   type Integer
+  }
+
+entity ServiceCapacityInfo
+  {
+  id Long,
+   qty Integer
+
+  }
+entity CapacityException
+ {
+   id Long,
+   exceptionType Integer,
+   reserveTime ZonedDateTime,
+   newQty Integer
+
+
+ }
+
+entity DatePeriod
+  {
+    id Long,
+    fromDate LocalDate,
+    toDate LocalDate
+  }
+
+entity OffDay
+  {
+   id Long,
+   offDate LocalDate,
+   offDayType OffDayType
+  }
+
+entity OffTime
+  {
+  i Long,
+  fromTime ZonedDateTime,
+  toTime ZonedDateTime,
+  offTimeType OffTimeType
+  }
+
+entity WeeklyWorkDay
+  {
+  id Long,
+  weekday WeekDay
+  }
+
+entity TimePeriod
+  {
+   id Long,
+   startTime ZonedDateTime,
+   endTime ZonedDateTime,
+   duration Integer,
+   gaptime Integer
+
+  }
+
+
+
+entity WeeklyScheduleInfo
+ {
+    id Long
+ }
+
+entity ScheduleInfo
+{
+id Long,
+scheduleType ScheduleType
+}
+
+entity SettingInfo
+{
+   id Long,
+   settingName String
+}
+
+entity ThemeSettingInfo
+    {
+     id Long,
+     name String
+
+    }
+ entity FinancialSetting
+{
+  id Long,
+  taxPercentage Double,
+  hasDiscount Boolean,
+  currency Currency
+}
+entity NotificationSetting
+{
+  id Long,
+  sendBookingConfirmation NotificationType,
+  sendOnCancelBooking NotificationType,
+  sendOnMoveBooking NotificationType,
+  sendCustomerReminder NotificationType,
+  reminderTimeInAdvanced Double
+
+}
+entity ExtraSetting
+{
+   id Long,
+   key String,
+   value String
+}
+
+entity ParticipantPerson
+{
+   id Long
+
+}
+entity CancelingInfo
+{
+   id Long,
+   description String,
+   status Integer
+ }
+
+
+ entity WaitingList
+ {
+    id Long,
+	qty Integer,
+    reserveTime ZonedDateTime,
+	description String
+
+  }
+  entity AgreementInfo
+  {
+    id Long,
+	rules String,
+	agreement String
+  }
+
+entity CustomerComment
+{
+id Long,
+createDate ZonedDateTime,
+commentText String
+}
+
+entity CustomerRank
+{
+id Long,
+createDate ZonedDateTime,
+rankValue Double
+
+}
+
+enum ServiceItemType
+  {
+   INDEPENDENT_SERVICE,
+   SERVICE_PACKAGE,
+   DEPENDENT_SERVICE
+  }
+
+
+enum NotificationType
+{
+  NONE,SMS,EMAIL,SMS_AND_EMAIL
+}
+enum ScheduleType
+{
+ DAILY,WEEKLY,MONTHLY
+}
+
+enum OffTimeType
+{
+REST_TIME,
+DINNER_TIME
+}
+
+enum OffDayType
+{
+  WEEKEND,
+NEW_YEAR_HOLYDAY,
+CALENDAR_HOLYDAY,
+COMPANY_HOLYDAY
+}
+
+enum ActivityType
+{
+   BEAUTY,TRAVEL,HEALTH,SPORT,EDUCATION,OTHER
+}
+
+enum WeekDay
+{
+   SATURDAY,SUNDAY,MONDAY,TUESDAY,
+   WEDNESDAY,THURSDAY,FRIDAY
+}
+
+enum PriceType
+{
+FIXED,
+SCHEDULE_BASED,
+ITEM_QUANTITY_BASED,
+CUSTOMER_BASED
+}
+
+enum Currency
+{
+  RIAL
+}
+enum DiscountType
+{
+FIXED,
+SCHEDULE_BASED,
+ITEM_QUANTITY_BASED,
+CUSTOMER_BASED
+}
+
+enum SocialNetworkType
+{
+  FACEBOOK,TWITTER,INSTAGRAM,TELEGRAM,GOOGLE,YAHOO
+}
+enum PaymentType
+{
+ CASH,CREDIT_CARD
+}
+
+
+
+relationship ManyToOne
+{
+CustomerComment{customer} to Customer
+}
+relationship ManyToOne
+{
+CustomerComment{serviceItem} to ServiceItem
+}
+
+relationship ManyToOne
+{
+CustomerRank{customer} to Customer
+}
+relationship ManyToOne
+{
+CustomerRank{serviceItem} to ServiceItem
+}
+
+
+relationship  ManyToOne
+{
+  Customer{personalInfo}
+  to PersonInfo
+}
+
+
+
+relationship ManyToMany
+{
+ ServiceItem{options} to
+ ServiceOptionInfo
+{serviceItems}
+}
+
+
+
+
+relationship ManyToOne
+{
+ Company{setting} to SettingInfo
+}
+
+relationship ManyToOne
+{
+ ServiceCategory{setting} to SettingInfo
+}
+
+relationship ManyToOne
+{
+  InvoiceInfo{orderBag}
+  to OrderBag
+}
+
+relationship ManyToMany
+{
+  InvoiceInfo{paymentLog} to
+  PaymentLog{invoiceInfo}
+}
+
+relationship ManyToOne
+{
+   InvoiceInfo{customer}
+   to Customer
+}
+
+relationship ManyToOne
+{
+   ServiceItem{discountInfo}
+   to DiscountInfo
+}
+
+
+
+
+relationship ManyToOne
+{
+  ServiceOptionItem{optionInfo} to ServiceOptionInfo
+}
+
+relationship ManyToOne
+{
+   ServiceOptionItem{priceInfo} to
+   PriceInfo
+}
+
+
+
+relationship ManyToOne
+{
+  ServiceItem{location} to LocationInfo
+}
+
+relationship ManyToOne
+{
+ScheduleBaseDiscount{scheduleInfo} to
+ScheduleInfo
+}
+
+
+
+
+relationship ManyToOne
+ {
+ ServiceItem{imageAlbum} to AlbumInfo
+ }
+
+relationship ManyToOne
+   {
+
+    ImageData{albumInfo} to AlbumInfo
+   }
+
+relationship ManyToOne
+    {
+      ThemeSettingInfo{logoImage} to ImageData
+    }
+
+relationship ManyToOne
+  {
+  ServiceItem{capacityInfo} to
+  ServiceCapacityInfo
+  }
+
+relationship ManyToOne
+  {
+
+  ServiceItem{category} to ServiceCategory
+
+  }
+
+relationship ManyToOne
+  {
+    ServiceItem{priceinfo} to
+    PriceInfo
+  }
+
+relationship ManyToMany
+{
+ServiceItem{serviceTimes} to
+ScheduleInfo{serviceItems}
+}
+
+relationship ManyToMany
+  {
+     WeeklyScheduleInfo{datePeriod}
+     to DatePeriod{weeklyScheduleInfo}
+  }
+
+relationship ManyToMany
+  {
+   WeeklyScheduleInfo{dailyDuration}
+   to TimePeriod{weeklyScheduleInfo}
+  }
+
+relationship ManyToMany
+  {
+  WeeklyScheduleInfo{weekdays} to
+  WeeklyWorkDay{weeklyScheduleInfo}
+  }
+
+relationship ManyToMany
+  {
+   DatePeriod{offdays} to
+   OffDay{datePeriod}
+  }
+
+relationship ManyToMany
+  {
+  TimePeriod{offtimes} to
+  OffTime{durationSlice}
+  }
+
+
+relationship ManyToOne
+{ ScheduleInfo{weeklyScheduleInfo} to
+WeeklyScheduleInfo
+}
+relationship ManyToOne
+{
+ServiceCategory{company}  to Company
+}
+
+relationship ManyToOne
+{
+ServiceCategory{parent} to
+ServiceCategory
+}
+
+
+relationship ManyToOne
+{
+SelectorData{type} to SelectorDataType
+}
+relationship ManyToOne
+{
+SelectorData{parent} to SelectorData
+}
+
+
+relationship ManyToMany
+{
+ServiceCategory{servants} to Servant{serviceCategories}
+}
+
+relationship ManyToMany
+{
+ServiceItem{servants} to
+Servant{serviceItems}
+}
+
+relationship ManyToOne
+{
+Servant{personInfo} to PersonInfo
+}
+relationship ManyToOne
+{
+  SettingInfo{themeSettingInfo} to ThemeSettingInfo
+}
+relationship ManyToOne
+{
+  SettingInfo{notificationSetting} to NotificationSetting
+}
+relationship ManyToOne
+{
+  SettingInfo{financialSetting} to FinancialSetting
+}
+relationship ManyToOne
+{
+  ExtraSetting{settingInfo} to SettingInfo
+}
+relationship ManyToOne
+{
+   CompanyManager{company} to Company
+ }
+ relationship ManyToOne
+{
+   CompanyManager{personInfo} to PersonInfo
+ }
+relationship ManyToOne
+{
+CapacityException{serviceCapacityInfo} to ServiceCapacityInfo
+}
+
+relationship ManyToOne
+{
+ParticipantPerson{personInfo} to PersonInfo
+}
+relationship ManyToOne
+{
+ParticipantPerson{orderBagItemDtail} to OrderBagServiceItemDtail
+}
+relationship ManyToOne
+{
+  WaitingList{serviceIte} to ServiceItem
+}
+
+
+relationship ManyToOne
+{
+ServiceItem{agreement} to AgreementInfo
+}
+relationship ManyToOne
+{
+   Company{agreement} to AgreementInfo
+}
+relationship ManyToOne
+{
+PersonInfo{location} to LocationInfo
+}
+relationship ManyToOne
+{
+ OrderBagServiceItem{orderBag} to
+ OrderBag
+}
+relationship ManyToOne
+{
+  LocationInfo{country} to SelectorData
+}
+relationship ManyToOne
+{
+  LocationInfo{state} to SelectorData
+}
+relationship ManyToOne
+{
+  LocationInfo{city} to SelectorData
+}
+relationship ManyToOne
+{
+ServiceCategory{images} to AlbumInfo
+}
+relationship ManyToOne
+{
+ServiceOptionItem{images} to AlbumInfo
+}
+relationship ManyToOne
+{
+  Company{location} to LocationInfo
+}
+relationship ManyToOne
+{
+CancelingInfo to OrderBagServiceItemDtail
+}
+
+relationship ManyToOne
+{
+  OrderBagServiceItem{serviceItem} to ServiceItem
+}
+relationship ManyToOne
+{
+  OrderBagServiceItemDtail{orderBagItem} to OrderBagServiceItem
+}
+ relationship ManyToMany
+ {
+  PriceInfo{servant} to Servant{priceInfo}
+ }
+relationship ManyToOne
+{
+   CompanySocialNetworkInfo{company} to Company
+}
+relationship ManyToOne
+{
+   CompanySocialNetworkInfo{socialNetworkInfo} to SocialNetworkInfo
+}
+relationship ManyToMany
+{
+   Company{tags} to MetaTag{company}
+}
+relationship ManyToOne
+{
+ ScheduleBaseDiscount{discountInfo} to DiscountInfo
+}
+
+  relationship ManyToOne
+{
+  RelatedServiceItem{firstItem} to
+  ServiceItem
+}
+  relationship ManyToOne
+{
+  RelatedServiceItem{secondItem} to
+  ServiceItem
+}
+relationship ManyToOne
+{
+  OrderBagServiceItemDtail{priceInfoDtail} to PriceInfoDtail
+}
+
+relationship ManyToOne
+{
+OrderBagItemOption{orderbagItemDtail} to OrderBagServiceItemDtail
+}
+relationship ManyToOne
+{
+  OrderBagItemOption{orderbagItem} to
+  ServiceOptionItem
+}
+relationship ManyToMany
+{
+  ServiceItem{tags} to
+  MetaTag{serviceItem}
+}
+relationship ManyToMany
+{
+  PersonInfo{socialNetworkInfo} to
+  SocialNetworkInfo{personInfo}
+}
+
+relationship ManyToOne
+{
+  ServiceTimeSessionInfo{serviceItem} to
+  ServiceItem
+}
+relationship ManyToOne
+{
+   ServiceTimeSessionInfo{scheduleInfo} to
+  ScheduleInfo
+}
+relationship ManyToOne
+{
+ServiceTimeSession {serviceTimeSessionInfo}
+to ServiceTimeSessionInfo
+}
+
+
+
+paginate all with pagination
+
+dto all with mapstruct
+
+service all with serviceClass

@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "weeklyScheduleInfo" : {
+            "home": {
+                "title": "Weekly Schedule Infos",
+                "createLabel": "Create a new Weekly Schedule Info",
+                "createOrEditLabel": "Create or edit a Weekly Schedule Info",
+                "search": "Search for Weekly Schedule Info"
+            },
+            "created": "A new Weekly Schedule Info is created with identifier {{ param }}",
+            "updated": "A Weekly Schedule Info is updated with identifier {{ param }}",
+            "deleted": "A Weekly Schedule Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Weekly Schedule Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Weekly Schedule Info"
+            },
+            "datePeriod": "Date Period",
+            "dailyDuration": "Daily Duration",
+            "weekdays": "Weekdays"
+        }
+    }
+}

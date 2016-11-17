@@ -1,0 +1,102 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myServiceTimeSessionLabel" translate="tikonApp.serviceTimeSession.home.createOrEditLabel">Create or edit a Service Time Session</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.serviceTimeSession.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.serviceTimeSession.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.startTime" for="field_startTime">Start Time</label>
+                <div class="input-group">
+                    <input id="field_startTime" type="text" class="form-control" name="startTime" datetime-picker="{{dateformat}}" ng-model="vm.serviceTimeSession.startTime" is-open="vm.datePickerOpenStatus.startTime"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.endTime" for="field_endTime">End Time</label>
+                <div class="input-group">
+                    <input id="field_endTime" type="text" class="form-control" name="endTime" datetime-picker="{{dateformat}}" ng-model="vm.serviceTimeSession.endTime" is-open="vm.datePickerOpenStatus.endTime"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.startDate" for="field_startDate">Start Date</label>
+                <div class="input-group">
+                    <input id="field_startDate" type="text" class="form-control" name="startDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.serviceTimeSession.startDate" is-open="vm.datePickerOpenStatus.startDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('startDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.endDate" for="field_endDate">End Date</label>
+                <div class="input-group">
+                    <input id="field_endDate" type="text" class="form-control" name="endDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.serviceTimeSession.endDate" is-open="vm.datePickerOpenStatus.endDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('endDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.capacity" for="field_capacity">Capacity</label>
+            <input type="number" class="form-control" name="capacity" id="field_capacity"
+                    ng-model="vm.serviceTimeSession.capacity"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.comment" for="field_comment">Comment</label>
+            <input type="text" class="form-control" name="comment" id="field_comment"
+                    ng-model="vm.serviceTimeSession.comment"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.serviceTimeSession.price"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceTimeSession.discount" for="field_discount">Discount</label>
+            <input type="number" class="form-control" name="discount" id="field_discount"
+                    ng-model="vm.serviceTimeSession.discount"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.serviceTimeSession.serviceTimeSessionInfo" for="field_serviceTimeSessionInfo">Service Time Session Info</label>
+            <select class="form-control" id="field_serviceTimeSessionInfo" name="serviceTimeSessionInfo" ng-model="vm.serviceTimeSession.serviceTimeSessionInfoId" ng-options="serviceTimeSessionInfo.id as serviceTimeSessionInfo.id for serviceTimeSessionInfo in vm.servicetimesessioninfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.serviceTimeSession.sessionTimes" for="field_sessionTimes">Session Times</label>
+            <select class="form-control" id="field_sessionTimes" name="sessionTimes" ng-model="vm.serviceTimeSession.sessionTimesId" ng-options="serviceTimeSessionInfo.id as serviceTimeSessionInfo.id for serviceTimeSessionInfo in vm.servicetimesessioninfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

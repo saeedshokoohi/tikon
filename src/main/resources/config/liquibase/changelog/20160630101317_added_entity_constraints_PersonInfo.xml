@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PersonInfo.
+    -->
+    <changeSet id="20160630101317-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="location_id"
+                                 baseTableName="person_info"
+                                 constraintName="fk_personinfo_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="person_infos_id"
+                                 baseTableName="person_info_social_network_info"
+                                 constraintName="fk_person_info_social_network_info_socialnetworkinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person_info"/>
+        <addForeignKeyConstraint baseColumnNames="social_network_infos_id"
+                                 baseTableName="person_info_social_network_info"
+                                 constraintName="fk_person_info_social_network_info_personinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="social_network_info"/>
+        
+    </changeSet>
+</databaseChangeLog>

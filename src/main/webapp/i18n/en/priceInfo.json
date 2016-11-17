@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "priceInfo" : {
+            "home": {
+                "title": "قیمت گذاری",
+                "createLabel": "قیمت گذاری جدید",
+                "createOrEditLabel": "Create or edit a Price Info",
+                "search": "Search for Price Info",
+                "backToPriceInfoList":"بازگشت به لیست"
+            },
+            "created": "A new Price Info is created with identifier {{ param }}",
+            "updated": "A Price Info is updated with identifier {{ param }}",
+            "deleted": "A Price Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Price Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Price Info"
+            },
+            "fromValidDate": "From Valid Date",
+            "priceType": "Price Type",
+            "servant": "Servant"
+        }
+    }
+}

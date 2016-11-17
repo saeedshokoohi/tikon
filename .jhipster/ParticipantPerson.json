@@ -1,0 +1,23 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "personInfo",
+      "otherEntityName": "personInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "orderBagItemDtail",
+      "otherEntityName": "orderBagServiceItemDtail",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [],
+  "changelogDate": "20160630101343",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

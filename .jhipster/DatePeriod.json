@@ -1,0 +1,36 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "offdays",
+      "otherEntityName": "offDay",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "weeklyScheduleInfo",
+      "otherEntityName": "weeklyScheduleInfo",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "datePeriod"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fromDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "toDate",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "changelogDate": "20160630101331",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

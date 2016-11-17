@@ -1,0 +1,29 @@
+{
+    "tikonApp": {
+        "orderBagServiceItem" : {
+            "home": {
+                "title": "Order Bag Service Items",
+                "createLabel": "Create a new Order Bag Service Item",
+                "createOrEditLabel": "Create or edit a Order Bag Service Item",
+                "search": "Search for Order Bag Service Item"
+            },
+            "created": "A new Order Bag Service Item is created with identifier {{ param }}",
+            "updated": "A Order Bag Service Item is updated with identifier {{ param }}",
+            "deleted": "A Order Bag Service Item is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Order Bag Service Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Order Bag Service Item"
+            },
+            "status": "Status",
+            "subtotalServicePrice": "Subtotal Service Price",
+            "subtotalOptionPrice": "Subtotal Option Price",
+            "subtotalVAT": "Subtotal VAT",
+            "subtotalDiscount": "Subtotal Discount",
+            "totalRowPrice": "Total Row Price",
+            "orderBag": "Order Bag",
+            "serviceItem": "Service Item"
+        }
+    }
+}

@@ -1,0 +1,162 @@
+<div>
+
+    <!--<jhi-alert></jhi-alert>-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left" ng-if="$ctrl.formState=='list'">
+                <button type="button" class="btn btn-primary" ng-click="$ctrl.newItem()" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" translate="tikonApp.serviceOptionInfo.home.createLabel">
+                        Create new Service Option Info
+                    </span>
+                </button>
+            </div>
+
+            <div class="col-xs-4 no-padding-left" ng-if="$ctrl.formState!='list'">
+                <button type="button" class="btn btn-primary" ng-click="$ctrl.backToList()" >
+                    <span class="glyphicon glyphicon-list"></span>
+                    <span class="hidden-xs" translate="tikonApp.priceInfo.home.backToPriceInfoList">
+                        Back To Price Info
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <br/>
+
+    <div id="priceInfoList" ng-if="$ctrl.formState=='list'">
+        <div class="table-responsive">
+            <table class="jh-table table table-striped">
+                <thead>
+                <tr jh-sort="$ctrl.predicate" ascending="$ctrl.reverse" callback="$ctrl.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="optionName"><span translate="tikonApp.serviceOptionItem.optionName">Option Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="tikonApp.serviceOptionItem.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="optionInfoId"><span translate="tikonApp.serviceOptionItem.optionInfo">Option Info</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="price"><span translate="tikonApp.priceInfoDtail.price">Price Info</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="imagesId"><span translate="tikonApp.serviceOptionItem.images">Images</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+
+                </thead>
+                <tbody>
+
+                <tr ng-repeat="serviceOptionItem in $ctrl.serviceOptionItems track by serviceOptionItem.id">
+                    <td><a ng-click="$ctrl.editItem({id:serviceOptionItem.id})">{{serviceOptionItem.id}}</a></td>
+                    <!--<td>{{serviceOptionItem.priceInfo.fromValidDate | toPersianDate}}</td>-->
+                    <!--<td translate="{{'tikonApp.PriceType.' + priceInfo.priceType}}">{{priceInfoDtail.priceInfo.priceType}}</td>-->
+                    <td>{{serviceOptionItem.optionName}}</td>
+                    <td>{{serviceOptionItem.description}}</td>
+                    <td>{{serviceOptionItem.priceInfoDtail.price}}</td>
+
+                    <!--<td>-->
+                        <!--<a ui-sref="price-info-detail({id:serviceOptionItem.priceInfoId})">{{serviceOptionItem.priceInfoId}}</a>-->
+                    <!--</td>-->
+                    <td>
+                        <a ui-sref="album-info-detail({id:serviceOptionItem.imagesId})">{{serviceOptionItem.imagesId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <!-- <button type="submit"
+                                     ui-sref="schedule-info-detail({id:scheduleInfo.id})"
+                                     class="btn btn-info btn-sm">
+                                 <span class="glyphicon glyphicon-eye-open"></span>
+                                 <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                             </button>-->
+
+                            <button type="submit"
+                                    ng-click="$ctrl.editItem({id:serviceOptionItem.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="price-info-dtail.delete({id:serviceOptionItem.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="optionInfoItemEdit" ng-if="$ctrl.formState!='list'">
+        <div class="form-group" ng-show="$ctrl.serviceOptionItem.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   ng-model="$ctrl.serviceOptionItem.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceOptionInfo.title" ng-show="false" for="field_title">title</label>
+            <input type="text" class="form-control" name="optionName" id="field_title" ng-show="false"
+                   ng-model="$ctrl.serviceOptionItem.optionInfo.title" ng-init="$ctrl.serviceOptionItem.optionInfo.title='ServiceOption'"
+            />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceOptionItem.optionName" for="field_optionName">Option Name</label>
+            <input type="text" class="form-control" name="optionName" id="field_optionName"
+                   ng-model="$ctrl.serviceOptionItem.optionName"
+            />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceOptionItem.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                   ng-model="$ctrl.serviceOptionItem.description"
+            />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfo.fromValidDate" for="field_fromValidDate">From
+                Valid Date</label>
+
+            <eo-date-picker id="field_fromValidDate"
+                            date-value="$ctrl.serviceOptionItem.priceInfoDtail.priceInfo.fromValidDate"></eo-date-picker>
+
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfo.priceType" for="field_priceType">Price
+                Type</label>
+            <select class="form-control" name="priceType" ng-model="$ctrl.serviceOptionItem.priceInfoDtail.priceInfo.priceType" id="field_priceType">
+                <option value="FIXED" translate="tikonApp.PriceType.FIXED">FIXED</option>
+                <option value="SCHEDULE_BASED" translate="tikonApp.PriceType.SCHEDULE_BASED">SCHEDULE_BASED</option>
+                <option value="ITEM_QUANTITY_BASED" translate="tikonApp.PriceType.ITEM_QUANTITY_BASED">
+                    ITEM_QUANTITY_BASED
+                </option>
+                <option value="CUSTOMER_BASED" translate="tikonApp.PriceType.CUSTOMER_BASED">CUSTOMER_BASED</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfoDtail.title" for="field_priceTitle">Title</label>
+            <input type="text" class="form-control" name="title" id="field_priceTitle"
+                   ng-model="$ctrl.serviceOptionItem.priceInfoDtail.title" ng-init="Price"
+            />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfoDtail.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                   ng-model="$ctrl.serviceOptionItem.priceInfoDtail.price"
+            />
+        </div>
+
+        <div class="form-group">
+            <eo-image-gallery album-id="$ctrl.serviceOptionItem.imagesId" album-caption="vm.serviceCategory.categoryName"></eo-image-gallery>
+        </div>
+
+    </div>
+
+        <div class="text-center">
+        <!-- <jhi-item-count page="$ctrl.page" total="$ctrl.queryCount"></jhi-item-count>
+         <uib-pagination class="pagination-sm" total-items="$ctrl.totalItems" ng-model="$ctrl.page" ng-change="$ctrl.transition()"></uib-pagination>-->
+    </div>
+
+
+</div>

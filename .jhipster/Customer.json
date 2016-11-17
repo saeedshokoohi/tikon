@@ -1,0 +1,22 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "personalInfo",
+      "otherEntityName": "personInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "userAccountId",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20160630101309",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

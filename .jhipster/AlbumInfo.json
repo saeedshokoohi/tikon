@@ -1,0 +1,19 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "isSingleImage",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "caption",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101325",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

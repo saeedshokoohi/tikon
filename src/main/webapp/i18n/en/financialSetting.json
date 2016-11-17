@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "financialSetting" : {
+            "home": {
+                "title": "Financial Settings",
+                "createLabel": "Create a new Financial Setting",
+                "createOrEditLabel": "Create or edit a Financial Setting",
+                "search": "Search for Financial Setting"
+            },
+            "created": "A new Financial Setting is created with identifier {{ param }}",
+            "updated": "A Financial Setting is updated with identifier {{ param }}",
+            "deleted": "A Financial Setting is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Financial Setting {{ id }}?"
+            },
+            "detail": {
+                "title": "Financial Setting"
+            },
+            "taxPercentage": "درصد مالیات بر ارزش افزوده",
+            "hasDiscount": "تخفیف دارد",
+            "currency": "نوع ارز"
+        }
+    }
+}

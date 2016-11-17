@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ServiceItem.
+    -->
+    <changeSet id="20160630101327-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="service_items_id"
+                                 baseTableName="service_item_options"
+                                 constraintName="fk_service_item_options_serviceoptioninfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_item"/>
+        <addForeignKeyConstraint baseColumnNames="options_id"
+                                 baseTableName="service_item_options"
+                                 constraintName="fk_service_item_options_serviceitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_option_info"/>
+        
+        <addForeignKeyConstraint baseColumnNames="discount_info_id"
+                                 baseTableName="service_item"
+                                 constraintName="fk_serviceitem_discountinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="discount_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="location_id"
+                                 baseTableName="service_item"
+                                 constraintName="fk_serviceitem_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="image_album_id"
+                                 baseTableName="service_item"
+                                 constraintName="fk_serviceitem_imagealbum_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="album_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="capacity_info_id"
+                                 baseTableName="service_item"
+                                 constraintName="fk_serviceitem_capacityinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_capacity_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="service_item"
+                                 constraintName="fk_serviceitem_category_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_category"/>
+
+        <addForeignKeyConstraint baseColumnNames="priceinfo_id"
+                                 baseTableName="service_item"
+                                 constraintName="fk_serviceitem_priceinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="price_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="service_items_id"
+                                 baseTableName="service_item_service_times"
+                                 constraintName="fk_service_item_service_times_scheduleinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_item"/>
+        <addForeignKeyConstraint baseColumnNames="service_times_id"
+                                 baseTableName="service_item_service_times"
+                                 constraintName="fk_service_item_service_times_serviceitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="schedule_info"/>
+        
+        <addForeignKeyConstraint baseColumnNames="service_items_id"
+                                 baseTableName="service_item_servants"
+                                 constraintName="fk_service_item_servants_servant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_item"/>
+        <addForeignKeyConstraint baseColumnNames="servants_id"
+                                 baseTableName="service_item_servants"
+                                 constraintName="fk_service_item_servants_serviceitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="servant"/>
+        
+        <addForeignKeyConstraint baseColumnNames="agreement_id"
+                                 baseTableName="service_item"
+                                 constraintName="fk_serviceitem_agreement_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agreement_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="service_items_id"
+                                 baseTableName="service_item_tags"
+                                 constraintName="fk_service_item_tags_metatag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_item"/>
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="service_item_tags"
+                                 constraintName="fk_service_item_tags_serviceitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="meta_tag"/>
+        
+    </changeSet>
+</databaseChangeLog>

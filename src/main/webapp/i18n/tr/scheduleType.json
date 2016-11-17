@@ -1,0 +1,10 @@
+{
+    "tikonApp": {
+        "ScheduleType" : {
+            "null": "",
+            "DAILY": "DAILY",
+            "WEEKLY": "WEEKLY",
+            "MONTHLY": "MONTHLY"
+        }
+    }
+}

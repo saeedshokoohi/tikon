@@ -1,0 +1,31 @@
+{
+    "tikonApp": {
+        "company" : {
+            "home": {
+                "title": "کسب و کار",
+                "createLabel": "ایجاد کسب و کار جدید",
+                "createOrEditLabel": "ایجاد یا ویرایش کسب و کار",
+                "search": "جستجو"
+            },
+            "created": "یک کسب و کار جدید ایجاد شد {{ param }}",
+            "updated": "A Company is updated with identifier {{ param }}",
+            "deleted": "A Company is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "آیا از حذف اطمینان دارید {{ id }}?"
+            },
+            "detail": {
+                "title": "کسب و کار"
+            },
+            "title": "عنوان ",
+            "description": "شرح کسب و کار",
+            "phoneNumber": "شماره تلفن",
+            "activityType": "نوع فعالیت",
+            "webSiteUrl": "آدرس وب سایت",
+            "keyUrl": "آدرس در تیکآن",
+            "setting": "تنظیمات",
+            "agreement": "توافق نامه",
+            "location": "محل",
+            "tags": "تگ ها"
+        }
+    }
+}

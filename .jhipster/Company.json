@@ -1,0 +1,70 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "setting",
+      "otherEntityName": "settingInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "agreement",
+      "otherEntityName": "agreementInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "location",
+      "otherEntityName": "locationInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "tags",
+      "otherEntityName": "metaTag",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "activityType",
+      "fieldType": "ActivityType",
+      "fieldValues": "BEAUTY,TRAVEL,HEALTH,SPORT,EDUCATION,OTHER"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "webSiteUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "keyUrl",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101301",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

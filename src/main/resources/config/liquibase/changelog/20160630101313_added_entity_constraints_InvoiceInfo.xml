@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity InvoiceInfo.
+    -->
+    <changeSet id="20160630101313-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="order_bag_id"
+                                 baseTableName="invoice_info"
+                                 constraintName="fk_invoiceinfo_orderbag_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="order_bag"/>
+
+        <addForeignKeyConstraint baseColumnNames="invoice_infos_id"
+                                 baseTableName="invoice_info_payment_log"
+                                 constraintName="fk_invoice_info_payment_log_paymentlog_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="invoice_info"/>
+        <addForeignKeyConstraint baseColumnNames="payment_logs_id"
+                                 baseTableName="invoice_info_payment_log"
+                                 constraintName="fk_invoice_info_payment_log_invoiceinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="payment_log"/>
+        
+        <addForeignKeyConstraint baseColumnNames="customer_id"
+                                 baseTableName="invoice_info"
+                                 constraintName="fk_invoiceinfo_customer_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="customer"/>
+
+    </changeSet>
+</databaseChangeLog>

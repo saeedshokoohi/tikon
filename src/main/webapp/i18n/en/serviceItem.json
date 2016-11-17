@@ -1,0 +1,58 @@
+{
+    "tikonApp": {
+        "serviceItem" : {
+            "home": {
+                "title": "سرویس ها",
+                "createLabel": "ایجاد سرویس جدید",
+                "createOrEditLabel": "ایجاد یا ویرایش سرویس",
+                "search": "جستجوی سرویس ها"
+            },
+            "created": "یک سرویس جدید ایجاد شد . کد : {{ param }}",
+            "updated": "سرویس با کد {{ param }} ویرایش شد.",
+            "deleted": "سرویس با کد {{ param }} حذف شد.",
+            "delete": {
+                "question": "آیا از حذف سرویس با کد {{ param }} اطمینان دارید؟"
+            },
+            "detail": {
+                "title": "سرویس"
+            },
+            "itemTitle": "عنوان سرویس یا خدمت",
+            "description": "شرح",
+            "minPreReserveTime": "حداقل زمان قابل رزرو سرویس",
+            "maxPreReserveTime": "حد اکثر زمان قابل رزرو سرویس",
+            "hasWaitingList": "لیست انتظار دارد",
+            "mustGetParticipantInfo": "نیاز به گرفتن اطلاعات شرکت کنندگان است.",
+            "canBeCanceled": "مشتری میتواند رزرو خود را لغو کند",
+            "minPreCancelTime": "حداقل زمان قابل لغو کردن رزرو",
+            "paymentType": "نوع پرداخت",
+            "serviceType": "نوع سرویس",
+            "options": "خدمات دلخواه",
+            "discountInfo": "اطلاعات تخفیفات",
+            "location": "محل",
+            "imageAlbum": "آلبوم تصاویر",
+            "capacityInfo": "ظرفیت",
+            "category": "دسته بندی",
+            "priceinfo": "قیمت گذاری",
+            "serviceTimes": "زمان ها",
+            "servants": "سرویس دهندگان",
+            "agreement": "قوانین و توافقات",
+            "tags": "تگ ها",
+            "startDate":"تاریخ شروع",
+            "endDate":"تاریخ پایان",
+            "startTime":"ساعت شروع",
+            "endTime":"ساعت پایان",
+            "backToList":"بازگشت به لیست",
+            "datePeriod":"دوره زمانی",
+            "timePeriod":"ساعت کاری",
+            "durationInfo":"",
+            "duration": "مدت زمان هر نوبت (دقیقه)",
+            "gapTime":"فاصله بین هر نوبت (دقیقه)",
+            "workDays":"روز های کاری",
+            "offDates":"تاریخ های تعطیل",
+            "offTimes":"ساعت های تعطیل",
+            "generateTimeInfo":"نمایش زمان بندی بر روی تقویم",
+            "editScheduleInfo":"بازگشت به اطلاعات زمانبندی"
+
+        }
+    }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ServiceTimeSession.
+    -->
+    <changeSet id="20161113063537-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="service_time_session_info_id"
+                                 baseTableName="service_time_session"
+                                 constraintName="fk_servicetimesession_servicetimesessioninfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_time_session_info"/>
+
+
+
+    </changeSet>
+</databaseChangeLog>

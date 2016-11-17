@@ -1,0 +1,31 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "company",
+      "otherEntityName": "company",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "tags"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "serviceItem",
+      "otherEntityName": "serviceItem",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "tags"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "tag",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101302",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

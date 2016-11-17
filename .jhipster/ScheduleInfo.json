@@ -1,0 +1,31 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "weeklyScheduleInfo",
+      "otherEntityName": "weeklyScheduleInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "serviceItems",
+      "otherEntityName": "serviceItem",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "serviceTimes"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "scheduleType",
+      "fieldType": "ScheduleType",
+      "fieldValues": "DAILY,WEEKLY,MONTHLY"
+    }
+  ],
+  "changelogDate": "20160630101337",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

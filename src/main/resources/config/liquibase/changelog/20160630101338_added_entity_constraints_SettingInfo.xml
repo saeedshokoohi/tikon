@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity SettingInfo.
+    -->
+    <changeSet id="20160630101338-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="theme_setting_info_id"
+                                 baseTableName="setting_info"
+                                 constraintName="fk_settinginfo_themesettinginfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="theme_setting_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="notification_setting_id"
+                                 baseTableName="setting_info"
+                                 constraintName="fk_settinginfo_notificationsetting_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="notification_setting"/>
+
+        <addForeignKeyConstraint baseColumnNames="financial_setting_id"
+                                 baseTableName="setting_info"
+                                 constraintName="fk_settinginfo_financialsetting_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="financial_setting"/>
+
+    </changeSet>
+</databaseChangeLog>

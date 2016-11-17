@@ -1,0 +1,36 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "themeSettingInfo",
+      "otherEntityName": "themeSettingInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "notificationSetting",
+      "otherEntityName": "notificationSetting",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "financialSetting",
+      "otherEntityName": "financialSetting",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "settingName",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101338",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

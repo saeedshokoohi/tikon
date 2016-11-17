@@ -1,0 +1,9 @@
+{
+    "activate": {
+        "title": "فعال سازی",
+        "messages": {
+            "success": "<strong>نام کاربری شما فعال شد.</strong> لطفا <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">وارد شوید</a>.",
+            "error": "<strong>نام کاربری شما غیر فعال است.</strong> لطفا برای ثبت نام به فرم ثبت نام مراجعه فرمایید."
+        }
+    }
+}

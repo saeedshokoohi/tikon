@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="tikonApp.customerComment.detail.title">Customer Comment</span> {{vm.customerComment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.customerComment.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.customerComment.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.customerComment.commentText">Comment Text</span></dt>
+        <dd>
+            <span>{{vm.customerComment.commentText}}</span>
+        </dd>
+        <dt><span translate="tikonApp.customerComment.customer">Customer</span></dt>
+        <dd>
+            <a ui-sref="customer-detail({id:vm.customerComment.customerId})">{{vm.customerComment.customerId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.customerComment.serviceItem">Service Item</span></dt>
+        <dd>
+            <a ui-sref="service-item-detail({id:vm.customerComment.serviceItemId})">{{vm.customerComment.serviceItemId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,85 @@
+<div>
+    <h2 translate="tikonApp.invoiceInfo.home.title">Invoice Infos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="invoice-info.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="tikonApp.invoiceInfo.home.createLabel">
+                        Create new Invoice Info
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'tikonApp.invoiceInfo.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createDate"><span translate="tikonApp.invoiceInfo.createDate">Create Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderBagId"><span translate="tikonApp.invoiceInfo.orderBag">Order Bag</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="customerId"><span translate="tikonApp.invoiceInfo.customer">Customer</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="invoiceInfo in vm.invoiceInfos track by invoiceInfo.id">
+                    <td><a ui-sref="invoice-info-detail({id:invoiceInfo.id})">{{invoiceInfo.id}}</a></td>
+                    <td>{{invoiceInfo.createDate | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="order-bag-detail({id:invoiceInfo.orderBagId})">{{invoiceInfo.orderBagId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="customer-detail({id:invoiceInfo.customerId})">{{invoiceInfo.customerId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="invoice-info-detail({id:invoiceInfo.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="invoice-info.edit({id:invoiceInfo.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="invoice-info.delete({id:invoiceInfo.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

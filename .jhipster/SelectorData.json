@@ -1,0 +1,39 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "type",
+      "otherEntityName": "selectorDataType",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "parent",
+      "otherEntityName": "selectorData",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "key",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "text",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "orderNo",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160630101306",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity SelectorData.
+    -->
+    <changeSet id="20160630101306-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="type_id"
+                                 baseTableName="selector_data"
+                                 constraintName="fk_selectordata_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="selector_data_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="parent_id"
+                                 baseTableName="selector_data"
+                                 constraintName="fk_selectordata_parent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="selector_data"/>
+
+    </changeSet>
+</databaseChangeLog>

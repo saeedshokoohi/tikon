@@ -1,0 +1,26 @@
+{
+    "tikonApp": {
+        "notificationSetting" : {
+            "home": {
+                "title": "Notification Settings",
+                "createLabel": "Create a new Notification Setting",
+                "createOrEditLabel": "Create or edit a Notification Setting",
+                "search": "Search for Notification Setting"
+            },
+            "created": "A new Notification Setting is created with identifier {{ param }}",
+            "updated": "A Notification Setting is updated with identifier {{ param }}",
+            "deleted": "A Notification Setting is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Notification Setting {{ id }}?"
+            },
+            "detail": {
+                "title": "Notification Setting"
+            },
+            "sendBookingConfirmation": "ارسال تائیدیه رزرو",
+            "sendOnCancelBooking": "ارسال در زمان لغو رزرو",
+            "sendOnMoveBooking": "ارسال در زمان جابجایی رزرو",
+            "sendCustomerReminder": "ارسال پیام یادآوری به مشتری",
+            "reminderTimeInAdvanced": "زمان یاداوری قبل از رزرو"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "tikonApp": {
+        "timePeriod" : {
+            "home": {
+                "title": "Time Periods",
+                "createLabel": "Create a new Time Period",
+                "createOrEditLabel": "Create or edit a Time Period",
+                "search": "Search for Time Period"
+            },
+            "created": "A new Time Period is created with identifier {{ param }}",
+            "updated": "A Time Period is updated with identifier {{ param }}",
+            "deleted": "A Time Period is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Time Period {{ id }}?"
+            },
+            "detail": {
+                "title": "Time Period"
+            },
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "duration": "Duration",
+            "gaptime": "Gaptime",
+            "offtimes": "Offtimes",
+            "weeklyScheduleInfo": "Weekly Schedule Info"
+        }
+    }
+}

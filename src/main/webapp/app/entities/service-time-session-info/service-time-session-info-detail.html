@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="tikonApp.serviceTimeSessionInfo.detail.title">Service Time Session Info</span> {{vm.serviceTimeSessionInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.serviceTimeSessionInfo.type">Type</span></dt>
+        <dd>
+            <span>{{vm.serviceTimeSessionInfo.type}}</span>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSessionInfo.serviceItem">Service Item</span></dt>
+        <dd>
+            <a ui-sref="service-item-detail({id:vm.serviceTimeSessionInfo.serviceItemId})">{{vm.serviceTimeSessionInfo.serviceItemId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.serviceTimeSessionInfo.scheduleInfo">Schedule Info</span></dt>
+        <dd>
+            <a ui-sref="schedule-info-detail({id:vm.serviceTimeSessionInfo.scheduleInfoId})">{{vm.serviceTimeSessionInfo.scheduleInfoId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

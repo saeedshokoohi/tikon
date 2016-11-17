@@ -1,0 +1,55 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "location",
+      "otherEntityName": "locationInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "socialNetworkInfo",
+      "otherEntityName": "socialNetworkInfo",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "nationalCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "fisrtName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "lastName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "gender",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "birthDate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160630101317",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

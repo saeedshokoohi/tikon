@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "priceInfo" : {
+            "home": {
+                "title": "Price Infos",
+                "createLabel": "Create a new Price Info",
+                "createOrEditLabel": "Create or edit a Price Info",
+                "search": "Search for Price Info"
+            },
+            "created": "A new Price Info is created with identifier {{ param }}",
+            "updated": "A Price Info is updated with identifier {{ param }}",
+            "deleted": "A Price Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Price Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Price Info"
+            },
+            "fromValidDate": "From Valid Date",
+            "priceType": "Price Type",
+            "servant": "Servant"
+        }
+    }
+}

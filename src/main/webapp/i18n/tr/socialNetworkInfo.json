@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "socialNetworkInfo" : {
+            "home": {
+                "title": "Social Network Infos",
+                "createLabel": "Create a new Social Network Info",
+                "createOrEditLabel": "Create or edit a Social Network Info",
+                "search": "Search for Social Network Info"
+            },
+            "created": "A new Social Network Info is created with identifier {{ param }}",
+            "updated": "A Social Network Info is updated with identifier {{ param }}",
+            "deleted": "A Social Network Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Social Network Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Social Network Info"
+            },
+            "socialNetworkType": "Social Network Type",
+            "title": "Title",
+            "url": "Url",
+            "personInfo": "Person Info"
+        }
+    }
+}

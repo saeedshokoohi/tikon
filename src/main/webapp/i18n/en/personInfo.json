@@ -1,0 +1,38 @@
+{
+    "tikonApp": {
+        "personInfo" : {
+            "home": {
+                "title": "Person Infos",
+                "createLabel": "Create a new Person Info",
+                "createOrEditLabel": "Create or edit a Person Info",
+                "search": "Search for Person Info"
+            },
+            "created": "A new Person Info is created with identifier {{ param }}",
+            "updated": "بروز شد {{ param }}",
+            "deleted": "A Person Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Person Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Person Info"
+            },
+            "nationalCode": "کد ملی",
+            "fisrtName": "نام",
+            "lastName": "نام خاتوادگی",
+            "gender": {
+                "title": "جنسیت",
+                "female": "زن",
+                "male": "مرد"
+            },
+            "phoneNumber": "موبایل",
+            "birthDate": "تاریخ تولد",
+            "location": "آدرس",
+            "socialNetworkInfo": "Social Network Info",
+            "sections": {
+                "generalTab": "مشخصات فردی",
+                "locationTab": "آدرس"
+            }
+
+        }
+    }
+}

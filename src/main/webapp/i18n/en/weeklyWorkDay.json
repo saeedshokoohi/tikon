@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "weeklyWorkDay" : {
+            "home": {
+                "title": "Weekly Work Days",
+                "createLabel": "Create a new Weekly Work Day",
+                "createOrEditLabel": "Create or edit a Weekly Work Day",
+                "search": "Search for Weekly Work Day"
+            },
+            "created": "A new Weekly Work Day is created with identifier {{ param }}",
+            "updated": "A Weekly Work Day is updated with identifier {{ param }}",
+            "deleted": "A Weekly Work Day is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Weekly Work Day {{ id }}?"
+            },
+            "detail": {
+                "title": "Weekly Work Day"
+            },
+            "weekday": "Weekday",
+            "weeklyScheduleInfo": "Weekly Schedule Info"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "login": {
+        "title": "ورود",
+        "form": {
+            "password": "رمز عبور",
+            "password.placeholder": "رمز عبور",
+            "rememberme": "مرا به خاطر بسپار",
+            "button": "ورود"
+        },
+        "messages": {
+            "error": {
+                "authentication": "<strong>خطا در ورود !</strong> لطفا اطلاعات کاربری خود را بررسی کنید."
+            }
+        },
+        "password" : {
+            "forgot": "رمز عبور خود را فراموش کرده اید ؟"
+        }
+    }
+}

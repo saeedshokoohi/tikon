@@ -1,0 +1,85 @@
+<div>
+    <h2 translate="tikonApp.companySocialNetworkInfo.home.title">Company Social Network Infos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="company-social-network-info.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="tikonApp.companySocialNetworkInfo.home.createLabel">
+                        Create new Company Social Network Info
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'tikonApp.companySocialNetworkInfo.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderNumber"><span translate="tikonApp.companySocialNetworkInfo.orderNumber">Order Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="companyId"><span translate="tikonApp.companySocialNetworkInfo.company">Company</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="socialNetworkInfoId"><span translate="tikonApp.companySocialNetworkInfo.socialNetworkInfo">Social Network Info</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="companySocialNetworkInfo in vm.companySocialNetworkInfos track by companySocialNetworkInfo.id">
+                    <td><a ui-sref="company-social-network-info-detail({id:companySocialNetworkInfo.id})">{{companySocialNetworkInfo.id}}</a></td>
+                    <td>{{companySocialNetworkInfo.orderNumber}}</td>
+                    <td>
+                        <a ui-sref="company-detail({id:companySocialNetworkInfo.companyId})">{{companySocialNetworkInfo.companyId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="social-network-info-detail({id:companySocialNetworkInfo.socialNetworkInfoId})">{{companySocialNetworkInfo.socialNetworkInfoId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="company-social-network-info-detail({id:companySocialNetworkInfo.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="company-social-network-info.edit({id:companySocialNetworkInfo.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="company-social-network-info.delete({id:companySocialNetworkInfo.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

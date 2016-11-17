@@ -1,0 +1,32 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "serviceCapacityInfo",
+      "otherEntityName": "serviceCapacityInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "exceptionType",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "reserveTime",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "newQty",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160630101330",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

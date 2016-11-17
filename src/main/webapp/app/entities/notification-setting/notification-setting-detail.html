@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span translate="tikonApp.notificationSetting.detail.title">Notification Setting</span> {{vm.notificationSetting.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.notificationSetting.sendBookingConfirmation">Send Booking Confirmation</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.NotificationType.' + vm.notificationSetting.sendBookingConfirmation}}">{{vm.notificationSetting.sendBookingConfirmation}}</span>
+        </dd>
+        <dt><span translate="tikonApp.notificationSetting.sendOnCancelBooking">Send On Cancel Booking</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.NotificationType.' + vm.notificationSetting.sendOnCancelBooking}}">{{vm.notificationSetting.sendOnCancelBooking}}</span>
+        </dd>
+        <dt><span translate="tikonApp.notificationSetting.sendOnMoveBooking">Send On Move Booking</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.NotificationType.' + vm.notificationSetting.sendOnMoveBooking}}">{{vm.notificationSetting.sendOnMoveBooking}}</span>
+        </dd>
+        <dt><span translate="tikonApp.notificationSetting.sendCustomerReminder">Send Customer Reminder</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.NotificationType.' + vm.notificationSetting.sendCustomerReminder}}">{{vm.notificationSetting.sendCustomerReminder}}</span>
+        </dd>
+        <dt><span translate="tikonApp.notificationSetting.reminderTimeInAdvanced">Reminder Time In Advanced</span></dt>
+        <dd>
+            <span>{{vm.notificationSetting.reminderTimeInAdvanced}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

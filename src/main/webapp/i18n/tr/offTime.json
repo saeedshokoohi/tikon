@@ -1,0 +1,26 @@
+{
+    "tikonApp": {
+        "offTime" : {
+            "home": {
+                "title": "Off Times",
+                "createLabel": "Create a new Off Time",
+                "createOrEditLabel": "Create or edit a Off Time",
+                "search": "Search for Off Time"
+            },
+            "created": "A new Off Time is created with identifier {{ param }}",
+            "updated": "A Off Time is updated with identifier {{ param }}",
+            "deleted": "A Off Time is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Off Time {{ id }}?"
+            },
+            "detail": {
+                "title": "Off Time"
+            },
+            "i": "I",
+            "fromTime": "From Time",
+            "toTime": "To Time",
+            "offTimeType": "Off Time Type",
+            "durationSlice": "Duration Slice"
+        }
+    }
+}

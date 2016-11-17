@@ -1,0 +1,22 @@
+{
+    "tikonApp": {
+        "serviceCapacityInfo" : {
+            "home": {
+                "title": "Service Capacity Infos",
+                "createLabel": "Create a new Service Capacity Info",
+                "createOrEditLabel": "Create or edit a Service Capacity Info",
+                "search": "Search for Service Capacity Info"
+            },
+            "created": "A new Service Capacity Info is created with identifier {{ param }}",
+            "updated": "A Service Capacity Info is updated with identifier {{ param }}",
+            "deleted": "A Service Capacity Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Service Capacity Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Service Capacity Info"
+            },
+            "qty": "Qty"
+        }
+    }
+}

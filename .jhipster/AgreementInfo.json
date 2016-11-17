@@ -1,0 +1,19 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "rules",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "agreement",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101346",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

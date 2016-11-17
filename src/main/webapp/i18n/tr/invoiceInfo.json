@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "invoiceInfo" : {
+            "home": {
+                "title": "Invoice Infos",
+                "createLabel": "Create a new Invoice Info",
+                "createOrEditLabel": "Create or edit a Invoice Info",
+                "search": "Search for Invoice Info"
+            },
+            "created": "A new Invoice Info is created with identifier {{ param }}",
+            "updated": "A Invoice Info is updated with identifier {{ param }}",
+            "deleted": "A Invoice Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Invoice Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Invoice Info"
+            },
+            "createDate": "Create Date",
+            "orderBag": "Order Bag",
+            "paymentLog": "Payment Log",
+            "customer": "Customer"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+
+<div class="row">
+
+
+    <fieldset class="standard" >
+
+        <div class="row">
+            <div class="col-sm-3 text-right"    ng-repeat="day in $ctrl.allWeekDays">
+<span ng-class="{'offDate':!day.checked}">
+                <input type="checkbox"  ng-click="$ctrl.checkChanged()" ng-model="day.checked" ng-checked="day.checked" >
+                    {{ day.name }}
+                </input>
+</span>
+            </div>
+        </div>
+    </fieldset>
+</div>

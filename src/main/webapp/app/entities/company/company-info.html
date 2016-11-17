@@ -1,0 +1,74 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+
+    <div class="panel">
+        <div class="panel-body" >
+
+        <action-bar>
+
+        </action-bar>
+
+        <!--<div class="form-group" ng-show="vm.company.id">-->
+            <!--<label for="id" translate="global.field.id">ID</label>-->
+            <!--<input type="text" class="form-control" id="id" name="id"-->
+                   <!--ng-model="vm.company.id" readonly />-->
+        <!--</div>-->
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                   ng-model="vm.company.title"
+            />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.phoneNumber" for="field_phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" name="phoneNumber" id="field_phoneNumber"
+                   ng-model="vm.company.phoneNumber"
+            />
+        </div>
+        <div class="form-group">
+            <label class="control-label"  translate="tikonApp.company.activityType" for="field_activityType">Activity Type</label>
+            <select class="form-control" name="activityType" ng-model="vm.company.activityType" id="field_activityType">
+                <option value="BEAUTY" translate="tikonApp.ActivityType.BEAUTY">BEAUTY</option>
+                <option value="TRAVEL" translate="tikonApp.ActivityType.TRAVEL">TRAVEL</option>
+                <option value="HEALTH" translate="tikonApp.ActivityType.HEALTH">HEALTH</option>
+                <option value="SPORT" translate="tikonApp.ActivityType.SPORT">SPORT</option>
+                <option value="EDUCATION" translate="tikonApp.ActivityType.EDUCATION">EDUCATION</option>
+                <option value="OTHER" translate="tikonApp.ActivityType.OTHER">OTHER</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.webSiteUrl" for="field_webSiteUrl">Web Site Url</label>
+            <input type="text" class="form-control" name="webSiteUrl" id="field_webSiteUrl"
+                   ng-model="vm.company.webSiteUrl"
+            />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.keyUrl" for="field_keyUrl">Key Url</label>
+            <input type="text" class="form-control" name="keyUrl" id="field_keyUrl"
+                   ng-model="vm.company.keyUrl"
+            />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.company.tags" for="field_tags">Tags</label>
+            <!--<select class="form-control" id="field_tags" multiple name="tags" ng-model="vm.company.tags" ng-options="metaTag as metaTag.id for metaTag in vm.metatags track by metaTag.id"></select>-->
+            <eo-multi-select id="field_tags"  list="vm.company.tags" items="vm.metatags" displaytag="tag" displayitem="tag">
+            </eo-multi-select>
+            <!--<select id="field_tags" kendo-multi-select k-options="vm.metatagOptions" k-ng-model="vm.company.tags"></select>-->
+            <!--<p ng-show="vm.company.tags.length" style="padding-top: 1em;">[ {{ vm.company.tags }}]</p>-->
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.company.description" for="field_description">Description</label>
+            <br/>
+            <div style="padding: 20px ; height: 500px">
+            <div  summernote height="300"  name="description" id="field_description"
+                   ng-model="vm.company.description"
+            />
+        </div>
+        </div>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,13 @@
+{
+    "tikonApp": {
+        "SocialNetworkType" : {
+            "null": "",
+            "FACEBOOK": "FACEBOOK",
+            "TWITTER": "TWITTER",
+            "INSTAGRAM": "INSTAGRAM",
+            "TELEGRAM": "TELEGRAM",
+            "GOOGLE": "GOOGLE",
+            "YAHOO": "YAHOO"
+        }
+    }
+}

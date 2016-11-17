@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="tikonApp.socialNetworkInfo.detail.title">Social Network Info</span> {{vm.socialNetworkInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.socialNetworkInfo.socialNetworkType">Social Network Type</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.SocialNetworkType.' + vm.socialNetworkInfo.socialNetworkType}}">{{vm.socialNetworkInfo.socialNetworkType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.socialNetworkInfo.title">Title</span></dt>
+        <dd>
+            <span>{{vm.socialNetworkInfo.title}}</span>
+        </dd>
+        <dt><span translate="tikonApp.socialNetworkInfo.url">Url</span></dt>
+        <dd>
+            <span>{{vm.socialNetworkInfo.url}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

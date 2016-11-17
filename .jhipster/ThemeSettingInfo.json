@@ -1,0 +1,22 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "logoImage",
+      "otherEntityName": "imageData",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101339",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

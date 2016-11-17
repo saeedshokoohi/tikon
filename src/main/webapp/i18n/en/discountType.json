@@ -1,0 +1,11 @@
+{
+    "tikonApp": {
+        "DiscountType" : {
+            "null": "",
+            "FIXED": "FIXED",
+            "SCHEDULE_BASED": "SCHEDULE_BASED",
+            "ITEM_QUANTITY_BASED": "ITEM_QUANTITY_BASED",
+            "CUSTOMER_BASED": "CUSTOMER_BASED"
+        }
+    }
+}

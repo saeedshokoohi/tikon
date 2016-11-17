@@ -1,0 +1,38 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myWeeklyScheduleInfoLabel" translate="tikonApp.weeklyScheduleInfo.home.createOrEditLabel">Create or edit a Weekly Schedule Info</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.weeklyScheduleInfo.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.weeklyScheduleInfo.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.weeklyScheduleInfo.datePeriod" for="field_datePeriod">Date Period</label>
+            <select class="form-control" id="field_datePeriod" multiple name="datePeriod" ng-model="vm.weeklyScheduleInfo.datePeriods" ng-options="datePeriod as datePeriod.id for datePeriod in vm.dateperiods track by datePeriod.id"></select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.weeklyScheduleInfo.dailyDuration" for="field_dailyDuration">Daily Duration</label>
+            <select class="form-control" id="field_dailyDuration" multiple name="dailyDuration" ng-model="vm.weeklyScheduleInfo.dailyDurations" ng-options="timePeriod as timePeriod.id for timePeriod in vm.timeperiods track by timePeriod.id"></select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.weeklyScheduleInfo.weekdays" for="field_weekdays">Weekdays</label>
+            <select class="form-control" id="field_weekdays" multiple name="weekdays" ng-model="vm.weeklyScheduleInfo.weekdays" ng-options="weeklyWorkDay as weeklyWorkDay.id for weeklyWorkDay in vm.weeklyworkdays track by weeklyWorkDay.id"></select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

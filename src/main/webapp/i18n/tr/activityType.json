@@ -1,0 +1,13 @@
+{
+    "tikonApp": {
+        "ActivityType" : {
+            "null": "",
+            "BEAUTY": "BEAUTY",
+            "TRAVEL": "TRAVEL",
+            "HEALTH": "HEALTH",
+            "SPORT": "SPORT",
+            "EDUCATION": "EDUCATION",
+            "OTHER": "OTHER"
+        }
+    }
+}

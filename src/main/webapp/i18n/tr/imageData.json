@@ -1,0 +1,28 @@
+{
+    "tikonApp": {
+        "imageData" : {
+            "home": {
+                "title": "Image Data",
+                "createLabel": "Create a new Image Data",
+                "createOrEditLabel": "Create or edit a Image Data",
+                "search": "Search for Image Data"
+            },
+            "created": "A new Image Data is created with identifier {{ param }}",
+            "updated": "A Image Data is updated with identifier {{ param }}",
+            "deleted": "A Image Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Image Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Image Data"
+            },
+            "fileName": "File Name",
+            "caption": "Caption",
+            "fileType": "File Type",
+            "fileData": "File Data",
+            "thumbnailData": "Thumbnail Data",
+            "isCoverImage": "Is Cover Image",
+            "albumInfo": "Album Info"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "selectorDataType" : {
+            "home": {
+                "title": "Selector Data Types",
+                "createLabel": "Create a new Selector Data Type",
+                "createOrEditLabel": "Create or edit a Selector Data Type",
+                "search": "Search for Selector Data Type"
+            },
+            "created": "A new Selector Data Type is created with identifier {{ param }}",
+            "updated": "A Selector Data Type is updated with identifier {{ param }}",
+            "deleted": "A Selector Data Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Selector Data Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Selector Data Type"
+            },
+            "key": "Key",
+            "typeName": "Type Name"
+        }
+    }
+}

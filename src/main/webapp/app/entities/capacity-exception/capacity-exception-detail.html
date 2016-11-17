@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="tikonApp.capacityException.detail.title">Capacity Exception</span> {{vm.capacityException.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.capacityException.exceptionType">Exception Type</span></dt>
+        <dd>
+            <span>{{vm.capacityException.exceptionType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.capacityException.reserveTime">Reserve Time</span></dt>
+        <dd>
+            <span>{{vm.capacityException.reserveTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.capacityException.newQty">New Qty</span></dt>
+        <dd>
+            <span>{{vm.capacityException.newQty}}</span>
+        </dd>
+        <dt><span translate="tikonApp.capacityException.serviceCapacityInfo">Service Capacity Info</span></dt>
+        <dd>
+            <a ui-sref="service-capacity-info-detail({id:vm.capacityException.serviceCapacityInfoId})">{{vm.capacityException.serviceCapacityInfoId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

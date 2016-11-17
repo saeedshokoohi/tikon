@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="tikonApp.locationInfo.detail.title">Location Info</span> {{vm.locationInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.locationInfo.title">Title</span></dt>
+        <dd>
+            <span>{{vm.locationInfo.title}}</span>
+        </dd>
+        <dt><span translate="tikonApp.locationInfo.address">Address</span></dt>
+        <dd>
+            <span>{{vm.locationInfo.address}}</span>
+        </dd>
+        <dt><span translate="tikonApp.locationInfo.mapX">Map X</span></dt>
+        <dd>
+            <span>{{vm.locationInfo.mapX}}</span>
+        </dd>
+        <dt><span translate="tikonApp.locationInfo.mapY">Map Y</span></dt>
+        <dd>
+            <span>{{vm.locationInfo.mapY}}</span>
+        </dd>
+        <dt><span translate="tikonApp.locationInfo.isActive">Is Active</span></dt>
+        <dd>
+            <span>{{vm.locationInfo.isActive}}</span>
+        </dd>
+        <dt><span translate="tikonApp.locationInfo.country">Country</span></dt>
+        <dd>
+            <a ui-sref="selector-data-detail({id:vm.locationInfo.countryId})">{{vm.locationInfo.countryId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.locationInfo.state">State</span></dt>
+        <dd>
+            <a ui-sref="selector-data-detail({id:vm.locationInfo.stateId})">{{vm.locationInfo.stateId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.locationInfo.city">City</span></dt>
+        <dd>
+            <a ui-sref="selector-data-detail({id:vm.locationInfo.cityId})">{{vm.locationInfo.cityId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

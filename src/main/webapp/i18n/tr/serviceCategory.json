@@ -1,0 +1,27 @@
+{
+    "tikonApp": {
+        "serviceCategory" : {
+            "home": {
+                "title": "Service Categories",
+                "createLabel": "Create a new Service Category",
+                "createOrEditLabel": "Create or edit a Service Category",
+                "search": "Search for Service Category"
+            },
+            "created": "A new Service Category is created with identifier {{ param }}",
+            "updated": "A Service Category is updated with identifier {{ param }}",
+            "deleted": "A Service Category is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Service Category {{ id }}?"
+            },
+            "detail": {
+                "title": "Service Category"
+            },
+            "categoryName": "Category Name",
+            "setting": "Setting",
+            "company": "Company",
+            "parent": "Parent",
+            "servants": "Servants",
+            "images": "Images"
+        }
+    }
+}

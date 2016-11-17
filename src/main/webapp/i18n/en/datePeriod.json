@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "datePeriod" : {
+            "home": {
+                "title": "Date Periods",
+                "createLabel": "Create a new Date Period",
+                "createOrEditLabel": "Create or edit a Date Period",
+                "search": "Search for Date Period"
+            },
+            "created": "A new Date Period is created with identifier {{ param }}",
+            "updated": "A Date Period is updated with identifier {{ param }}",
+            "deleted": "A Date Period is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Date Period {{ id }}?"
+            },
+            "detail": {
+                "title": "Date Period"
+            },
+            "fromDate": "From Date",
+            "toDate": "To Date",
+            "offdays": "Offdays",
+            "weeklyScheduleInfo": "Weekly Schedule Info"
+        }
+    }
+}

@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFinancialSettingLabel" translate="tikonApp.financialSetting.home.createOrEditLabel">Create or edit a Financial Setting</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.financialSetting.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.financialSetting.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.financialSetting.taxPercentage" for="field_taxPercentage">Tax Percentage</label>
+            <input type="number" class="form-control" name="taxPercentage" id="field_taxPercentage"
+                    ng-model="vm.financialSetting.taxPercentage"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.financialSetting.hasDiscount" for="field_hasDiscount">Has Discount</label>
+            <input type="checkbox" class="form-control" name="hasDiscount" id="field_hasDiscount"
+                    ng-model="vm.financialSetting.hasDiscount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.financialSetting.currency" for="field_currency">Currency</label>
+            <select class="form-control" name="currency" ng-model="vm.financialSetting.currency" id="field_currency">
+                <option value="RIAL" translate="tikonApp.Currency.RIAL">RIAL</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

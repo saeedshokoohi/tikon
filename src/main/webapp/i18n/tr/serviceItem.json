@@ -1,0 +1,42 @@
+{
+    "tikonApp": {
+        "serviceItem" : {
+            "home": {
+                "title": "Service Items",
+                "createLabel": "Create a new Service Item",
+                "createOrEditLabel": "Create or edit a Service Item",
+                "search": "Search for Service Item"
+            },
+            "created": "A new Service Item is created with identifier {{ param }}",
+            "updated": "A Service Item is updated with identifier {{ param }}",
+            "deleted": "A Service Item is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Service Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Service Item"
+            },
+            "itemTitle": "Item Title",
+            "description": "Description",
+            "minPreReserveTime": "Min Pre Reserve Time",
+            "maxPreReserveTime": "Max Pre Reserve Time",
+            "hasWaitingList": "Has Waiting List",
+            "mustGetParticipantInfo": "Must Get Participant Info",
+            "canBeCanceled": "Can Be Canceled",
+            "minPreCancelTime": "Min Pre Cancel Time",
+            "paymentType": "Payment Type",
+            "serviceType": "Service Type",
+            "options": "Options",
+            "discountInfo": "Discount Info",
+            "location": "Location",
+            "imageAlbum": "Image Album",
+            "capacityInfo": "Capacity Info",
+            "category": "Category",
+            "priceinfo": "Priceinfo",
+            "serviceTimes": "Service Times",
+            "servants": "Servants",
+            "agreement": "Agreement",
+            "tags": "Tags"
+        }
+    }
+}

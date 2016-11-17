@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity DatePeriod.
+    -->
+    <changeSet id="20160630101331-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="date_periods_id"
+                                 baseTableName="date_period_offdays"
+                                 constraintName="fk_date_period_offdays_offday_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="date_period"/>
+        <addForeignKeyConstraint baseColumnNames="offdays_id"
+                                 baseTableName="date_period_offdays"
+                                 constraintName="fk_date_period_offdays_dateperiod_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="off_day"/>
+        
+    </changeSet>
+</databaseChangeLog>

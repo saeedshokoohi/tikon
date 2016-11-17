@@ -1,0 +1,28 @@
+
+<div>
+    <h2><span translate="tikonApp.priceInfo.detail.title">Price Info</span> {{vm.priceInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.priceInfo.fromValidDate">From Valid Date</span></dt>
+        <dd>
+            <span>{{vm.priceInfo.fromValidDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.priceInfo.priceType">Price Type</span></dt>
+        <dd>
+            <span translate="{{'tikonApp.PriceType.' + vm.priceInfo.priceType}}">{{vm.priceInfo.priceType}}</span>
+        </dd>
+        <dt><span translate="tikonApp.priceInfo.servant">Servant</span></dt>
+        <dd>
+            <span ng-repeat="servant in vm.priceInfo.servants">
+                <a ui-sref="servant-detail({id: {{servant.id}}})">{{servant.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

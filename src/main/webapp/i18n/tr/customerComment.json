@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "customerComment" : {
+            "home": {
+                "title": "Customer Comments",
+                "createLabel": "Create a new Customer Comment",
+                "createOrEditLabel": "Create or edit a Customer Comment",
+                "search": "Search for Customer Comment"
+            },
+            "created": "A new Customer Comment is created with identifier {{ param }}",
+            "updated": "A Customer Comment is updated with identifier {{ param }}",
+            "deleted": "A Customer Comment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Customer Comment {{ id }}?"
+            },
+            "detail": {
+                "title": "Customer Comment"
+            },
+            "createDate": "Create Date",
+            "commentText": "Comment Text",
+            "customer": "Customer",
+            "serviceItem": "Service Item"
+        }
+    }
+}

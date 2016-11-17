@@ -1,0 +1,54 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "orderBag",
+      "otherEntityName": "orderBag",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "serviceItem",
+      "otherEntityName": "serviceItem",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "status",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "subtotalServicePrice",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "subtotalOptionPrice",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "subtotalVAT",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "subtotalDiscount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "totalRowPrice",
+      "fieldType": "Double"
+    }
+  ],
+  "changelogDate": "20160630101311",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

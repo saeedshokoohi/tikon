@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity ServiceCategory.
+    -->
+    <changeSet id="20160630101308-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="setting_id"
+                                 baseTableName="service_category"
+                                 constraintName="fk_servicecategory_setting_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="setting_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="company_id"
+                                 baseTableName="service_category"
+                                 constraintName="fk_servicecategory_company_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+
+        <addForeignKeyConstraint baseColumnNames="parent_id"
+                                 baseTableName="service_category"
+                                 constraintName="fk_servicecategory_parent_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_category"/>
+
+        <addForeignKeyConstraint baseColumnNames="service_categories_id"
+                                 baseTableName="service_category_servants"
+                                 constraintName="fk_service_category_servants_servant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_category"/>
+        <addForeignKeyConstraint baseColumnNames="servants_id"
+                                 baseTableName="service_category_servants"
+                                 constraintName="fk_service_category_servants_servicecategory_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="servant"/>
+        
+        <addForeignKeyConstraint baseColumnNames="images_id"
+                                 baseTableName="service_category"
+                                 constraintName="fk_servicecategory_images_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="album_info"/>
+
+    </changeSet>
+</databaseChangeLog>

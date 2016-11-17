@@ -1,0 +1,27 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "settingInfo",
+      "otherEntityName": "settingInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "key",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "value",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101342",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

@@ -1,0 +1,29 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "servant",
+      "otherEntityName": "servant",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "fromValidDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "priceType",
+      "fieldType": "PriceType",
+      "fieldValues": "FIXED,SCHEDULE_BASED,ITEM_QUANTITY_BASED,CUSTOMER_BASED"
+    }
+  ],
+  "changelogDate": "20160630101318",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

@@ -1,0 +1,22 @@
+
+<div>
+    <h2><span translate="tikonApp.selectorDataType.detail.title">Selector Data Type</span> {{vm.selectorDataType.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.selectorDataType.key">Key</span></dt>
+        <dd>
+            <span>{{vm.selectorDataType.key}}</span>
+        </dd>
+        <dt><span translate="tikonApp.selectorDataType.typeName">Type Name</span></dt>
+        <dd>
+            <span>{{vm.selectorDataType.typeName}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,31 @@
+{
+    "tikonApp": {
+        "serviceTimeSession" : {
+            "home": {
+                "title": "Service Time Sessions",
+                "createLabel": "Create a new Service Time Session",
+                "createOrEditLabel": "Create or edit a Service Time Session",
+                "search": "Search for Service Time Session"
+            },
+            "created": "A new Service Time Session is created with identifier {{ param }}",
+            "updated": "A Service Time Session is updated with identifier {{ param }}",
+            "deleted": "A Service Time Session is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Service Time Session {{ id }}?"
+            },
+            "detail": {
+                "title": "Service Time Session"
+            },
+            "startTime": "Start Time",
+            "endTime": "End Time",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "capacity": "Capacity",
+            "comment": "Comment",
+            "price": "Price",
+            "discount": "Discount",
+            "serviceTimeSessionInfo": "Service Time Session Info",
+            "sessionTimes": "Session Times"
+        }
+    }
+}

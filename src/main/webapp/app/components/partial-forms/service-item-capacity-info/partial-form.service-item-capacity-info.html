@@ -1,0 +1,31 @@
+<div>
+
+    <!--<jhi-alert></jhi-alert>-->
+    <div class="container-fluid">
+
+    </div>
+    <br/>
+
+    <div id="servicePriceInfo" >
+        <div class="form-group" ng-show="$ctrl.serviceCapacityInfo.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   ng-model="$ctrl.serviceCapacityInfo.id" readonly />
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceCapacityInfo.qty" for="field_qty">Qty</label>
+            <input type="number" class="form-control" name="qty" id="field_qty"
+                   ng-model="$ctrl.serviceCapacityInfo.qty"
+            />
+        </div>
+
+    </div>
+
+        <div class="text-center">
+        <!-- <jhi-item-count page="$ctrl.page" total="$ctrl.queryCount"></jhi-item-count>
+         <uib-pagination class="pagination-sm" total-items="$ctrl.totalItems" ng-model="$ctrl.page" ng-change="$ctrl.transition()"></uib-pagination>-->
+    </div>
+
+
+</div>

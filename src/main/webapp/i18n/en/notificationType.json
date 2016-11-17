@@ -1,0 +1,11 @@
+{
+    "tikonApp": {
+        "NotificationType" : {
+            "null": "",
+            "NONE": "عدم ارسال",
+            "SMS": "پیامک",
+            "EMAIL": "ایمیل",
+            "SMS_AND_EMAIL": "پیامک و ایمیل"
+        }
+    }
+}

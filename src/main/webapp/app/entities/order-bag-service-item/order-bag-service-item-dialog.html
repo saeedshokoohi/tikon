@@ -1,0 +1,74 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOrderBagServiceItemLabel" translate="tikonApp.orderBagServiceItem.home.createOrEditLabel">Create or edit a Order Bag Service Item</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.orderBagServiceItem.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.orderBagServiceItem.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagServiceItem.status" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                    ng-model="vm.orderBagServiceItem.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagServiceItem.subtotalServicePrice" for="field_subtotalServicePrice">Subtotal Service Price</label>
+            <input type="number" class="form-control" name="subtotalServicePrice" id="field_subtotalServicePrice"
+                    ng-model="vm.orderBagServiceItem.subtotalServicePrice"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagServiceItem.subtotalOptionPrice" for="field_subtotalOptionPrice">Subtotal Option Price</label>
+            <input type="number" class="form-control" name="subtotalOptionPrice" id="field_subtotalOptionPrice"
+                    ng-model="vm.orderBagServiceItem.subtotalOptionPrice"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagServiceItem.subtotalVAT" for="field_subtotalVAT">Subtotal VAT</label>
+            <input type="number" class="form-control" name="subtotalVAT" id="field_subtotalVAT"
+                    ng-model="vm.orderBagServiceItem.subtotalVAT"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagServiceItem.subtotalDiscount" for="field_subtotalDiscount">Subtotal Discount</label>
+            <input type="number" class="form-control" name="subtotalDiscount" id="field_subtotalDiscount"
+                    ng-model="vm.orderBagServiceItem.subtotalDiscount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagServiceItem.totalRowPrice" for="field_totalRowPrice">Total Row Price</label>
+            <input type="number" class="form-control" name="totalRowPrice" id="field_totalRowPrice"
+                    ng-model="vm.orderBagServiceItem.totalRowPrice"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.orderBagServiceItem.orderBag" for="field_orderBag">Order Bag</label>
+            <select class="form-control" id="field_orderBag" name="orderBag" ng-model="vm.orderBagServiceItem.orderBagId" ng-options="orderBag.id as orderBag.id for orderBag in vm.orderbags"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.orderBagServiceItem.serviceItem" for="field_serviceItem">Service Item</label>
+            <select class="form-control" id="field_serviceItem" name="serviceItem" ng-model="vm.orderBagServiceItem.serviceItemId" ng-options="serviceItem.id as serviceItem.id for serviceItem in vm.serviceitems"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

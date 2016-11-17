@@ -1,0 +1,56 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myServiceOptionItemLabel" translate="tikonApp.serviceOptionItem.home.createOrEditLabel">Create or edit a Service Option Item</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.serviceOptionItem.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.serviceOptionItem.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceOptionItem.optionName" for="field_optionName">Option Name</label>
+            <input type="text" class="form-control" name="optionName" id="field_optionName"
+                    ng-model="vm.serviceOptionItem.optionName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.serviceOptionItem.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.serviceOptionItem.description"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.serviceOptionItem.optionInfo" for="field_optionInfo">Option Info</label>
+            <select class="form-control" id="field_optionInfo" name="optionInfo" ng-model="vm.serviceOptionItem.optionInfoId" ng-options="serviceOptionInfo.id as serviceOptionInfo.id for serviceOptionInfo in vm.serviceoptioninfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.serviceOptionItem.priceInfo" for="field_priceInfo">Price Info</label>
+            <select class="form-control" id="field_priceInfo" name="priceInfo" ng-model="vm.serviceOptionItem.priceInfoId" ng-options="priceInfo.id as priceInfo.id for priceInfo in vm.priceinfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.serviceOptionItem.images" for="field_images">Images</label>
+            <select class="form-control" id="field_images" name="images" ng-model="vm.serviceOptionItem.imagesId" ng-options="albumInfo.id as albumInfo.id for albumInfo in vm.albuminfos"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

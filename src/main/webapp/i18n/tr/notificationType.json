@@ -1,0 +1,11 @@
+{
+    "tikonApp": {
+        "NotificationType" : {
+            "null": "",
+            "NONE": "NONE",
+            "SMS": "SMS",
+            "EMAIL": "EMAIL",
+            "SMS_AND_EMAIL": "SMS_AND_EMAIL"
+        }
+    }
+}

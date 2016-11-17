@@ -1,0 +1,8 @@
+{
+    "tikonApp": {
+        "GenderType" : {
+            "MALE": "مرد",
+            "FEMALE": "زن"
+        }
+    }
+}

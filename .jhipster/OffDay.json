@@ -1,0 +1,29 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "datePeriod",
+      "otherEntityName": "datePeriod",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "offdays"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "offDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "offDayType",
+      "fieldType": "OffDayType",
+      "fieldValues": "WEEKEND,NEW_YEAR_HOLYDAY,CALENDAR_HOLYDAY,COMPANY_HOLYDAY"
+    }
+  ],
+  "changelogDate": "20160630101332",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

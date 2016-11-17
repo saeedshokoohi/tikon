@@ -1,0 +1,34 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "personInfo",
+      "otherEntityName": "personInfo",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "socialNetworkInfo"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "socialNetworkType",
+      "fieldType": "SocialNetworkType",
+      "fieldValues": "FACEBOOK,TWITTER,INSTAGRAM,TELEGRAM,GOOGLE,YAHOO"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "url",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101304",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

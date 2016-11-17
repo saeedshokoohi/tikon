@@ -1,0 +1,51 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "personInfo",
+      "otherEntityName": "personInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "serviceCategories",
+      "otherEntityName": "serviceCategory",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "servants"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "serviceItems",
+      "otherEntityName": "serviceItem",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "servants"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "priceInfo",
+      "otherEntityName": "priceInfo",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "servant"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "level",
+      "fieldType": "Integer"
+    }
+  ],
+  "changelogDate": "20160630101324",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

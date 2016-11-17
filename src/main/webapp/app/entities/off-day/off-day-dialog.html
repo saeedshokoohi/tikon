@@ -1,0 +1,45 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOffDayLabel" translate="tikonApp.offDay.home.createOrEditLabel">Create or edit a Off Day</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.offDay.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.offDay.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.offDay.offDate" for="field_offDate">Off Date</label>
+                <div class="input-group">
+                    <input id="field_offDate" type="text" class="form-control" name="offDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.offDay.offDate" is-open="vm.datePickerOpenStatus.offDate"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('offDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.offDay.offDayType" for="field_offDayType">Off Day Type</label>
+            <select class="form-control" name="offDayType" ng-model="vm.offDay.offDayType" id="field_offDayType">
+                <option value="WEEKEND" translate="tikonApp.OffDayType.WEEKEND">WEEKEND</option>
+                <option value="NEW_YEAR_HOLYDAY" translate="tikonApp.OffDayType.NEW_YEAR_HOLYDAY">NEW_YEAR_HOLYDAY</option>
+                <option value="CALENDAR_HOLYDAY" translate="tikonApp.OffDayType.CALENDAR_HOLYDAY">CALENDAR_HOLYDAY</option>
+                <option value="COMPANY_HOLYDAY" translate="tikonApp.OffDayType.COMPANY_HOLYDAY">COMPANY_HOLYDAY</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

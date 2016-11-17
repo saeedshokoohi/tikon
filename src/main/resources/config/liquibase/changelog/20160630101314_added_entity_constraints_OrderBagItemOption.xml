@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity OrderBagItemOption.
+    -->
+    <changeSet id="20160630101314-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="orderbag_item_dtail_id"
+                                 baseTableName="order_bag_item_option"
+                                 constraintName="fk_orderbagitemoption_orderbagitemdtail_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="order_bag_service_item_dtail"/>
+
+        <addForeignKeyConstraint baseColumnNames="orderbag_item_id"
+                                 baseTableName="order_bag_item_option"
+                                 constraintName="fk_orderbagitemoption_orderbagitem_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="service_option_item"/>
+
+    </changeSet>
+</databaseChangeLog>

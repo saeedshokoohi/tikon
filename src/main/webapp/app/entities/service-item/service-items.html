@@ -1,0 +1,123 @@
+<div>
+    <h2 translate="tikonApp.serviceItem.home.title">Service Items</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="service-item.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="tikonApp.serviceItem.home.createLabel">
+                        Create new Service Item
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'tikonApp.serviceItem.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="itemTitle"><span translate="tikonApp.serviceItem.itemTitle">Item Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="tikonApp.serviceItem.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="minPreReserveTime"><span translate="tikonApp.serviceItem.minPreReserveTime">Min Pre Reserve Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maxPreReserveTime"><span translate="tikonApp.serviceItem.maxPreReserveTime">Max Pre Reserve Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="hasWaitingList"><span translate="tikonApp.serviceItem.hasWaitingList">Has Waiting List</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mustGetParticipantInfo"><span translate="tikonApp.serviceItem.mustGetParticipantInfo">Must Get Participant Info</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="canBeCanceled"><span translate="tikonApp.serviceItem.canBeCanceled">Can Be Canceled</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="minPreCancelTime"><span translate="tikonApp.serviceItem.minPreCancelTime">Min Pre Cancel Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentType"><span translate="tikonApp.serviceItem.paymentType">Payment Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="serviceType"><span translate="tikonApp.serviceItem.serviceType">Service Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="discountInfoId"><span translate="tikonApp.serviceItem.discountInfo">Discount Info</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="locationId"><span translate="tikonApp.serviceItem.location">Location</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="imageAlbumId"><span translate="tikonApp.serviceItem.imageAlbum">Image Album</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="capacityInfoId"><span translate="tikonApp.serviceItem.capacityInfo">Capacity Info</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="categoryId"><span translate="tikonApp.serviceItem.category">Category</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="priceinfoId"><span translate="tikonApp.serviceItem.priceinfo">Priceinfo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="agreementId"><span translate="tikonApp.serviceItem.agreement">Agreement</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="serviceItem in vm.serviceItems track by serviceItem.id">
+                    <td><a ui-sref="service-item-detail({id:serviceItem.id})">{{serviceItem.id}}</a></td>
+                    <td>{{serviceItem.itemTitle}}</td>
+                    <td>{{serviceItem.description}}</td>
+                    <td>{{serviceItem.minPreReserveTime}}</td>
+                    <td>{{serviceItem.maxPreReserveTime}}</td>
+                    <td>{{serviceItem.hasWaitingList}}</td>
+                    <td>{{serviceItem.mustGetParticipantInfo}}</td>
+                    <td>{{serviceItem.canBeCanceled}}</td>
+                    <td>{{serviceItem.minPreCancelTime}}</td>
+                    <td>{{serviceItem.paymentType}}</td>
+                    <td translate="{{'tikonApp.ServiceItemType.' + serviceItem.serviceType}}">{{serviceItem.serviceType}}</td>
+                    <td>
+                        <a ui-sref="discount-info-detail({id:serviceItem.discountInfoId})">{{serviceItem.discountInfoId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="location-info-detail({id:serviceItem.locationId})">{{serviceItem.locationId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="album-info-detail({id:serviceItem.imageAlbumId})">{{serviceItem.imageAlbumId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="service-capacity-info-detail({id:serviceItem.capacityInfoId})">{{serviceItem.capacityInfoId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="service-category-detail({id:serviceItem.categoryId})">{{serviceItem.categoryId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="price-info-detail({id:serviceItem.priceinfoId})">{{serviceItem.priceinfoId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="agreement-info-detail({id:serviceItem.agreementId})">{{serviceItem.agreementId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="service-item-detail({id:serviceItem.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="service-item.edit({id:serviceItem.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="service-item.delete({id:serviceItem.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

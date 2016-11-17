@@ -1,0 +1,51 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "setting",
+      "otherEntityName": "settingInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "company",
+      "otherEntityName": "company",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "parent",
+      "otherEntityName": "serviceCategory",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 4,
+      "relationshipName": "servants",
+      "otherEntityName": "servant",
+      "relationshipType": "many-to-many",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipId": 5,
+      "relationshipName": "images",
+      "otherEntityName": "albumInfo",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "categoryName",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101308",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

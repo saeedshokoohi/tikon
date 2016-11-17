@@ -1,0 +1,8 @@
+version: '2'
+services:
+    tikon-sonar:
+        container_name: tikon-sonar
+        image: sonarqube:5.5-alpine
+        ports:
+            - 9000:9000
+            - 9092:9092

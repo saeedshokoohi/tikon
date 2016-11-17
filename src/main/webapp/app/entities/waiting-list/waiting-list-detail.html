@@ -1,0 +1,30 @@
+
+<div>
+    <h2><span translate="tikonApp.waitingList.detail.title">Waiting List</span> {{vm.waitingList.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.waitingList.qty">Qty</span></dt>
+        <dd>
+            <span>{{vm.waitingList.qty}}</span>
+        </dd>
+        <dt><span translate="tikonApp.waitingList.reserveTime">Reserve Time</span></dt>
+        <dd>
+            <span>{{vm.waitingList.reserveTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.waitingList.description">Description</span></dt>
+        <dd>
+            <span>{{vm.waitingList.description}}</span>
+        </dd>
+        <dt><span translate="tikonApp.waitingList.serviceIte">Service Ite</span></dt>
+        <dd>
+            <a ui-sref="service-item-detail({id:vm.waitingList.serviceIteId})">{{vm.waitingList.serviceIteId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

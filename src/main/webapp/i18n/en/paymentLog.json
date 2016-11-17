@@ -1,0 +1,25 @@
+{
+    "tikonApp": {
+        "paymentLog" : {
+            "home": {
+                "title": "Payment Logs",
+                "createLabel": "Create a new Payment Log",
+                "createOrEditLabel": "Create or edit a Payment Log",
+                "search": "Search for Payment Log"
+            },
+            "created": "A new Payment Log is created with identifier {{ param }}",
+            "updated": "A Payment Log is updated with identifier {{ param }}",
+            "deleted": "A Payment Log is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Payment Log {{ id }}?"
+            },
+            "detail": {
+                "title": "Payment Log"
+            },
+            "traceCode": "Trace Code",
+            "paymentType": "Payment Type",
+            "createDate": "Create Date",
+            "invoiceInfo": "Invoice Info"
+        }
+    }
+}

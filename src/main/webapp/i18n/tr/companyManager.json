@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "companyManager" : {
+            "home": {
+                "title": "Company Managers",
+                "createLabel": "Create a new Company Manager",
+                "createOrEditLabel": "Create or edit a Company Manager",
+                "search": "Search for Company Manager"
+            },
+            "created": "A new Company Manager is created with identifier {{ param }}",
+            "updated": "A Company Manager is updated with identifier {{ param }}",
+            "deleted": "A Company Manager is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Company Manager {{ id }}?"
+            },
+            "detail": {
+                "title": "Company Manager"
+            },
+            "managerType": "Manager Type",
+            "company": "Company",
+            "personInfo": "Person Info"
+        }
+    }
+}

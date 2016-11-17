@@ -1,0 +1,78 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOrderBagItemOptionLabel" translate="tikonApp.orderBagItemOption.home.createOrEditLabel">Create or edit a Order Bag Item Option</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.orderBagItemOption.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.orderBagItemOption.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagItemOption.reserveTime" for="field_reserveTime">Reserve Time</label>
+                <div class="input-group">
+                    <input id="field_reserveTime" type="text" class="form-control" name="reserveTime" datetime-picker="{{dateformat}}" ng-model="vm.orderBagItemOption.reserveTime" is-open="vm.datePickerOpenStatus.reserveTime"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('reserveTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagItemOption.qty" for="field_qty">Qty</label>
+            <input type="number" class="form-control" name="qty" id="field_qty"
+                    ng-model="vm.orderBagItemOption.qty"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagItemOption.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.orderBagItemOption.price"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagItemOption.discount" for="field_discount">Discount</label>
+            <input type="number" class="form-control" name="discount" id="field_discount"
+                    ng-model="vm.orderBagItemOption.discount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagItemOption.vat" for="field_vat">Vat</label>
+            <input type="number" class="form-control" name="vat" id="field_vat"
+                    ng-model="vm.orderBagItemOption.vat"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.orderBagItemOption.totalPrice" for="field_totalPrice">Total Price</label>
+            <input type="number" class="form-control" name="totalPrice" id="field_totalPrice"
+                    ng-model="vm.orderBagItemOption.totalPrice"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="tikonApp.orderBagItemOption.orderbagItemDtail" for="field_orderbagItemDtail">Orderbag Item Dtail</label>
+            <select class="form-control" id="field_orderbagItemDtail" name="orderbagItemDtail" ng-model="vm.orderBagItemOption.orderbagItemDtailId" ng-options="orderBagServiceItemDtail.id as orderBagServiceItemDtail.id for orderBagServiceItemDtail in vm.orderbagserviceitemdtails"            >
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="tikonApp.orderBagItemOption.orderbagItem" for="field_orderbagItem">Orderbag Item</label>
+            <select class="form-control" id="field_orderbagItem" name="orderbagItem" ng-model="vm.orderBagItemOption.orderbagItemId" ng-options="serviceOptionItem.id as serviceOptionItem.id for serviceOptionItem in vm.serviceoptionitems"            >
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

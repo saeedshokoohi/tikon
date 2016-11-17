@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "agreementInfo" : {
+            "home": {
+                "title": "قوانین و توفقنامه ها",
+                "createLabel": "Create a new Agreement Info",
+                "createOrEditLabel": "Create or edit a Agreement Info",
+                "search": "Search for Agreement Info"
+            },
+            "created": "A new Agreement Info is created with identifier {{ param }}",
+            "updated": "A Agreement Info is updated with identifier {{ param }}",
+            "deleted": "A Agreement Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Agreement Info {{ id }}?"
+            },
+            "detail": {
+                "title": "قوانین و توافقنامه"
+            },
+            "rules": "قوانین",
+            "agreement": "توافق نامه"
+        }
+    }
+}

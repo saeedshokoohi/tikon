@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "albumInfo" : {
+            "home": {
+                "title": "Album Infos",
+                "createLabel": "Create a new Album Info",
+                "createOrEditLabel": "Create or edit a Album Info",
+                "search": "Search for Album Info"
+            },
+            "created": "A new Album Info is created with identifier {{ param }}",
+            "updated": "A Album Info is updated with identifier {{ param }}",
+            "deleted": "A Album Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Album Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Album Info"
+            },
+            "isSingleImage": "Is Single Image",
+            "caption": "Caption"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "tikonApp": {
+        "relatedServiceItem" : {
+            "home": {
+                "title": "Related Service Items",
+                "createLabel": "Create a new Related Service Item",
+                "createOrEditLabel": "Create or edit a Related Service Item",
+                "search": "Search for Related Service Item"
+            },
+            "created": "A new Related Service Item is created with identifier {{ param }}",
+            "updated": "A Related Service Item is updated with identifier {{ param }}",
+            "deleted": "A Related Service Item is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Related Service Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Related Service Item"
+            },
+            "type": "Type",
+            "firstItem": "First Item",
+            "secondItem": "Second Item"
+        }
+    }
+}

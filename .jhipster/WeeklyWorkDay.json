@@ -1,0 +1,24 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "weeklyScheduleInfo",
+      "otherEntityName": "weeklyScheduleInfo",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "weekdays"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "weekday",
+      "fieldType": "WeekDay",
+      "fieldValues": "SATURDAY,SUNDAY,MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY"
+    }
+  ],
+  "changelogDate": "20160630101334",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

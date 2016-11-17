@@ -1,0 +1,29 @@
+{
+    "tikonApp": {
+        "personInfo" : {
+            "home": {
+                "title": "Person Infos",
+                "createLabel": "Create a new Person Info",
+                "createOrEditLabel": "Create or edit a Person Info",
+                "search": "Search for Person Info"
+            },
+            "created": "A new Person Info is created with identifier {{ param }}",
+            "updated": "A Person Info is updated with identifier {{ param }}",
+            "deleted": "A Person Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Person Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Person Info"
+            },
+            "nationalCode": "National Code",
+            "fisrtName": "Fisrt Name",
+            "lastName": "Last Name",
+            "gender": "Gender",
+            "phoneNumber": "Phone Number",
+            "birthDate": "Birth Date",
+            "location": "Location",
+            "socialNetworkInfo": "Social Network Info"
+        }
+    }
+}

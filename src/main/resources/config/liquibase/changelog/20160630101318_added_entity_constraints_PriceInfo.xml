@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PriceInfo.
+    -->
+    <changeSet id="20160630101318-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="price_infos_id"
+                                 baseTableName="price_info_servant"
+                                 constraintName="fk_price_info_servant_servant_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="price_info"/>
+        <addForeignKeyConstraint baseColumnNames="servants_id"
+                                 baseTableName="price_info_servant"
+                                 constraintName="fk_price_info_servant_priceinfo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="servant"/>
+        
+    </changeSet>
+</databaseChangeLog>

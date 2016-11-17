@@ -1,0 +1,95 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myServiceCategoryLabel" translate="tikonApp.serviceCategory.home.createOrEditLabel">
+            Create or edit a Service Category</h4>
+
+    </div>
+
+    <div class="modal-body">
+        <ul class="nav nav-tabs  nav-justified lightnav">
+            <li class="active" ><a data-toggle="tab" data-target="#serviceCategoryTab">
+                <span translate="tikonApp.serviceCategory.sections.serviceCategoryTab">serviceCategoryTab </span>
+            </a></li>
+            <li ><a data-toggle="tab" data-target="#settingInfoTab">
+                <span translate="tikonApp.serviceCategory.sections.settingInfoTab">settingInfoTab</span>
+            </a></li>
+        </ul>
+        <!--<jhi-alert-error></jhi-alert-error>-->
+        <!--   <div class="form-group" ng-show="vm.serviceCategory.id">
+               <label for="id" translate="global.field.id">ID</label>
+               <input type="text" class="form-control" id="id" name="id"
+                       ng-model="vm.serviceCategory.id" readonly />
+           </div>-->
+        <div class="tab-content panel panel-default">
+            <div id="serviceCategoryTab" class="tab-pane fade in active">
+
+                <div class="form-group">
+                    <label class="control-label" translate="tikonApp.serviceCategory.categoryName"
+                           for="field_categoryName">Category Name</label>
+                    <input type="text" class="form-control" name="categoryName" id="field_categoryName"
+                           ng-model="vm.serviceCategory.categoryName"
+                    />
+                </div>
+
+                <!--&lt;!&ndash;  <div class="form-group">-->
+                      <!--<label translate="tikonApp.serviceCategory.setting" for="field_setting">Setting</label>-->
+                      <!--<select class="form-control" id="field_setting" name="setting" ng-model="vm.serviceCategory.settingId" ng-options="settingInfo.id as settingInfo.id for settingInfo in vm.settinginfos"            >-->
+                          <!--<option value=""></option>-->
+                      <!--</select>-->
+                  <!--</div>&ndash;&gt;-->
+                <!--&lt;!&ndash; <div class="form-group">-->
+                     <!--<label translate="tikonApp.serviceCategory.company" for="field_company">Company</label>-->
+                     <!--<select class="form-control" id="field_company" name="company" ng-model="vm.serviceCategory.companyId" ng-options="company.id as company.id for company in vm.companies"            >-->
+                         <!--<option value=""></option>-->
+                     <!--</select>-->
+                 <!--</div>&ndash;&gt;-->
+                <div class="form-group">
+                    <label translate="tikonApp.serviceCategory.parent" for="field_parent">Parent</label>
+                    <select class="form-control" id="field_parent" name="parent" ng-model="vm.serviceCategory.parentId"
+                            ng-options="serviceCategory.id as serviceCategory.id for serviceCategory in vm.servicecategories">
+                        <option value=""></option>
+                    </select>
+                </div>
+                <!--<div class="form-group">-->
+                    <!--<eo-image-gallery album-id="vm.serviceCategory.imagesId"-->
+                                      <!--album-caption="vm.serviceCategory.categoryName"></eo-image-gallery>-->
+                <!--</div>-->
+
+                <!--  <div class="form-group">
+                      <label translate="tikonApp.serviceCategory.servants" for="field_servants">Servants</label>
+                      <select class="form-control" id="field_servants" multiple name="servants" ng-model="vm.serviceCategory.servants" ng-options="servant as servant.id for servant in vm.servants track by servant.id"></select>
+                  </div>-->
+                <!--  <div class="form-group">
+                      <label translate="tikonApp.serviceCategory.images" for="field_images">Images</label>
+                      <select class="form-control" id="field_images" name="images" ng-model="vm.serviceCategory.imagesId" ng-options="albumInfo.id as albumInfo.id for albumInfo in vm.albuminfos"            >
+                          <option value=""></option>
+                      </select>
+                  </div>-->
+            </div>
+            <div id="settingInfoTab" class="tab-pane fade in">
+
+                <div id="settingInfo">
+
+                    <pf-setting-info setting-info="vm.serviceCategory.setting"   >
+
+                    </pf-setting-info>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+            translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

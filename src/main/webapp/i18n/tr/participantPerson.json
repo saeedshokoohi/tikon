@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "participantPerson" : {
+            "home": {
+                "title": "Participant People",
+                "createLabel": "Create a new Participant Person",
+                "createOrEditLabel": "Create or edit a Participant Person",
+                "search": "Search for Participant Person"
+            },
+            "created": "A new Participant Person is created with identifier {{ param }}",
+            "updated": "A Participant Person is updated with identifier {{ param }}",
+            "deleted": "A Participant Person is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Participant Person {{ id }}?"
+            },
+            "detail": {
+                "title": "Participant Person"
+            },
+            "personInfo": "Person Info",
+            "orderBagItemDtail": "Order Bag Item Dtail"
+        }
+    }
+}

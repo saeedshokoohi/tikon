@@ -1,0 +1,12 @@
+version: '2'
+services:
+    tikon-postgresql:
+        container_name: tikon-postgresql
+        image: postgres:9.5.2
+        # volumes:
+        #     - ~/volumes/jhipster/tikon/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=tikon
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432

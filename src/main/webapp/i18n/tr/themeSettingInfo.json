@@ -1,0 +1,23 @@
+{
+    "tikonApp": {
+        "themeSettingInfo" : {
+            "home": {
+                "title": "Theme Setting Infos",
+                "createLabel": "Create a new Theme Setting Info",
+                "createOrEditLabel": "Create or edit a Theme Setting Info",
+                "search": "Search for Theme Setting Info"
+            },
+            "created": "A new Theme Setting Info is created with identifier {{ param }}",
+            "updated": "A Theme Setting Info is updated with identifier {{ param }}",
+            "deleted": "A Theme Setting Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Theme Setting Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Theme Setting Info"
+            },
+            "name": "Name",
+            "logoImage": "Logo Image"
+        }
+    }
+}

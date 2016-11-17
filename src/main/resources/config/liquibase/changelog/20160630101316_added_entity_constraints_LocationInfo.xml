@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity LocationInfo.
+    -->
+    <changeSet id="20160630101316-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="country_id"
+                                 baseTableName="location_info"
+                                 constraintName="fk_locationinfo_country_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="selector_data"/>
+
+        <addForeignKeyConstraint baseColumnNames="state_id"
+                                 baseTableName="location_info"
+                                 constraintName="fk_locationinfo_state_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="selector_data"/>
+
+        <addForeignKeyConstraint baseColumnNames="city_id"
+                                 baseTableName="location_info"
+                                 constraintName="fk_locationinfo_city_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="selector_data"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,233 @@
+<div ng-if="$ctrl.formState=='list'">
+
+    <!--<jhi-alert></jhi-alert>-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ng-click="$ctrl.newItem()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" translate="tikonApp.scheduleInfo.home.createLabel">
+                        Create new Schedule Info
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <br/>
+
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+            <tr callback="$ctrl.transition()">
+                <th><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                <!--<th ><span translate="tikonApp.scheduleInfo.weeklyScheduleInfo.DatePeriodDTO">Schedule Type</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                <!--<th ><span translate="tikonApp.scheduleInfo.scheduleType">Schedule Type</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                <!--<th ><span translate="tikonApp.scheduleInfo.weeklyScheduleInfo">Weekly Schedule Info</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                <!---->
+                <th><span translate="tikonApp.scheduleInfo.fromDate">from Date</span></th>
+                <th><span translate="tikonApp.scheduleInfo.toDate">from Date</span></th>
+                <th><span translate="tikonApp.scheduleInfo.startTime">from Date</span></th>
+                <th><span translate="tikonApp.scheduleInfo.endTime">from Date</span></th>
+                <th></th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr ng-repeat="scheduleInfo in $ctrl.scheduleInfos track by scheduleInfo.id">
+                <td><a ng-click="$ctrl.editItem({id:scheduleInfo.id})">{{scheduleInfo.id}}</a></td>
+                <td>{{scheduleInfo.weeklyScheduleInfo.datePeriod.fromDate | toPersianDate}}</td>
+                <td>{{scheduleInfo.weeklyScheduleInfo.datePeriod.toDate | toPersianDate}}</td>
+                <td>{{scheduleInfo.weeklyScheduleInfo.timePeriod.startTime | toPersianTime}}</td>
+                <td>{{scheduleInfo.weeklyScheduleInfo.timePeriod.endTime | toPersianTime}}</td>
+                <!--<td>-->
+                <!--<a ui-sref="weekly-schedule-info-detail({id:scheduleInfo.weeklyScheduleInfoId})">{{scheduleInfo.weeklyScheduleInfoId}}</a>-->
+                <!--</td>-->
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <!-- <button type="submit"
+                                 ui-sref="schedule-info-detail({id:scheduleInfo.id})"
+                                 class="btn btn-info btn-sm">
+                             <span class="glyphicon glyphicon-eye-open"></span>
+                             <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                         </button>-->
+                        <button type="submit"
+                                ng-click="$ctrl.editItem({id:scheduleInfo.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="schedule-info.delete({id:scheduleInfo.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>
+                            <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <!-- <jhi-item-count page="$ctrl.page" total="$ctrl.queryCount"></jhi-item-count>
+         <uib-pagination class="pagination-sm" total-items="$ctrl.totalItems" ng-model="$ctrl.page" ng-change="$ctrl.transition()"></uib-pagination>-->
+    </div>
+</div>
+<div ng-if="$ctrl.formState!='list'">
+    <div class="form-group">
+
+        <button class="btn btn-primary" ng-click="$ctrl.backToList()">
+            <span class="glyphicon glyphicon-list"></span>
+                    <span class="hidden-xs" translate="tikonApp.serviceItem.backToList">
+                      Back to List
+                    </span>
+        </button>
+
+        <button ng-if="$ctrl.step===0" class="btn btn-primary" type="button" ng-click="$ctrl.showTimingInfo()">
+            <span class="glyphicon glyphicon-calendar"></span>
+                   <span translate="tikonApp.serviceItem.generateTimeInfo">
+
+                   </span>
+        </button>
+        <button ng-if="$ctrl.step===1" class="btn btn-primary" type="button" ng-click="$ctrl.backToScheduleInfo()">
+            <span class="glyphicon glyphicon-edit"></span>
+                   <span translate="tikonApp.serviceItem.editScheduleInfo">
+
+                   </span>
+        </button>
+
+    </div>
+    <div ng-if="$ctrl.step===0">
+
+
+
+
+        <br>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="group-label" translate="tikonApp.serviceItem.datePeriod">datePeriod</label>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group" style="float: right ; width: 100%">
+                    <label translate="tikonApp.serviceItem.startDate" for="field_startDate">Start Date</label>
+
+                    <eo-date-picker id="field_startDate"
+                                    date-value="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.datePeriod.fromDate"></eo-date-picker>
+
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group" style="float: right ; width: 100%">
+
+                    <label translate="tikonApp.serviceItem.endDate" for="field_endDate">End Date</label>
+                    <eo-date-picker id="field_endDate"
+                                    date-value="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.datePeriod.toDate"></eo-date-picker>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="group-label" translate="tikonApp.serviceItem.workDays">work days</label>
+
+            </div>
+
+            <div class="col-sm-10">
+                <pf-weekly-work-days selected-weekly-schedule-info="$ctrl.selectedScheduleInfo.weeklyScheduleInfo">
+
+                </pf-weekly-work-days>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="group-label" translate="tikonApp.serviceItem.timePeriod">time period</label>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group" style="float: right ; width: 100%">
+                    <label translate="tikonApp.serviceItem.startTime" for="field_startTime">Start Time</label>
+                    <eo-time-picker id="field_startTime" time-value-in="field_startTime"
+                                    time-value="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.timePeriod.startTime"></eo-time-picker>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group" style="float: right ; width: 100%">
+                    <label translate="tikonApp.serviceItem.endTime" for="field_endTime">End Time</label>
+
+                    <eo-time-picker id="field_endTime" time-value-in="field_endTime"
+                                    time-value="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.timePeriod.endTime"></eo-time-picker>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="group-label" translate="tikonApp.serviceItem.durationInfo">duration</label>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group" style="float: right ; width: 100%">
+                    <label translate="tikonApp.serviceItem.duration" for="field_duration">Duration</label>
+                    <input type="number" id="field_duration" class="form-control shortInput"
+                           ng-model="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.timePeriod.duration"/>
+
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group" style="float: right ; width: 100%">
+                    <label translate="tikonApp.serviceItem.gapTime" for="field_gapTime">Gap Time</label>
+                    <input id="field_gapTime" type="number" class="form-control shortInput"
+                           ng-model="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.timePeriod.gaptime"/>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="group-label" translate="tikonApp.serviceItem.offDates">Off days</label>
+
+            </div>
+
+            <div class="col-sm-10">
+                <pf-date-period-off-days
+                    selected-date-period="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.datePeriod">
+
+                </pf-date-period-off-days>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <label class="group-label" translate="tikonApp.serviceItem.offTimes">Off times</label>
+
+            </div>
+
+            <div class="col-sm-10">
+                <pf-time-period-off-times
+                    selected-time-period="$ctrl.selectedScheduleInfo.weeklyScheduleInfo.timePeriod">
+
+                </pf-time-period-off-times>
+            </div>
+
+
+        </div>
+    </div>
+    <div ng-if="$ctrl.step===1">
+
+        <div eo-scheduler timing-info="$ctrl.timingInfo" style="width: 100%;height: 600px;"></div>
+    </div>
+</div>

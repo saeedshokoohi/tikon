@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="tikonApp.orderBagItemOption.detail.title">Order Bag Item Option</span> {{vm.orderBagItemOption.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.orderBagItemOption.reserveTime">Reserve Time</span></dt>
+        <dd>
+            <span>{{vm.orderBagItemOption.reserveTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagItemOption.qty">Qty</span></dt>
+        <dd>
+            <span>{{vm.orderBagItemOption.qty}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagItemOption.price">Price</span></dt>
+        <dd>
+            <span>{{vm.orderBagItemOption.price}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagItemOption.discount">Discount</span></dt>
+        <dd>
+            <span>{{vm.orderBagItemOption.discount}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagItemOption.vat">Vat</span></dt>
+        <dd>
+            <span>{{vm.orderBagItemOption.vat}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagItemOption.totalPrice">Total Price</span></dt>
+        <dd>
+            <span>{{vm.orderBagItemOption.totalPrice}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBagItemOption.orderbagItemDtail">Orderbag Item Dtail</span></dt>
+        <dd>
+            <a ui-sref="order-bag-service-item-dtail-detail({id:vm.orderBagItemOption.orderbagItemDtailId})">{{vm.orderBagItemOption.orderbagItemDtailId}}</a>
+        </dd>
+        <dt><span translate="tikonApp.orderBagItemOption.orderbagItem">Orderbag Item</span></dt>
+        <dd>
+            <a ui-sref="service-option-item-detail({id:vm.orderBagItemOption.orderbagItemId})">{{vm.orderBagItemOption.orderbagItemId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

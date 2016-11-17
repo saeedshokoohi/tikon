@@ -1,0 +1,95 @@
+<div>
+    <h2 translate="tikonApp.orderBagServiceItem.home.title">Order Bag Service Items</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="order-bag-service-item.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="tikonApp.orderBagServiceItem.home.createLabel">
+                        Create new Order Bag Service Item
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'tikonApp.orderBagServiceItem.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="status"><span translate="tikonApp.orderBagServiceItem.status">Status</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="subtotalServicePrice"><span translate="tikonApp.orderBagServiceItem.subtotalServicePrice">Subtotal Service Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="subtotalOptionPrice"><span translate="tikonApp.orderBagServiceItem.subtotalOptionPrice">Subtotal Option Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="subtotalVAT"><span translate="tikonApp.orderBagServiceItem.subtotalVAT">Subtotal VAT</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="subtotalDiscount"><span translate="tikonApp.orderBagServiceItem.subtotalDiscount">Subtotal Discount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalRowPrice"><span translate="tikonApp.orderBagServiceItem.totalRowPrice">Total Row Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="orderBagId"><span translate="tikonApp.orderBagServiceItem.orderBag">Order Bag</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="serviceItemId"><span translate="tikonApp.orderBagServiceItem.serviceItem">Service Item</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="orderBagServiceItem in vm.orderBagServiceItems track by orderBagServiceItem.id">
+                    <td><a ui-sref="order-bag-service-item-detail({id:orderBagServiceItem.id})">{{orderBagServiceItem.id}}</a></td>
+                    <td>{{orderBagServiceItem.status}}</td>
+                    <td>{{orderBagServiceItem.subtotalServicePrice}}</td>
+                    <td>{{orderBagServiceItem.subtotalOptionPrice}}</td>
+                    <td>{{orderBagServiceItem.subtotalVAT}}</td>
+                    <td>{{orderBagServiceItem.subtotalDiscount}}</td>
+                    <td>{{orderBagServiceItem.totalRowPrice}}</td>
+                    <td>
+                        <a ui-sref="order-bag-detail({id:orderBagServiceItem.orderBagId})">{{orderBagServiceItem.orderBagId}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="service-item-detail({id:orderBagServiceItem.serviceItemId})">{{orderBagServiceItem.serviceItemId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="order-bag-service-item-detail({id:orderBagServiceItem.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="order-bag-service-item.edit({id:orderBagServiceItem.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="order-bag-service-item.delete({id:orderBagServiceItem.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

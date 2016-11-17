@@ -1,0 +1,22 @@
+
+<div>
+    <h2><span translate="tikonApp.orderBag.detail.title">Order Bag</span> {{vm.orderBag.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="tikonApp.orderBag.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.orderBag.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="tikonApp.orderBag.status">Status</span></dt>
+        <dd>
+            <span>{{vm.orderBag.status}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

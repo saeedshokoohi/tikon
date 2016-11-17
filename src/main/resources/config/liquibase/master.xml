@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101301_added_entity_Company.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101302_added_entity_MetaTag.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101303_added_entity_CompanySocialNetworkInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101304_added_entity_SocialNetworkInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101305_added_entity_CompanyManager.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101306_added_entity_SelectorData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101307_added_entity_SelectorDataType.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101308_added_entity_ServiceCategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101309_added_entity_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101310_added_entity_OrderBag.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101311_added_entity_OrderBagServiceItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101312_added_entity_OrderBagServiceItemDtail.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101313_added_entity_InvoiceInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101314_added_entity_OrderBagItemOption.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101315_added_entity_PaymentLog.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101316_added_entity_LocationInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101317_added_entity_PersonInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101318_added_entity_PriceInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101319_added_entity_PriceInfoDtail.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101320_added_entity_DiscountInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101321_added_entity_ScheduleBaseDiscount.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101322_added_entity_ServiceOptionInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101323_added_entity_ServiceOptionItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101324_added_entity_Servant.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101325_added_entity_AlbumInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101326_added_entity_ImageData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101327_added_entity_ServiceItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101328_added_entity_RelatedServiceItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101329_added_entity_ServiceCapacityInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101330_added_entity_CapacityException.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101331_added_entity_DatePeriod.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101332_added_entity_OffDay.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101333_added_entity_OffTime.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101334_added_entity_WeeklyWorkDay.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101335_added_entity_TimePeriod.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101336_added_entity_WeeklyScheduleInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101337_added_entity_ScheduleInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101338_added_entity_SettingInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101339_added_entity_ThemeSettingInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101340_added_entity_FinancialSetting.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101341_added_entity_NotificationSetting.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101342_added_entity_ExtraSetting.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101343_added_entity_ParticipantPerson.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101344_added_entity_CancelingInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101345_added_entity_WaitingList.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101346_added_entity_AgreementInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101347_added_entity_CustomerComment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101348_added_entity_CustomerRank.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20160630101301_added_entity_constraints_Company.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101303_added_entity_constraints_CompanySocialNetworkInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101305_added_entity_constraints_CompanyManager.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101306_added_entity_constraints_SelectorData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101308_added_entity_constraints_ServiceCategory.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101309_added_entity_constraints_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101311_added_entity_constraints_OrderBagServiceItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101312_added_entity_constraints_OrderBagServiceItemDtail.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101313_added_entity_constraints_InvoiceInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101314_added_entity_constraints_OrderBagItemOption.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101316_added_entity_constraints_LocationInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101317_added_entity_constraints_PersonInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101318_added_entity_constraints_PriceInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101321_added_entity_constraints_ScheduleBaseDiscount.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101323_added_entity_constraints_ServiceOptionItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101324_added_entity_constraints_Servant.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101326_added_entity_constraints_ImageData.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101327_added_entity_constraints_ServiceItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101328_added_entity_constraints_RelatedServiceItem.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101330_added_entity_constraints_CapacityException.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101331_added_entity_constraints_DatePeriod.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101335_added_entity_constraints_TimePeriod.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101336_added_entity_constraints_WeeklyScheduleInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101337_added_entity_constraints_ScheduleInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101338_added_entity_constraints_SettingInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101339_added_entity_constraints_ThemeSettingInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101342_added_entity_constraints_ExtraSetting.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101343_added_entity_constraints_ParticipantPerson.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101345_added_entity_constraints_WaitingList.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101347_added_entity_constraints_CustomerComment.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160630101348_added_entity_constraints_CustomerRank.xml" relativeToChangelogFile="false"/>
+
+    <include file="classpath:config/liquibase/changelog/20161113063536_added_entity_ServiceTimeSessionInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161113063537_added_entity_ServiceTimeSession.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161113063536_added_entity_constraints_ServiceTimeSessionInfo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20161113063537_added_entity_constraints_ServiceTimeSession.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

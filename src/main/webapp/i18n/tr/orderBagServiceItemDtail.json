@@ -1,0 +1,29 @@
+{
+    "tikonApp": {
+        "orderBagServiceItemDtail" : {
+            "home": {
+                "title": "Order Bag Service Item Dtails",
+                "createLabel": "Create a new Order Bag Service Item Dtail",
+                "createOrEditLabel": "Create or edit a Order Bag Service Item Dtail",
+                "search": "Search for Order Bag Service Item Dtail"
+            },
+            "created": "A new Order Bag Service Item Dtail is created with identifier {{ param }}",
+            "updated": "A Order Bag Service Item Dtail is updated with identifier {{ param }}",
+            "deleted": "A Order Bag Service Item Dtail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Order Bag Service Item Dtail {{ id }}?"
+            },
+            "detail": {
+                "title": "Order Bag Service Item Dtail"
+            },
+            "reserveTime": "Reserve Time",
+            "gty": "Gty",
+            "price": "Price",
+            "discount": "Discount",
+            "vat": "Vat",
+            "totalPrice": "Total Price",
+            "orderBagItem": "Order Bag Item",
+            "priceInfoDtail": "Price Info Dtail"
+        }
+    }
+}

@@ -1,0 +1,155 @@
+<div>
+
+    <!--<jhi-alert></jhi-alert>-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left" ng-if="$ctrl.formState=='list'">
+                <button type="button" class="btn btn-primary" ng-click="$ctrl.newItem()" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs" translate="tikonApp.priceInfo.home.createLabel">
+                        Create new Price Info
+                    </span>
+                </button>
+            </div>
+
+            <div class="col-xs-4 no-padding-left" ng-if="$ctrl.formState!='list'">
+                <button type="button" class="btn btn-primary" ng-click="$ctrl.backToList()" >
+                    <span class="glyphicon glyphicon-list"></span>
+                    <span class="hidden-xs" translate="tikonApp.priceInfo.home.backToPriceInfoList">
+                        Back To Price Info
+                    </span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <br/>
+
+    <div id="priceInfoList" ng-if="$ctrl.formState=='list'">
+        <div class="table-responsive">
+            <table class="jh-table table table-striped">
+                <thead>
+                <tr jh-sort="$ctrl.predicate" ascending="$ctrl.reverse" callback="$ctrl.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span
+                        class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="fromValidDate"><span
+                        translate="tikonApp.priceInfo.fromValidDate">From Valid Date</span> <span
+                        class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="priceType"><span translate="tikonApp.priceInfo.priceType">Price Type</span> <span
+                        class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="title"><span translate="tikonApp.priceInfoDtail.title">Title</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="price"><span translate="tikonApp.priceInfoDtail.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+
+                </thead>
+                <tbody>
+
+                <tr ng-repeat="priceInfoDtail in $ctrl.priceInfoDtails track by priceInfoDtail.id">
+                    <td><a ng-click="$ctrl.editItem({id:priceInfoDtail.id})">{{priceInfoDtail.id}}</a></td>
+                    <td>{{priceInfoDtail.priceInfo.fromValidDate | toPersianDate}}</td>
+                    <td translate="{{'tikonApp.PriceType.' + priceInfo.priceType}}">{{priceInfoDtail.priceInfo.priceType}}</td>
+                    <td>{{priceInfoDtail.title}}</td>
+                    <td>{{priceInfoDtail.price}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <!-- <button type="submit"
+                                     ui-sref="schedule-info-detail({id:scheduleInfo.id})"
+                                     class="btn btn-info btn-sm">
+                                 <span class="glyphicon glyphicon-eye-open"></span>
+                                 <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                             </button>-->
+
+                            <button type="submit"
+                                    ng-click="$ctrl.editItem({id:priceInfoDtail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="price-info-dtail.delete({id:priceInfoDtail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="priceInfoEdit" ng-if="$ctrl.formState!='list'">
+        <div class="form-group" ng-show="$ctrl.priceInfoDtail.priceInfo.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   ng-model="$ctrl.priceInfoDtail.priceInfo.id" readonly/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfo.fromValidDate" for="field_fromValidDate">From
+                Valid Date</label>
+
+            <eo-date-picker id="field_fromValidDate"
+                            date-value="$ctrl.priceInfoDtail.priceInfo.fromValidDate"></eo-date-picker>
+
+
+            <!--<div class="input-group">-->
+                <!--<input id="field_fromValidDate" type="text" class="form-control" name="fromValidDate"-->
+                       <!--datetime-picker="{{dateformat}}" ng-model="$ctrl.priceInfoDtail.priceInfo.fromValidDate"-->
+                       <!--is-open="$ctrl.datePickerOpenStatus.fromValidDate"-->
+                <!--/>-->
+                    <!--<span class="input-group-btn">-->
+                        <!--<button type="button" class="btn btn-default" ng-click="$ctrl.openCalendar('fromValidDate')"><i-->
+                            <!--class="glyphicon glyphicon-calendar"></i></button>-->
+                    <!--</span>-->
+            <!--</div>-->
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfo.priceType" for="field_priceType">Price
+                Type</label>
+            <select class="form-control" name="priceType" ng-model="$ctrl.priceInfoDtail.priceInfo.priceType" id="field_priceType">
+                <option value="FIXED" translate="tikonApp.PriceType.FIXED">FIXED</option>
+                <option value="SCHEDULE_BASED" translate="tikonApp.PriceType.SCHEDULE_BASED">SCHEDULE_BASED</option>
+                <option value="ITEM_QUANTITY_BASED" translate="tikonApp.PriceType.ITEM_QUANTITY_BASED">
+                    ITEM_QUANTITY_BASED
+                </option>
+                <option value="CUSTOMER_BASED" translate="tikonApp.PriceType.CUSTOMER_BASED">CUSTOMER_BASED</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfoDtail.title" for="field_title">Title</label>
+            <input type="text" class="form-control" name="title" id="field_title"
+                   ng-model="$ctrl.priceInfoDtail.title" value="قیمت"
+            />
+        </div>
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" translate="tikonApp.priceInfoDtail.capacityRatio" for="field_capacityRatio">Capacity Ratio</label>-->
+            <!--<input type="number" class="form-control" name="capacityRatio" id="field_capacityRatio"-->
+                   <!--ng-model="$ctrl.priceInfoDtail.capacityRatio"-->
+            <!--/>-->
+        <!--</div>-->
+        <div class="form-group">
+            <label class="control-label" translate="tikonApp.priceInfoDtail.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                   ng-model="$ctrl.priceInfoDtail.price"
+            />
+        </div>
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" translate="tikonApp.priceInfoDtail.coworkerPrice" for="field_coworkerPrice">Coworker Price</label>-->
+            <!--<input type="number" class="form-control" name="coworkerPrice" id="field_coworkerPrice"-->
+                   <!--ng-model="$ctrl.priceInfoDtail.coworkerPrice"-->
+            <!--/>-->
+        <!--</div>-->
+
+
+    </div>
+
+        <div class="text-center">
+        <!-- <jhi-item-count page="$ctrl.page" total="$ctrl.queryCount"></jhi-item-count>
+         <uib-pagination class="pagination-sm" total-items="$ctrl.totalItems" ng-model="$ctrl.page" ng-change="$ctrl.transition()"></uib-pagination>-->
+    </div>
+
+
+</div>

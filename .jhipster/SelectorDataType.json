@@ -1,0 +1,19 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "key",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "typeName",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101307",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}

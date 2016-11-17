@@ -1,0 +1,23 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "serviceItems",
+      "otherEntityName": "serviceItem",
+      "relationshipType": "many-to-many",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "options"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "title",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160630101322",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass"
+}
